@@ -8,13 +8,12 @@ from ai_hello_world.settings import *
 # Allow all hosts for development
 ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1', '0.0.0.0']
 
-# Add drf-spectacular for API documentation
+# Add CORS headers only (remove drf-spectacular temporarily)
 INSTALLED_APPS += [
-    'drf_spectacular',
     'corsheaders',
 ]
 
-# Django REST Framework settings with Swagger
+# Django REST Framework settings
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
@@ -23,7 +22,6 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
     ],
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 # Spectacular settings for OpenAPI/Swagger
@@ -35,6 +33,9 @@ SPECTACULAR_SETTINGS = {
     'COMPONENT_SPLIT_REQUEST': True,
     'COMPONENT_NO_READ_ONLY_REQUIRED': True,
     'SCHEMA_PATH_PREFIX': '/api/v1/',
+    'SWAGGER_UI_DIST': 'https://cdn.jsdelivr.net/npm/swagger-ui-dist@latest',
+    'SWAGGER_UI_FAVICON_HREF': None,
+    'REDOC_DIST': 'https://cdn.jsdelivr.net/npm/redoc@latest',
     'SERVERS': [
         {
             'url': 'http://localhost:8000',

@@ -1,0 +1,352 @@
+================================================================================
+COMPREHENSIVE API TEST REPORT
+================================================================================
+
+Test Session Information:
+  Timestamp: 2025-07-27T18:24:21.731585
+  Base URL: https://7v38qrq1-8000.asse.devtunnels.ms
+  Total Tests: 16
+  Passed: 0
+  Failed: 16
+  Success Rate: 0.0%
+
+--------------------------------------------------------------------------------
+TEST #1: Health Check
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:21:47.336809
+Status: ❌ FAIL
+
+REQUEST:
+  Method: GET
+  Endpoint: /api/health/
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/health/
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #2: Hello Index
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:21:57.634934
+Status: ❌ FAIL
+
+REQUEST:
+  Method: GET
+  Endpoint: /
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #3: Auth Health Check
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:22:07.919187
+Status: ❌ FAIL
+
+REQUEST:
+  Method: GET
+  Endpoint: /api/v1/auth/health
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/health
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #4: User Login
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:22:18.189923
+Status: ❌ FAIL
+
+REQUEST:
+  Method: POST
+  Endpoint: /api/v1/auth/login
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/login
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+    Content-Type: application/json
+  Payload:
+    {
+    "username": "test_user",
+    "password": "test_password",
+    "language": "en",
+    "remember_me": false
+}
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #5: Admin Login
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:22:28.455148
+Status: ❌ FAIL
+
+REQUEST:
+  Method: POST
+  Endpoint: /api/v1/auth/login
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/login
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+    Content-Type: application/json
+  Payload:
+    {
+    "username": "admin",
+    "password": "admin123",
+    "language": "vi",
+    "remember_me": true
+}
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #6: Session Validation
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:22:38.747543
+Status: ❌ FAIL
+
+REQUEST:
+  Method: GET
+  Endpoint: /api/v1/auth/validate
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/validate
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #7: Token Refresh
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:22:49.047541
+Status: ❌ FAIL
+
+REQUEST:
+  Method: POST
+  Endpoint: /api/v1/auth/refresh
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/refresh
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+    Content-Type: application/json
+  Payload:
+    {
+    "refresh_token": "dummy_refresh_token"
+}
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #8: User Logout
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:22:59.343952
+Status: ❌ FAIL
+
+REQUEST:
+  Method: POST
+  Endpoint: /api/v1/auth/logout
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/logout
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+    Content-Type: application/json
+  Payload:
+    {
+    "session_id": "dummy_session"
+}
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #9: Idle Resources List
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:23:09.642028
+Status: ❌ FAIL
+
+REQUEST:
+  Method: GET
+  Endpoint: /api/v1/idle-resources
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #10: Idle Resources Paginated
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:23:19.919020
+Status: ❌ FAIL
+
+REQUEST:
+  Method: GET
+  Endpoint: /api/v1/idle-resources?page=1&page_size=5
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources?page=1&page_size=5
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #11: Create Idle Resource
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:23:30.191247
+Status: ❌ FAIL
+
+REQUEST:
+  Method: POST
+  Endpoint: /api/v1/idle-resources
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+    Content-Type: application/json
+  Payload:
+    {
+    "employee_name": "John Doe",
+    "employee_id": "EMP001",
+    "department_name": "IT",
+    "department_id": "DEPT001",
+    "job_rank": "Senior Developer",
+    "skills": [
+        "Python",
+        "Django",
+        "React"
+    ],
+    "experience_years": 5,
+    "idle_from": "2025-07-27",
+    "idle_to": "2025-08-27",
+    "idle_type": "Between Projects",
+    "hourly_rate": 50.0,
+    "availability_status": "Available"
+}
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #12: Master Data
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:23:40.483404
+Status: ❌ FAIL
+
+REQUEST:
+  Method: GET
+  Endpoint: /api/v1/master-data
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/master-data
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #13: Master Data Filtered
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:23:50.803185
+Status: ❌ FAIL
+
+REQUEST:
+  Method: GET
+  Endpoint: /api/v1/master-data?include_inactive=true
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/master-data?include_inactive=true
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #14: Resource Detail
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:24:01.111677
+Status: ❌ FAIL
+
+REQUEST:
+  Method: GET
+  Endpoint: /api/v1/idle-resources/123e4567-e89b-12d3-a456-426614174000
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources/123e4567-e89b-12d3-a456-426614174000
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #15: Update Resource
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:24:11.415808
+Status: ❌ FAIL
+
+REQUEST:
+  Method: PUT
+  Endpoint: /api/v1/idle-resources/123e4567-e89b-12d3-a456-426614174000
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources/123e4567-e89b-12d3-a456-426614174000
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+    Content-Type: application/json
+  Payload:
+    {
+    "employee_name": "Jane Doe Updated",
+    "availability_status": "Busy"
+}
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+
+--------------------------------------------------------------------------------
+TEST #16: Delete Resource
+--------------------------------------------------------------------------------
+Timestamp: 2025-07-27T18:24:21.731413
+Status: ❌ FAIL
+
+REQUEST:
+  Method: DELETE
+  Endpoint: /api/v1/idle-resources/123e4567-e89b-12d3-a456-426614174000
+  Full URL: https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources/123e4567-e89b-12d3-a456-426614174000
+  Headers:
+    User-Agent: API-Test-Client/1.0
+    Accept: application/json
+
+RESPONSE:
+ERROR: HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)
+
+

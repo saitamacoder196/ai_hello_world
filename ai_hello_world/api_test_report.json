@@ -1,0 +1,403 @@
+{
+  "test_session": {
+    "timestamp": "2025-07-27T18:24:21.731585",
+    "base_url": "https://7v38qrq1-8000.asse.devtunnels.ms",
+    "total_tests": 16,
+    "passed_tests": 0,
+    "failed_tests": 16
+  },
+  "tests": [
+    {
+      "test_number": 1,
+      "test_name": "Health Check",
+      "timestamp": "2025-07-27T18:21:47.336809",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/health/",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/health/",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 2,
+      "test_name": "Hello Index",
+      "timestamp": "2025-07-27T18:21:57.634934",
+      "request": {
+        "method": "GET",
+        "endpoint": "/",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 3,
+      "test_name": "Auth Health Check",
+      "timestamp": "2025-07-27T18:22:07.919187",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/auth/health",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/health",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 4,
+      "test_name": "User Login",
+      "timestamp": "2025-07-27T18:22:18.189923",
+      "request": {
+        "method": "POST",
+        "endpoint": "/api/v1/auth/login",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/login",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "username": "test_user",
+          "password": "test_password",
+          "language": "en",
+          "remember_me": false
+        }
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 5,
+      "test_name": "Admin Login",
+      "timestamp": "2025-07-27T18:22:28.455148",
+      "request": {
+        "method": "POST",
+        "endpoint": "/api/v1/auth/login",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/login",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "username": "admin",
+          "password": "admin123",
+          "language": "vi",
+          "remember_me": true
+        }
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 6,
+      "test_name": "Session Validation",
+      "timestamp": "2025-07-27T18:22:38.747543",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/auth/validate",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/validate",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 7,
+      "test_name": "Token Refresh",
+      "timestamp": "2025-07-27T18:22:49.047541",
+      "request": {
+        "method": "POST",
+        "endpoint": "/api/v1/auth/refresh",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/refresh",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "refresh_token": "dummy_refresh_token"
+        }
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 8,
+      "test_name": "User Logout",
+      "timestamp": "2025-07-27T18:22:59.343952",
+      "request": {
+        "method": "POST",
+        "endpoint": "/api/v1/auth/logout",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/logout",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "session_id": "dummy_session"
+        }
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 9,
+      "test_name": "Idle Resources List",
+      "timestamp": "2025-07-27T18:23:09.642028",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/idle-resources",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 10,
+      "test_name": "Idle Resources Paginated",
+      "timestamp": "2025-07-27T18:23:19.919020",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/idle-resources?page=1&page_size=5",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources?page=1&page_size=5",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 11,
+      "test_name": "Create Idle Resource",
+      "timestamp": "2025-07-27T18:23:30.191247",
+      "request": {
+        "method": "POST",
+        "endpoint": "/api/v1/idle-resources",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "employee_name": "John Doe",
+          "employee_id": "EMP001",
+          "department_name": "IT",
+          "department_id": "DEPT001",
+          "job_rank": "Senior Developer",
+          "skills": [
+            "Python",
+            "Django",
+            "React"
+          ],
+          "experience_years": 5,
+          "idle_from": "2025-07-27",
+          "idle_to": "2025-08-27",
+          "idle_type": "Between Projects",
+          "hourly_rate": 50.0,
+          "availability_status": "Available"
+        }
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 12,
+      "test_name": "Master Data",
+      "timestamp": "2025-07-27T18:23:40.483404",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/master-data",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/master-data",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 13,
+      "test_name": "Master Data Filtered",
+      "timestamp": "2025-07-27T18:23:50.803185",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/master-data?include_inactive=true",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/master-data?include_inactive=true",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 14,
+      "test_name": "Resource Detail",
+      "timestamp": "2025-07-27T18:24:01.111677",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/idle-resources/123e4567-e89b-12d3-a456-426614174000",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources/123e4567-e89b-12d3-a456-426614174000",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 15,
+      "test_name": "Update Resource",
+      "timestamp": "2025-07-27T18:24:11.415808",
+      "request": {
+        "method": "PUT",
+        "endpoint": "/api/v1/idle-resources/123e4567-e89b-12d3-a456-426614174000",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources/123e4567-e89b-12d3-a456-426614174000",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "employee_name": "Jane Doe Updated",
+          "availability_status": "Busy"
+        }
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    },
+    {
+      "test_number": 16,
+      "test_name": "Delete Resource",
+      "timestamp": "2025-07-27T18:24:21.731413",
+      "request": {
+        "method": "DELETE",
+        "endpoint": "/api/v1/idle-resources/123e4567-e89b-12d3-a456-426614174000",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources/123e4567-e89b-12d3-a456-426614174000",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": null,
+        "headers": {},
+        "body": null
+      },
+      "error": "HTTPSConnectionPool(host='7v38qrq1-8000.asse.devtunnels.ms', port=443): Read timed out. (read timeout=10)",
+      "success": false
+    }
+  ]
+}
