@@ -26,24 +26,73 @@ from .serializers import (
     DeleteIdleResourceResponseSerializer,
     BulkUpdateIdleResourcesRequestSerializer,
     BulkUpdateIdleResourcesResponseSerializer,
+    ExportIdleResourcesRequestSerializer,
+    ExportIdleResourcesResponseSerializer,
+    ImportIdleResourcesRequestSerializer,
+    ImportIdleResourcesResponseSerializer,
+    AdvancedSearchRequestSerializer,
+    AdvancedSearchResponseSerializer,
+    ValidateDataRequestSerializer,
+    ValidateDataResponseSerializer,
     GetMasterDataRequestSerializer,
     GetMasterDataResponseSerializer
 )
 
 
-@api_view(['GET'])
+@api_view(['GET', 'POST'])
 @permission_classes([AllowAny])  # TODO: Change to IsAuthenticated when auth is implemented
 def get_idle_resource_list(request):
     """
-    Get Idle Resource List API
+    Get Idle Resource List API or Create Idle Resource API
     
-    Endpoint: GET /api/v1/idle-resources
-    
-    Query Parameters: GetIdleResourceListRequestSerializer
-    Response: GetIdleResourceListResponseSerializer
+    GET /api/v1/idle-resources - List resources
+    POST /api/v1/idle-resources - Create resource
     """
     
-    # Parse and validate query parameters
+    if request.method == 'POST':
+        # Handle CREATE operation
+        # Validate request body
+        serializer = CreateIdleResourceRequestSerializer(data=request.data)
+        if not serializer.is_valid():
+            return Response({
+                'error': 'Invalid request payload',
+                'details': serializer.errors
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Extract validated data
+        validated_data = serializer.validated_data
+        
+        # MOCK RESPONSE
+        generated_id = str(uuid.uuid4())
+        mock_created_record = {
+            'id': generated_id,
+            **validated_data,
+            'idleMM': _calculate_idle_months(
+                validated_data.get('idleFromDate'),
+                validated_data.get('idleToDate')
+            ),
+            'createdAt': timezone.now().isoformat(),
+            'updatedAt': timezone.now().isoformat(),
+            'version': 1
+        }
+        
+        mock_response_data = {
+            'id': generated_id,
+            'createdRecord': mock_created_record,
+            'auditTrailId': str(uuid.uuid4()),
+            'validationWarnings': [],
+            'businessRuleResults': {
+                'calculatedFields': ['idleMM'],
+                'appliedRules': ['date_validation', 'department_validation']
+            },
+            'createdAt': timezone.now().isoformat()
+        }
+        
+        response_serializer = CreateIdleResourceResponseSerializer(data=mock_response_data)
+        response_serializer.is_valid()
+        return Response(response_serializer.data, status=status.HTTP_201_CREATED)
+    
+    # GET method - Parse and validate query parameters
     serializer = GetIdleResourceListRequestSerializer(data=request.query_params)
     if not serializer.is_valid():
         return Response({
@@ -53,19 +102,19 @@ def get_idle_resource_list(request):
     
     # Extract validated parameters
     page = serializer.validated_data.get('page', 1)
-    page_size = serializer.validated_data.get('page_size', 25)
-    sort_by = serializer.validated_data.get('sort_by', 'idle_from_date')
-    sort_order = serializer.validated_data.get('sort_order', 'desc')
+    page_size = serializer.validated_data.get('pageSize', 25)
+    sort_by = serializer.validated_data.get('sortBy', 'idleFrom')
+    sort_order = serializer.validated_data.get('sortOrder', 'desc')
     
     # Filter parameters
     filters = {
-        'department_id': serializer.validated_data.get('department_id'),
-        'idle_type': serializer.validated_data.get('idle_type'),
-        'date_from': serializer.validated_data.get('date_from'),
-        'date_to': serializer.validated_data.get('date_to'),
-        'special_action': serializer.validated_data.get('special_action'),
-        'search_query': serializer.validated_data.get('search_query'),
-        'urgent_only': serializer.validated_data.get('urgent_only', False)
+        'departmentId': serializer.validated_data.get('departmentId'),
+        'idleType': serializer.validated_data.get('idleType'),
+        'dateFrom': serializer.validated_data.get('dateFrom'),
+        'dateTo': serializer.validated_data.get('dateTo'),
+        'specialAction': serializer.validated_data.get('specialAction'),
+        'searchQuery': serializer.validated_data.get('searchQuery'),
+        'urgentOnly': serializer.validated_data.get('urgentOnly', False)
     }
     
     # TODO: Implement business logic using ResourceCRUDService
@@ -91,45 +140,31 @@ def get_idle_resource_list(request):
     for i in range(min(page_size, 5)):  # Generate up to 5 mock records
         mock_records.append({
             'id': str(uuid.uuid4()),
-            'employee_name': f'Employee {i+1}',
-            'employee_id': f'EMP{str(i+1).zfill(3)}',
-            'department_id': str(uuid.uuid4()),
-            'child_department_id': str(uuid.uuid4()) if i % 2 == 0 else None,
-            'job_rank': ['Junior', 'Senior', 'Lead', 'Manager'][i % 4],
-            'current_location': ['Hanoi', 'HCMC', 'Da Nang'][i % 3],
-            'expected_working_places': ['Hanoi', 'HCMC'],
-            'idle_type': ['Bench', 'Training', 'Available'][i % 3],
-            'idle_from_date': '2025-01-01',
-            'idle_to_date': '2025-12-31',
-            'idle_mm': 12,
-            'japanese_level': ['N1', 'N2', 'N3', None][i % 4],
-            'english_level': ['Advanced', 'Intermediate', 'Basic', None][i % 4],
-            'source_type': 'FJPer',
-            'sales_price': 500000 + (i * 100000),
-            'special_action': ['Training', 'Certification', None][i % 3],
-            'change_dept_lending': 'Not Yet Open',
-            'skills_experience': f'Java, Spring Boot, React - {i+1} years',
-            'progress_notes': f'Progress note for employee {i+1}',
-            'pic': f'Manager {i+1}',
-            'created_at': timezone.now().isoformat(),
-            'updated_at': timezone.now().isoformat(),
-            'version': 1
+            'employeeName': f'Employee {i+1}',
+            'employeeId': f'EMP{str(i+1).zfill(3)}',
+            'departmentId': str(uuid.uuid4()),
+            'jobRank': ['Junior', 'Senior', 'Lead', 'Manager'][i % 4],
+            'currentLocation': ['Hanoi', 'HCMC', 'Da Nang'][i % 3],
+            'idleType': ['Bench', 'Training', 'Available'][i % 3],
+            'idleFromDate': '2025-01-01',
+            'idleToDate': '2025-12-31',
+            'idleMM': 12,
+            'salesPrice': 500000 + (i * 100000),
+            'specialAction': ['Training', 'Certification', None][i % 3],
+            'pic': f'Manager {i+1}'
         })
     
     mock_response_data = {
         'records': mock_records,
-        'total_count': 100,  # Mock total count
-        'page_info': {
-            'current_page': page,
-            'total_pages': (100 + page_size - 1) // page_size,
-            'has_next_page': page < ((100 + page_size - 1) // page_size),
-            'has_previous_page': page > 1
+        'totalCount': 100,  # Mock total count
+        'pageInfo': {
+            'currentPage': page,
+            'totalPages': (100 + page_size - 1) // page_size,
+            'hasNextPage': page < ((100 + page_size - 1) // page_size),
+            'hasPreviousPage': page > 1
         },
-        'aggregations': {
-            'by_department': {'DEV': 45, 'QA': 30, 'BA': 25},
-            'by_idle_type': {'Bench': 60, 'Training': 25, 'Available': 15}
-        },
-        'execution_time': 150
+        'aggregations': {},
+        'executionTime': 150
     }
     
     response_serializer = GetIdleResourceListResponseSerializer(data=mock_response_data)
@@ -552,6 +587,273 @@ def bulk_update_idle_resources(request):
     }
     
     response_serializer = BulkUpdateIdleResourcesResponseSerializer(data=mock_response_data)
+    response_serializer.is_valid()
+    return Response(response_serializer.data, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def export_idle_resources(request):
+    """
+    Export Idle Resources API
+    
+    Endpoint: POST /api/v1/idle-resources/export
+    
+    Request Body: ExportIdleResourcesRequestSerializer
+    Response: ExportIdleResourcesResponseSerializer
+    """
+    
+    # Validate request body
+    serializer = ExportIdleResourcesRequestSerializer(data=request.data)
+    if not serializer.is_valid():
+        return Response({
+            'error': 'Invalid request payload',
+            'details': serializer.errors
+        }, status=status.HTTP_400_BAD_REQUEST)
+    
+    validated_data = serializer.validated_data
+    export_format = validated_data.get('format', 'excel')
+    file_name = validated_data.get('fileName', 'idle_resources_export')
+    
+    # MOCK RESPONSE
+    export_id = str(uuid.uuid4())
+    file_extension = 'xlsx' if export_format == 'excel' else 'csv'
+    generated_filename = f"{file_name}_{timezone.now().strftime('%Y%m%d')}.{file_extension}"
+    
+    mock_response_data = {
+        'exportId': export_id,
+        'fileUrl': f'https://storage.example.com/exports/{generated_filename}',
+        'fileName': generated_filename,
+        'fileSize': 2048576,
+        'recordCount': 150,
+        'format': export_format,
+        'status': 'completed',
+        'createdAt': timezone.now().isoformat(),
+        'expiresAt': (timezone.now() + timedelta(days=1)).isoformat(),
+        'downloadToken': 'secure-token-' + str(uuid.uuid4())[:8]
+    }
+    
+    response_serializer = ExportIdleResourcesResponseSerializer(data=mock_response_data)
+    response_serializer.is_valid()
+    return Response(response_serializer.data, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def import_idle_resources(request):
+    """
+    Import Idle Resources API
+    
+    Endpoint: POST /api/v1/idle-resources/import
+    
+    Request Body: ImportIdleResourcesRequestSerializer (multipart/form-data)
+    Response: ImportIdleResourcesResponseSerializer
+    """
+    
+    # Validate request data
+    serializer = ImportIdleResourcesRequestSerializer(data=request.data)
+    if not serializer.is_valid():
+        return Response({
+            'error': 'Invalid request payload',
+            'details': serializer.errors
+        }, status=status.HTTP_400_BAD_REQUEST)
+    
+    validated_data = serializer.validated_data
+    import_mode = validated_data.get('importMode', 'validate')
+    
+    # MOCK RESPONSE
+    import_id = str(uuid.uuid4())
+    
+    mock_response_data = {
+        'importId': import_id,
+        'status': 'completed',
+        'totalRows': 100,
+        'validRows': 95,
+        'invalidRows': 5,
+        'processedRows': 95,
+        'duplicateRows': 2,
+        'errorReport': [
+            {
+                'row': 3,
+                'field': 'employeeId',
+                'error': 'Required field missing'
+            },
+            {
+                'row': 7,
+                'field': 'idleFromDate',
+                'error': 'Invalid date format'
+            }
+        ],
+        'warningReport': [],
+        'importSummary': {
+            'created': 90,
+            'updated': 5,
+            'skipped': 5
+        },
+        'auditTrailId': str(uuid.uuid4())
+    }
+    
+    response_serializer = ImportIdleResourcesResponseSerializer(data=mock_response_data)
+    response_serializer.is_valid()
+    return Response(response_serializer.data, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def advanced_search_idle_resources(request):
+    """
+    Advanced Search Idle Resources API
+    
+    Endpoint: POST /api/v1/idle-resources/search
+    
+    Request Body: AdvancedSearchRequestSerializer
+    Response: AdvancedSearchResponseSerializer
+    """
+    
+    # Validate request body
+    serializer = AdvancedSearchRequestSerializer(data=request.data)
+    if not serializer.is_valid():
+        return Response({
+            'error': 'Invalid request payload',
+            'details': serializer.errors
+        }, status=status.HTTP_400_BAD_REQUEST)
+    
+    validated_data = serializer.validated_data
+    query = validated_data.get('query', '')
+    page = validated_data.get('page', 1)
+    page_size = validated_data.get('pageSize', 20)
+    
+    # Generate mock search results
+    mock_records = []
+    for i in range(min(page_size, 5)):
+        mock_records.append({
+            'id': str(uuid.uuid4()),
+            'employeeName': f'Java Developer {i+1}',
+            'employeeId': f'DEV{str(i+1).zfill(3)}',
+            'departmentId': str(uuid.uuid4()),
+            'jobRank': 'Senior',
+            'currentLocation': 'Hanoi',
+            'idleType': 'Bench',
+            'idleFromDate': '2025-01-01',
+            'idleToDate': '2025-12-31',
+            'skillsExperience': 'Java, Spring Boot, React',
+            'specialAction': 'Training'
+        })
+    
+    mock_response_data = {
+        'results': mock_records,
+        'totalCount': 50,
+        'pageInfo': {
+            'currentPage': page,
+            'totalPages': 3,
+            'hasNextPage': page < 3
+        },
+        'facets': {
+            'departmentId': {
+                'DEPT001': 30,
+                'DEPT002': 20
+            },
+            'idleType': {
+                'Bench': 35,
+                'Training': 15
+            }
+        },
+        'aggregations': {},
+        'searchMetadata': {
+            'query': query,
+            'searchTime': 120
+        },
+        'suggestedFilters': [],
+        'executionTime': 120,
+        'cacheInfo': {
+            'hit': False,
+            'ttl': 300
+        }
+    }
+    
+    response_serializer = AdvancedSearchResponseSerializer(data=mock_response_data)
+    response_serializer.is_valid()
+    return Response(response_serializer.data, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def validate_data(request):
+    """
+    Validate Data API
+    
+    Endpoint: POST /api/v1/idle-resources/validate
+    
+    Request Body: ValidateDataRequestSerializer
+    Response: ValidateDataResponseSerializer
+    """
+    
+    # Validate request body
+    serializer = ValidateDataRequestSerializer(data=request.data)
+    if not serializer.is_valid():
+        return Response({
+            'error': 'Invalid request payload',
+            'details': serializer.errors
+        }, status=status.HTTP_400_BAD_REQUEST)
+    
+    validated_data = serializer.validated_data
+    data_to_validate = validated_data.get('data', {})
+    validation_type = validated_data.get('validationType', 'full')
+    
+    # Perform mock validation
+    validation_results = []
+    error_count = 0
+    warning_count = 0
+    
+    # Check for specific validation rules
+    idle_from = data_to_validate.get('idleFromDate')
+    idle_to = data_to_validate.get('idleToDate')
+    
+    if idle_from and idle_to:
+        try:
+            from_date = datetime.strptime(idle_from, '%Y-%m-%d').date()
+            to_date = datetime.strptime(idle_to, '%Y-%m-%d').date()
+            
+            if to_date < from_date:
+                validation_results.append({
+                    'field': 'idleToDate',
+                    'type': 'error',
+                    'message': 'Idle To Date must be greater than or equal to Idle From Date',
+                    'code': 'INVALID_DATE_RANGE'
+                })
+                error_count += 1
+        except ValueError:
+            validation_results.append({
+                'field': 'idleFromDate',
+                'type': 'error',
+                'message': 'Invalid date format. Expected YYYY-MM-DD',
+                'code': 'INVALID_DATE_FORMAT'
+            })
+            error_count += 1
+    
+    is_valid = error_count == 0
+    
+    mock_response_data = {
+        'isValid': is_valid,
+        'validationResults': validation_results,
+        'errorCount': error_count,
+        'warningCount': warning_count,
+        'duplicateCount': 0,
+        'businessRuleResults': {},
+        'suggestions': [
+            {
+                'field': 'idleToDate',
+                'suggestion': 'Set date to 2025-12-31 or later'
+            }
+        ] if error_count > 0 else [],
+        'validationSummary': {
+            'overall': 'passed' if is_valid else 'failed',
+            'criticalErrors': error_count,
+            'warnings': warning_count
+        }
+    }
+    
+    response_serializer = ValidateDataResponseSerializer(data=mock_response_data)
     response_serializer.is_valid()
     return Response(response_serializer.data, status=status.HTTP_200_OK)
 

@@ -50,21 +50,21 @@ class GetIdleResourceListRequestSerializer(serializers.Serializer):
     GET /api/v1/idle-resources request parameters
     """
     page = serializers.IntegerField(default=1, min_value=1)
-    page_size = serializers.IntegerField(default=25, min_value=1, max_value=100)
-    sort_by = serializers.CharField(default='idle_from_date', required=False)
-    sort_order = serializers.ChoiceField(choices=['asc', 'desc'], default='desc', required=False)
+    pageSize = serializers.IntegerField(default=25, min_value=1, max_value=100)
+    sortBy = serializers.CharField(default='idleFrom', required=False)
+    sortOrder = serializers.ChoiceField(choices=['asc', 'desc'], default='desc', required=False)
     
     # Filters
-    department_id = serializers.UUIDField(required=False, allow_null=True)
-    idle_type = serializers.CharField(required=False, allow_null=True)
-    date_from = serializers.DateField(required=False, allow_null=True)
-    date_to = serializers.DateField(required=False, allow_null=True)
-    special_action = serializers.CharField(required=False, allow_null=True)
-    search_query = serializers.CharField(required=False, allow_null=True)
-    urgent_only = serializers.BooleanField(default=False, required=False)
+    departmentId = serializers.CharField(required=False, allow_null=True)
+    idleType = serializers.CharField(required=False, allow_null=True)
+    dateFrom = serializers.DateField(required=False, allow_null=True)
+    dateTo = serializers.DateField(required=False, allow_null=True)
+    specialAction = serializers.CharField(required=False, allow_null=True)
+    searchQuery = serializers.CharField(required=False, allow_null=True)
+    urgentOnly = serializers.BooleanField(default=False, required=False)
     
     # Column selection
-    include_columns = serializers.ListField(
+    includeColumns = serializers.ListField(
         child=serializers.CharField(),
         required=False,
         default=list
@@ -303,9 +303,243 @@ class GetMasterDataResponseSerializer(serializers.Serializer):
     GET /api/v1/master-data response
     """
     departments = MasterDataTypeSerializer(many=True, read_only=True, default=list)
-    job_ranks = MasterDataTypeSerializer(many=True, read_only=True, default=list)
+    jobRanks = MasterDataTypeSerializer(many=True, read_only=True, default=list)
     locations = MasterDataTypeSerializer(many=True, read_only=True, default=list)
-    idle_types = MasterDataTypeSerializer(many=True, read_only=True, default=list)
+    idleTypes = MasterDataTypeSerializer(many=True, read_only=True, default=list)
     languages = MasterDataTypeSerializer(many=True, read_only=True, default=list)
-    source_types = MasterDataTypeSerializer(many=True, read_only=True, default=list)
-    special_actions = MasterDataTypeSerializer(many=True, read_only=True, default=list)
+    sourceTypes = MasterDataTypeSerializer(many=True, read_only=True, default=list)
+    specialActions = MasterDataTypeSerializer(many=True, read_only=True, default=list)
+
+
+# Export/Import Serializers
+class ExportIdleResourcesRequestSerializer(serializers.Serializer):
+    """
+    POST /api/v1/idle-resources/export request body
+    """
+    format = serializers.ChoiceField(choices=['excel', 'csv'], default='excel')
+    filters = serializers.DictField(required=False, default=dict)
+    columns = serializers.ListField(
+        child=serializers.CharField(),
+        required=False,
+        default=list
+    )
+    sortBy = serializers.CharField(required=False, default='idleFromDate')
+    sortOrder = serializers.ChoiceField(choices=['asc', 'desc'], default='desc', required=False)
+    fileName = serializers.CharField(required=False, default='idle_resources_export')
+    includeMetadata = serializers.BooleanField(default=True, required=False)
+    asyncMode = serializers.BooleanField(default=False, required=False)
+
+
+class ExportIdleResourcesResponseSerializer(serializers.Serializer):
+    """
+    POST /api/v1/idle-resources/export response
+    """
+    exportId = serializers.CharField(read_only=True)
+    fileUrl = serializers.URLField(read_only=True)
+    fileName = serializers.CharField(read_only=True)
+    fileSize = serializers.IntegerField(read_only=True)
+    recordCount = serializers.IntegerField(read_only=True)
+    format = serializers.CharField(read_only=True)
+    status = serializers.CharField(read_only=True)
+    createdAt = serializers.DateTimeField(read_only=True)
+    expiresAt = serializers.DateTimeField(read_only=True)
+    downloadToken = serializers.CharField(read_only=True)
+
+
+class ImportIdleResourcesRequestSerializer(serializers.Serializer):
+    """
+    POST /api/v1/idle-resources/import request body (multipart/form-data)
+    """
+    file = serializers.FileField()
+    importMode = serializers.ChoiceField(
+        choices=['validate', 'import', 'update'],
+        default='validate'
+    )
+    duplicateHandling = serializers.ChoiceField(
+        choices=['skip', 'update', 'error'],
+        default='skip'
+    )
+    validateOnly = serializers.BooleanField(default=False, required=False)
+    columnMapping = serializers.DictField(required=False, default=dict)
+    rollbackOnError = serializers.BooleanField(default=True, required=False)
+    batchSize = serializers.IntegerField(default=100, min_value=1, max_value=1000)
+
+
+class ImportErrorReportSerializer(serializers.Serializer):
+    """
+    Individual error in import report
+    """
+    row = serializers.IntegerField(read_only=True)
+    field = serializers.CharField(read_only=True)
+    error = serializers.CharField(read_only=True)
+
+
+class ImportSummarySerializer(serializers.Serializer):
+    """
+    Import operation summary
+    """
+    created = serializers.IntegerField(read_only=True)
+    updated = serializers.IntegerField(read_only=True)
+    skipped = serializers.IntegerField(read_only=True)
+
+
+class ImportIdleResourcesResponseSerializer(serializers.Serializer):
+    """
+    POST /api/v1/idle-resources/import response
+    """
+    importId = serializers.CharField(read_only=True)
+    status = serializers.CharField(read_only=True)
+    totalRows = serializers.IntegerField(read_only=True)
+    validRows = serializers.IntegerField(read_only=True)
+    invalidRows = serializers.IntegerField(read_only=True)
+    processedRows = serializers.IntegerField(read_only=True)
+    duplicateRows = serializers.IntegerField(read_only=True)
+    errorReport = ImportErrorReportSerializer(many=True, read_only=True, default=list)
+    warningReport = serializers.ListField(
+        child=serializers.DictField(),
+        read_only=True,
+        default=list
+    )
+    importSummary = ImportSummarySerializer(read_only=True)
+    auditTrailId = serializers.CharField(read_only=True)
+
+
+# Advanced Search Serializers
+class AdvancedSearchFiltersSerializer(serializers.Serializer):
+    """
+    Filters for advanced search
+    """
+    departmentId = serializers.CharField(required=False, allow_null=True)
+    idleType = serializers.ListField(
+        child=serializers.CharField(),
+        required=False,
+        default=list
+    )
+    dateRange = serializers.DictField(required=False, default=dict)
+
+
+class AdvancedSearchRequestSerializer(serializers.Serializer):
+    """
+    POST /api/v1/idle-resources/search request body
+    """
+    query = serializers.CharField(required=False, default='')
+    filters = AdvancedSearchFiltersSerializer(required=False, default=dict)
+    facets = serializers.ListField(
+        child=serializers.CharField(),
+        required=False,
+        default=list
+    )
+    sortBy = serializers.CharField(required=False, default='updatedAt')
+    sortOrder = serializers.ChoiceField(choices=['asc', 'desc'], default='desc', required=False)
+    page = serializers.IntegerField(default=1, min_value=1)
+    pageSize = serializers.IntegerField(default=20, min_value=1, max_value=100)
+    includeCount = serializers.BooleanField(default=True, required=False)
+    includeAggregations = serializers.BooleanField(default=True, required=False)
+    searchMode = serializers.ChoiceField(
+        choices=['standard', 'advanced', 'fuzzy'],
+        default='standard'
+    )
+
+
+class SearchMetadataSerializer(serializers.Serializer):
+    """
+    Search operation metadata
+    """
+    query = serializers.CharField(read_only=True)
+    searchTime = serializers.IntegerField(read_only=True)
+
+
+class CacheInfoSerializer(serializers.Serializer):
+    """
+    Cache information for search results
+    """
+    hit = serializers.BooleanField(read_only=True)
+    ttl = serializers.IntegerField(read_only=True)
+
+
+class AdvancedSearchResponseSerializer(serializers.Serializer):
+    """
+    POST /api/v1/idle-resources/search response
+    """
+    results = serializers.ListField(
+        child=serializers.DictField(),
+        read_only=True,
+        default=list
+    )
+    totalCount = serializers.IntegerField(read_only=True)
+    pageInfo = PageInfoSerializer(read_only=True)
+    facets = serializers.DictField(read_only=True, default=dict)
+    aggregations = serializers.DictField(read_only=True, default=dict)
+    searchMetadata = SearchMetadataSerializer(read_only=True)
+    suggestedFilters = serializers.ListField(
+        child=serializers.DictField(),
+        read_only=True,
+        default=list
+    )
+    executionTime = serializers.IntegerField(read_only=True)
+    cacheInfo = CacheInfoSerializer(read_only=True)
+
+
+# Validation Serializers
+class ValidateDataRequestSerializer(serializers.Serializer):
+    """
+    POST /api/v1/idle-resources/validate request body
+    """
+    data = serializers.DictField()
+    validationType = serializers.ChoiceField(
+        choices=['basic', 'full', 'business'],
+        default='full'
+    )
+    context = serializers.ChoiceField(
+        choices=['create', 'update', 'import'],
+        default='create'
+    )
+    strictMode = serializers.BooleanField(default=False, required=False)
+    includeWarnings = serializers.BooleanField(default=True, required=False)
+    checkDuplicates = serializers.BooleanField(default=True, required=False)
+    businessRules = serializers.ListField(
+        child=serializers.CharField(),
+        required=False,
+        default=list
+    )
+
+
+class ValidationResultSerializer(serializers.Serializer):
+    """
+    Individual validation result
+    """
+    field = serializers.CharField(read_only=True)
+    type = serializers.CharField(read_only=True)
+    message = serializers.CharField(read_only=True)
+    code = serializers.CharField(read_only=True)
+
+
+class ValidationSuggestionSerializer(serializers.Serializer):
+    """
+    Validation suggestion
+    """
+    field = serializers.CharField(read_only=True)
+    suggestion = serializers.CharField(read_only=True)
+
+
+class ValidationSummarySerializer(serializers.Serializer):
+    """
+    Validation summary
+    """
+    overall = serializers.CharField(read_only=True)
+    criticalErrors = serializers.IntegerField(read_only=True)
+    warnings = serializers.IntegerField(read_only=True)
+
+
+class ValidateDataResponseSerializer(serializers.Serializer):
+    """
+    POST /api/v1/idle-resources/validate response
+    """
+    isValid = serializers.BooleanField(read_only=True)
+    validationResults = ValidationResultSerializer(many=True, read_only=True, default=list)
+    errorCount = serializers.IntegerField(read_only=True)
+    warningCount = serializers.IntegerField(read_only=True)
+    duplicateCount = serializers.IntegerField(read_only=True)
+    businessRuleResults = serializers.DictField(read_only=True, default=dict)
+    suggestions = ValidationSuggestionSerializer(many=True, read_only=True, default=list)
+    validationSummary = ValidationSummarySerializer(read_only=True)
