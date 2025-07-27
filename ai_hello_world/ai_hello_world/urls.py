@@ -25,7 +25,8 @@ urlpatterns = [
     
     # API v1 endpoints
     path('api/v1/auth/', include('authentication.urls')),
-    path('api/v1/', include('resource_management.urls')),
+    path('api/v1/', include('resource_management.urls')),  # Original endpoints
+    path('api/v1/', include('resource_management.urls_v1_spec')),  # Spec-compliant endpoints
     
     # Simple APIs (no authentication required)
     path('', include('simple_urls')),
