@@ -167,9 +167,8 @@ def get_idle_resource_list(request):
         'executionTime': 150
     }
     
-    response_serializer = GetIdleResourceListResponseSerializer(data=mock_response_data)
-    response_serializer.is_valid()
-    return Response(response_serializer.data, status=status.HTTP_200_OK)
+    # Return the response directly to ensure correct format
+    return Response(mock_response_data, status=status.HTTP_200_OK)
 
 
 @api_view(['GET'])
@@ -311,9 +310,8 @@ def create_idle_resource(request):
         'created_at': timezone.now().isoformat()
     }
     
-    response_serializer = CreateIdleResourceResponseSerializer(data=mock_response_data)
-    response_serializer.is_valid()
-    return Response(response_serializer.data, status=status.HTTP_201_CREATED)
+    # Return the response directly to ensure correct format
+    return Response(mock_response_data, status=status.HTTP_201_CREATED)
 
 
 @api_view(['PUT'])
