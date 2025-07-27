@@ -124,9 +124,9 @@ def api_schema_view(request):
     return response
 
 def swagger_ui_view(request):
-    """Render Swagger UI interface with embedded schema"""
+    """Render Swagger UI interface with embedded schema - NO FETCH REQUIRED"""
     
-    # Embedded schema to avoid CORS issues
+    # Complete embedded schema to avoid ANY network requests
     schema_json = '''{
         "openapi": "3.0.0",
         "info": {
@@ -402,23 +402,54 @@ def swagger_ui_view(request):
     <script src="https://unpkg.com/swagger-ui-dist@4.15.5/swagger-ui-standalone-preset.js"></script>
     <script>
         window.onload = function() {{
-            const spec = {schema_json};
-            const ui = SwaggerUIBundle({{
-                spec: spec,
-                dom_id: '#swagger-ui',
-                deepLinking: true,
-                presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
-                plugins: [SwaggerUIBundle.plugins.DownloadUrl],
-                layout: "StandaloneLayout",
-                tryItOutEnabled: true,
-                supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
-                onComplete: function() {{
-                    console.log("Swagger UI loaded successfully!");
-                }},
-                onFailure: function(error) {{
-                    console.error("Swagger UI failed to load:", error);
-                }}
-            }});
+            try {{
+                console.log("Initializing Swagger UI with embedded schema...");
+                const spec = {schema_json};
+                console.log("Spec loaded:", spec);
+                
+                const ui = SwaggerUIBundle({{
+                    spec: spec,
+                    dom_id: '#swagger-ui',
+                    deepLinking: true,
+                    presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
+                    plugins: [SwaggerUIBundle.plugins.DownloadUrl],
+                    layout: "StandaloneLayout",
+                    tryItOutEnabled: true,
+                    supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
+                    requestInterceptor: function(request) {{
+                        console.log("API Request:", request.url, request.method);
+                        return request;
+                    }},
+                    responseInterceptor: function(response) {{
+                        console.log("API Response:", response.status, response.url);
+                        return response;
+                    }},
+                    onComplete: function() {{
+                        console.log("✅ Swagger UI loaded successfully with embedded schema!");
+                    }},
+                    onFailure: function(error) {{
+                        console.error("❌ Swagger UI failed to load:", error);
+                        document.getElementById('swagger-ui').innerHTML = 
+                            '<div style="padding: 20px; color: red; font-family: monospace;">' +
+                            '<h3>Swagger UI Load Error</h3>' +
+                            '<p>' + error.message + '</p>' +
+                            '<pre>' + JSON.stringify(error, null, 2) + '</pre>' +
+                            '</div>';
+                    }}
+                }});
+                
+                window.swaggerUI = ui;
+                console.log("Swagger UI instance created");
+                
+            }} catch(error) {{
+                console.error("❌ Critical error initializing Swagger UI:", error);
+                document.getElementById('swagger-ui').innerHTML = 
+                    '<div style="padding: 20px; color: red; font-family: monospace;">' +
+                    '<h3>Critical Initialization Error</h3>' +
+                    '<p>' + error.message + '</p>' +
+                    '<p>Stack: ' + error.stack + '</p>' +
+                    '</div>';
+            }}
         }};
     </script>
 </body>

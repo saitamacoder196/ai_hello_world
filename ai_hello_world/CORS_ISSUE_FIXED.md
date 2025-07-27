@@ -147,4 +147,49 @@ Users can now:
 - ✅ **Execute real API calls** without CORS restrictions
 - ✅ **Access all endpoints** with proper documentation
 
+## 🔧 **Latest Fix Applied:**
+
+### **Enhanced JavaScript Error Handling**
+Added comprehensive error handling and debugging to the Swagger UI initialization:
+
+```javascript
+window.onload = function() {
+    try {
+        console.log("Initializing Swagger UI with embedded schema...");
+        const spec = {schema_json};
+        
+        const ui = SwaggerUIBundle({
+            spec: spec,  // Direct embedded schema - NO FETCH REQUIRED
+            requestInterceptor: function(request) {
+                console.log("API Request:", request.url, request.method);
+                return request;
+            },
+            responseInterceptor: function(response) {
+                console.log("API Response:", response.status, response.url);
+                return response;
+            },
+            onComplete: function() {
+                console.log("✅ Swagger UI loaded successfully!");
+            },
+            // ... error handling for any failures
+        });
+    } catch(error) {
+        // Comprehensive error display for debugging
+    }
+};
+```
+
+### **CORS Verification:**
+✅ **Confirmed working CORS headers:**
+- `access-control-allow-origin: http://localhost:8002`
+- `access-control-allow-credentials: true`
+- Proper preflight handling
+
+### **API Testing Results:**
+✅ **API endpoints responding correctly:**
+```bash
+curl "http://localhost:8002/api/v1/idle-resources?page=1&pageSize=2"
+# Returns: {"records":[...], "totalCount":100, "pageInfo":{...}}
+```
+
 **The Swagger UI is now production-ready and fully functional! 🚀**
