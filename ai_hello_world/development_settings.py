@@ -27,10 +27,7 @@ TEMPLATES = [
     },
 ]
 
-# Add CORS headers only (remove drf-spectacular temporarily)
-INSTALLED_APPS += [
-    'corsheaders',
-]
+# CORS already configured in base settings
 
 # CORS settings for API documentation
 CORS_ALLOW_ALL_ORIGINS = True
@@ -132,17 +129,7 @@ SPECTACULAR_SETTINGS = {
     }
 }
 
-# Disable CSRF for API development and add CORS
-MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',  # Disabled for API development
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+# CSRF disabled for API development (already configured above)
 
 # Enable debug toolbar if available
 try:
