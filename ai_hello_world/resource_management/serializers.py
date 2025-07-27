@@ -112,28 +112,28 @@ class CreateIdleResourceRequestSerializer(serializers.Serializer):
     """
     POST /api/v1/idle-resources request body
     """
-    employee_name = serializers.CharField(max_length=100)
-    employee_id = serializers.CharField(max_length=50)
-    department_id = serializers.UUIDField()
-    child_department_id = serializers.UUIDField(required=False, allow_null=True)
-    job_rank = serializers.CharField(max_length=50)
-    current_location = serializers.CharField(max_length=100)
-    expected_working_places = serializers.ListField(
+    employeeName = serializers.CharField(max_length=100)
+    employeeId = serializers.CharField(max_length=50)
+    departmentId = serializers.CharField(max_length=50)
+    childDepartmentId = serializers.CharField(max_length=50, required=False, allow_null=True)
+    jobRank = serializers.CharField(max_length=50)
+    currentLocation = serializers.CharField(max_length=100)
+    expectedWorkingPlaces = serializers.ListField(
         child=serializers.CharField(max_length=100),
         required=False,
         default=list
     )
-    idle_type = serializers.CharField(max_length=50)
-    idle_from_date = serializers.DateField()
-    idle_to_date = serializers.DateField()
-    japanese_level = serializers.CharField(max_length=20, required=False, allow_null=True)
-    english_level = serializers.CharField(max_length=20, required=False, allow_null=True)
-    source_type = serializers.CharField(max_length=20, required=False, allow_null=True)
-    sales_price = serializers.DecimalField(max_digits=12, decimal_places=2, required=False, allow_null=True)
-    special_action = serializers.CharField(max_length=100, required=False, allow_null=True)
-    change_dept_lending = serializers.CharField(max_length=50, required=False, allow_null=True)
-    skills_experience = serializers.CharField(required=False, allow_null=True)
-    progress_notes = serializers.CharField(required=False, allow_null=True)
+    idleType = serializers.CharField(max_length=50)
+    idleFromDate = serializers.DateField()
+    idleToDate = serializers.DateField()
+    japaneseLevel = serializers.CharField(max_length=20, required=False, allow_null=True)
+    englishLevel = serializers.CharField(max_length=20, required=False, allow_null=True)
+    sourceType = serializers.CharField(max_length=20, required=False, allow_null=True)
+    salesPrice = serializers.DecimalField(max_digits=12, decimal_places=2, required=False, allow_null=True)
+    specialAction = serializers.CharField(max_length=100, required=False, allow_null=True)
+    changeDeptLending = serializers.CharField(max_length=50, required=False, allow_null=True)
+    skillsExperience = serializers.CharField(required=False, allow_null=True)
+    progressNotes = serializers.CharField(required=False, allow_null=True)
     pic = serializers.CharField(max_length=100, required=False, allow_null=True)
 
 

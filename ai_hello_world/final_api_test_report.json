@@ -1,0 +1,837 @@
+{
+  "test_session": {
+    "timestamp": "2025-07-27T18:45:55.552540",
+    "base_url": "https://7v38qrq1-8000.asse.devtunnels.ms",
+    "total_tests": 13,
+    "passed_tests": 11,
+    "failed_tests": 2,
+    "success_rate": 84.61538461538461
+  },
+  "test_results": [
+    {
+      "test_number": 1,
+      "test_name": "Health Check",
+      "timestamp": "2025-07-27T18:45:46.131521",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/health/",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/health/",
+        "headers": {
+          "User-Agent": "Final-API-Test/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null,
+        "params": null
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Sun, 27 Jul 2025 11:45:45 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "161",
+          "Connection": "keep-alive",
+          "Allow": "OPTIONS, GET",
+          "Cache-Control": "no-cache,no-store",
+          "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+          "Pragma": "no-cache",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZueXvFDD5-2zspFhjFn2X7mYw8PqFQuva0KQx2bu4P9BwGi1uRUe5KAlXjR5OPBUHfBI1hufXMpSRQ-MMfGluUng6NsNw127nONUWUAyIfta-HMxBtaYNV7copvsT5SlhVExzMJYTEBk8FWe-JACAPkFtTrjL-vPHVGsiqGIEP5s4rOzd9B8Jnnk4DCS07FHNYh6NKR3ILCYdGnuedXnCqdxzsCj4KZwJzcoFwyR-Wg-vTMW3xF_6L2n2tdRcTmNHQJFSAyXdYHuGbC-ioWN2SqSROSFKfJJwlK4xG8UG4XXLPtPNMSlk4XJSzuH6X_MDgT839Jl7aNWP-Zd6qGV5g3TqmnTinXdlq_E2FGGDVn_YVN-4PRtqUTLPCiUyRC6EJ-Zyjy_zdV9RcKwptt6QkcdwyXquktsYF77KR53ZuTR1jUr0KRXcMqYwmQ_NClkgrWhcWBsTHxjRYwssfwWooRgQjQrRKvFxx9V4BwdFS_lGRugjnVys3rcMjX-q1WOdOE3Ea0YmCbfYt9PuaMIfRFVrmILsNZ-TZ3IzdQbykOvTPi9_SFjALPbLTE0vrHunclMJ4wqqdqlDxKTR5Xw8puNKX7LrGLDex9MRJnQlslbngKSkFEhpB0_QG0_lsWuMzu5Bn1cjE7A4-D5_ZDhmnj4_wPb4p18mc7a794-B6wVrJZI0bTN_yAKOnX3ghfz2Jk6OYd7YIrgGdIf5PNrThF0MJCagPU9yamAgSJHRs9PTH3L_9x8MCP8LY3wcNP_kbMguIbyw-unlnIHsuLsdHSsxRorDse0x5NiQTYI8mzFTwbVmo3exbUTpq0u7WCtmHE0gWNSSzVuDFuNMhEPj9V39UCq8837c7IjSG4afOKiuy3iA_duKUzFKgmIaDUQVub3hUVTAcXmpAl01peX5dx; path=/; secure; samesite=none; Partitioned",
+          "Vary": "Accept, Cookie",
+          "X-Content-Type-Options": "nosniff, nosniff",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1499, ClientConnectionsPerPort:996",
+          "RateLimit-Reset": "HttpRequestRatePerPort:56s",
+          "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
+          "x-ms-ratelimit-limit": "1500",
+          "x-ms-ratelimit-remaining": "1495",
+          "x-ms-ratelimit-used": "5",
+          "x-ms-ratelimit-reset": "0",
+          "X-Frame-Options": "DENY",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin",
+          "X-Robots-Tag": "noindex, nofollow",
+          "VsSaaS-Request-Id": "3d501ecb-6bf9-4676-856a-637395ca8189",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+          "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
+        },
+        "body": {
+          "message": "AI Hello World!",
+          "welcome": "Chào mừng bạn đến với Django REST Framework API!",
+          "timestamp": "2025-07-27T11:45:45.081513Z",
+          "status": "success"
+        }
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 2,
+      "test_name": "Auth Health Check",
+      "timestamp": "2025-07-27T18:45:47.193991",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/auth/health",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/health",
+        "headers": {
+          "User-Agent": "Final-API-Test/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null,
+        "params": null
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Sun, 27 Jul 2025 11:45:46 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "85",
+          "Connection": "keep-alive",
+          "Allow": "OPTIONS, GET",
+          "Cache-Control": "no-cache,no-store",
+          "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+          "Pragma": "no-cache",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZuYmJJcYlNaHaQR7DjPjRzRRWg6zI12PnVsWXgotB8rFBNpKvH7K2gqun9p2R1QxmGfqAGwWTaRobPAtIX2SrlDGmKVEx_CmnYekWJzSVNtPD6IRGCI3RpKS-8EjwW9ZdY7cgFdrsfGw9fyxaEmlClv1bbRZwtmTIQyazl0utqZqyB1NlFZ1GbDUacHESeWijlD-XzfAOex0hgwHZKDHgQeltEKkDqw5fqaSajlSZFHtkNng1fPPdq2UWZNmhSHVu5SYrILahgqCEBooUBu3enAjdEg7dREzoY2R2yOTBwQ5_m5n3BLkBtloPeXGxTW8q10Na7ej_TKIc32m0ugnbfxxe_Xm-kpNFley6pSbQMME790n9sfHyda8fuUGoseg0r15mbQE_27HoF7nRHT7MS1cXagkqpzRlD2nBJeXp8f16zQVoGOzPEM0SXWgWwwJZgef-XZWswGEKEkdegjrJathZxrIkfPYhmm23gyRsLMQdHbd0V-CUs83jxVZ2KRGIAbhuQtji7PAgjGYC_jHx0U-ukzgrggfLjM7NFD27YmEEXFOV5s12bDzcXAXxN3LAPQxdJjJ7F1TWCEUdNKzAl5rH9-G9uZD8R-6B6pExGgRt7ImIo2lZi4hK7HbCSzM4l_vUaJFMvXHeph7gu37CyM8eIQGMYKs04GlvJAGYbwiMUovufbpD5LXAg8mOEcZKGX0xqYE2MRVk43bUBzmdi2k4mopSrwaWzazekgAlawDA-DV85a5GNe4-hbdnLaMoXT85BWnvezBomgeTObZAdFjv5gUJjAJ31PibPgS_nTYRZyzmCbnxOxgvq2J85jZG9FR_kY-_fsowfz5zU1S8rAk8kVU0H3lxlVbwcwpg3a6gWsJpOm8w1ODtnqKx3o8QwyRzg1InCwYyEe35oHVzbN; path=/; secure; samesite=none; Partitioned",
+          "Vary": "Accept, Cookie",
+          "X-Content-Type-Options": "nosniff, nosniff",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1499",
+          "RateLimit-Reset": "HttpRequestRatePerPort:52s",
+          "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
+          "x-ms-ratelimit-limit": "1500",
+          "x-ms-ratelimit-remaining": "1494",
+          "x-ms-ratelimit-used": "6",
+          "x-ms-ratelimit-reset": "0",
+          "X-Frame-Options": "DENY",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin",
+          "X-Robots-Tag": "noindex, nofollow",
+          "VsSaaS-Request-Id": "32b6ac3c-ed55-4592-b8b1-6a8b0e7e655c",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+          "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
+        },
+        "body": {
+          "status": "healthy",
+          "timestamp": "2025-07-27T11:45:46.023389+00:00",
+          "version": "1.0.0"
+        }
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 3,
+      "test_name": "Get Idle Resource List (Original)",
+      "timestamp": "2025-07-27T18:45:47.823047",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/idle-resources",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources",
+        "headers": {
+          "User-Agent": "Final-API-Test/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null,
+        "params": {
+          "page": 1,
+          "page_size": 5
+        }
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Sun, 27 Jul 2025 11:45:46 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "19",
+          "Connection": "keep-alive",
+          "Allow": "OPTIONS, POST, GET",
+          "Cache-Control": "no-cache,no-store",
+          "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+          "Pragma": "no-cache",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZvU1Z-QJFcuS-uUNOTAJrg4eQsbSlYyWlPACO5x2i8x8pHEYsqL5WQBdA87YLc3ZvFfyrJUfxEh_2KHyN5xMCncyU3FwH66cGMe75-WhhfW7CC8srGmVOOnRGQ69RogQ1PDqeM5E_fmmDstYlKl1slCpkqVEtlEdjwdEKyACZhKeuaXN1SrVeckIjDmN_bjg1Qj1MEOirNrsQpSAvZYOQ0RJD0GceHj6-yaY3tCz9pOUhCQGjSGuZ5te0Uwc8g4o74IXe0D3hI_AZX_H_5CZZ3RUDdsnZe7IMzY07TL87CRBFaAjX5P1iTiNuwN3yU0WXRUCwTWOTJ-2vKia4h3eDLdjMbV-9Wvowl0Enwpzy5l-AIlLeeZexcT6M8zScCdPlNrGu5nk905JWMzel3IOrOWYiEQV3Gt3UShYX0cqgPAyAmoSw7k97Vl0cNLwQWf-BntA1Bv04RbnKzPQCHWWtTvYiKNYqjr3pWsEFLD4VhlTNCJpEtoZRDHMgTn0ryEpuOwCBILTcS6hMRLmgTtdO78yWBv14AeYjO38emn1lFxMc8pUjHjFfmPja45rrp7bVtGEHd9rRIFBxC2Sju4iM6MZTigfxLSRezhn3sCm6sW_eQLl2tTkr8kWnVwjm6W398XqFL7dEbe2ZOeVHQFwC7z6hkDyoE9eAW7Ka6C_fQDvmBqPafLWCCgVkEtL-qEvAFAJ5sgtRxP3g7Zvf1rvLcDg7jioh1wDrpLBjWo-q6ij7NcKN_oZnHxfhDgxrQJlKdtKy2ZSL6evbPtEPu35Jc5dGH1Koh8KV0Ua9Ngo_5MI_fWlrabe309UtdF-m3J8cn1u1QZjzgQeMMR2-g4wSpTAQ3v-9TmYTNQIIP5-yGN3iNRbmbZNqLl0-CDXD9mvoSFXUyMIeQyC4CTdJCzTLqh; path=/; secure; samesite=none; Partitioned",
+          "Vary": "Accept, Cookie",
+          "X-Content-Type-Options": "nosniff, nosniff",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1499, ClientConnectionsPerPort:996",
+          "RateLimit-Reset": "HttpRequestRatePerPort:33s",
+          "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
+          "x-ms-ratelimit-limit": "1500",
+          "x-ms-ratelimit-remaining": "1495",
+          "x-ms-ratelimit-used": "5",
+          "x-ms-ratelimit-reset": "0",
+          "X-Frame-Options": "DENY",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin",
+          "X-Robots-Tag": "noindex, nofollow",
+          "VsSaaS-Request-Id": "4e92ff1f-0ca6-4241-9775-51eaa4d62e8e",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+          "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
+        },
+        "body": {
+          "aggregations": {}
+        }
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 4,
+      "test_name": "Get Idle Resource List (New Format)",
+      "timestamp": "2025-07-27T18:45:48.868127",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/idle-resources",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources",
+        "headers": {
+          "User-Agent": "Final-API-Test/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null,
+        "params": {
+          "page": 1,
+          "pageSize": 5,
+          "sortBy": "idleFrom",
+          "sortOrder": "desc",
+          "departmentId": "DEPT001"
+        }
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Sun, 27 Jul 2025 11:45:47 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "19",
+          "Connection": "keep-alive",
+          "Allow": "OPTIONS, POST, GET",
+          "Cache-Control": "no-cache,no-store",
+          "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+          "Pragma": "no-cache",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZshJQUZi16I8XZwJy9lO84O55ZQp6NM5StU48Zf40XxBPw99UbjOX2OpnXVxNZNsjxZLF3HcWByH21s15fhZfDi3ve2vKsqwKVgBWkbAGRoxWS2TqStDoY2R7oPNVL0kQIKGzJbdcRf1NXqJ8ljnXL7IJXazppoNJRfJKi50q2WqrYHQyh3yIiO__9cPxWiknIA8Mt9nbY1828sA_EUMcjl4LmRmvlMGmOOgl2RSX647pKkpd2dQV-nOlkqLFlIihcKifnzoGSTqIO1MQ2w1B6saOJI7KqhoYrKazs4DA7AMqTYI-9B2b13Ekg-TeE09kDI1wEOWYQ4AlutIBdSXQNiN6NKEHopelNO7GKztymaZ5JvXcvnw9VqaDwPRRTheBWhSeBROjFEFr5pbR411lBwedWfB6QZCGvDxaqjs-sqjFrxUJNknu1xR3gAt2630cekTJJZxFLjFz697l6oDys1Xejvcms2yQvdV2hf68JPi_HAPN9IWYy-q4UdGFkm5XDyZiySB7_t9OrxBRvXYWets1TfqfJMOXuWhrz7LYWPDnbtTcWM5D30HwTKLVNya_7rch9-7gmB1xmgHIncRzUsfT5vy09noKMK-i87FXNFkZFmao9lI3wE3NZTkUwT4WxgeO_L5ONabz-V6-ao600oOXTeNLwh0l4piXmPwIO_jJg5J7RWQDqaEOsqrqBRBxvQw1RKVj58Z3IpqQ8D8LNSz6KEBOghlj97Ay4Y3r3lXWOOWtcNhq7NKn2olh_UFpvNj3gVCfdXOk34akq5dghZQqspMGE7aaUSH3iC-YVeJTC0NL48WF6WPFhg37Z_fiyWhvtOJDJX5scQO9ufN6VinlMlT1ZXOkv4-AierCplb8TUuq3Xc1g7MgTKr3NELPY8lKXV6eKov_A9u2j2Vt5u; path=/; secure; samesite=none; Partitioned",
+          "Vary": "Accept, Cookie",
+          "X-Content-Type-Options": "nosniff, nosniff",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1499",
+          "RateLimit-Reset": "HttpRequestRatePerPort:24s",
+          "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
+          "x-ms-ratelimit-limit": "1500",
+          "x-ms-ratelimit-remaining": "1494",
+          "x-ms-ratelimit-used": "6",
+          "x-ms-ratelimit-reset": "0",
+          "X-Frame-Options": "DENY",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin",
+          "X-Robots-Tag": "noindex, nofollow",
+          "VsSaaS-Request-Id": "d3014d15-5a96-4155-bdd1-836faebc23e8",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+          "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
+        },
+        "body": {
+          "aggregations": {}
+        }
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 5,
+      "test_name": "Create Idle Resource (Old Format)",
+      "timestamp": "2025-07-27T18:45:49.386727",
+      "request": {
+        "method": "POST",
+        "endpoint": "/api/v1/idle-resources",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources",
+        "headers": {
+          "User-Agent": "Final-API-Test/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "employee_name": "Test Employee",
+          "employee_id": "EMP001",
+          "department_id": "DEPT001",
+          "job_rank": "Senior",
+          "current_location": "Hanoi",
+          "idle_type": "Bench",
+          "idle_from_date": "2025-01-01",
+          "idle_to_date": "2025-12-31"
+        },
+        "params": null
+      },
+      "response": {
+        "status_code": 400,
+        "headers": {
+          "Date": "Sun, 27 Jul 2025 11:45:48 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "89",
+          "Connection": "keep-alive",
+          "Allow": "OPTIONS, POST, GET",
+          "Cache-Control": "no-cache,no-store",
+          "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+          "Pragma": "no-cache",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZuaxMyanQcz2HrVCyj0wfDd1RHeMpZdsrjOR2vuCTY8N04ElZSMmFXa-ORU4lP0qdweaTiQGnejtwteLVhYV0VsZLjvajaO0ViNqd2NUDbKEAOB2nV0BvYgY70iCmE26ZNVqa29U6JF3Ocv_oGwdeVUnKvsZZE1xphBv7HW6BAjY8Ei_eX7PPpKAWCywElJ742K37bHzmpyK4AK_eUNSkZwQRJ1TPj69Nnh9qU0uD1DDoeDMQtY42H_5INpNTVif7NIcFNhO9VyHivVFxux3ZcCS-Fj5nRWEf5nFcjG3qp9MuqvQ720CLc2U-4Vhw92cQbyMNqKUr-oGnhqLSgjG5dNcxDZKkx7VUxXGK71iLAJoZrgaeg4sKs3FgVN0C8Ptrt5rtSPSFlTZx_53Ay2co23NM-SQtbToGZHttQNrZDPYc_fp48JzvPcFvNfXkThoP0eSbnqo31l0yIHh6byrjG7zjyo4BXEcfQNCn-IyHrjNpES1mLLPft3WeHtOJI0kcjaEnmlIfzpFHJymugfysZYtOEzP6-Nv1f4zYygqZ2Duv09OrlmBQPvnm4ahslsEH47A0sSjZmxC9TUu_WkYeTHSYW6Ll2KnxZSoyLJ01nhJhH4H3_-9rSK-96F3v6NlnSIz4xI1BYIg-Vp1eDKY2IHnKNEOFqENfocokh70g8LO96b3NIKyrwxlCYDxoRPOpNNTCmZN2rBHKORp700YyHZXBFCE92DPp5W0D92HhIboO8rQLMKBzKGUqO_LLqVGfL2pI0Um_wWV8Yw8LeuB37LRR13NM16WxuWPm84MT9PpSpfwOBCF45vLVJB6FWWTjdasqqbasAVW0EdFAeNqohMyZ8pnkDAF1qdVmCqfnh_QbVwQbquOr6xT9jXTy8NJqlblRjCPQicFiCbtx5dgbj6; path=/; secure; samesite=none; Partitioned",
+          "Vary": "Accept, Cookie",
+          "X-Content-Type-Options": "nosniff, nosniff",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1498, ClientConnectionsPerPort:998",
+          "RateLimit-Reset": "HttpRequestRatePerPort:53s",
+          "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
+          "x-ms-ratelimit-limit": "1500",
+          "x-ms-ratelimit-remaining": "1495",
+          "x-ms-ratelimit-used": "5",
+          "x-ms-ratelimit-reset": "0",
+          "X-Frame-Options": "DENY",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin",
+          "X-Robots-Tag": "noindex, nofollow",
+          "VsSaaS-Request-Id": "34f18656-8a30-4571-8a19-a49de7df46f6",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+          "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
+        },
+        "body": {
+          "error": "Invalid request payload",
+          "details": {
+            "department_id": [
+              "Must be a valid UUID."
+            ]
+          }
+        }
+      },
+      "error": null,
+      "success": false
+    },
+    {
+      "test_number": 6,
+      "test_name": "Create Idle Resource (New Format)",
+      "timestamp": "2025-07-27T18:45:50.480549",
+      "request": {
+        "method": "POST",
+        "endpoint": "/api/v1/idle-resources",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources",
+        "headers": {
+          "User-Agent": "Final-API-Test/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "employeeName": "Nguyen Van A",
+          "employeeId": "EMP001",
+          "departmentId": "DEPT001",
+          "jobRank": "Senior",
+          "currentLocation": "Hanoi",
+          "idleType": "Bench",
+          "idleFromDate": "2025-01-01",
+          "idleToDate": "2025-12-31",
+          "japaneseLevel": "N2",
+          "englishLevel": "Intermediate",
+          "sourceType": "FJPer",
+          "salesPrice": 500000,
+          "specialAction": "Training"
+        },
+        "params": null
+      },
+      "response": {
+        "status_code": 400,
+        "headers": {
+          "Date": "Sun, 27 Jul 2025 11:45:49 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "391",
+          "Connection": "keep-alive",
+          "Allow": "OPTIONS, POST, GET",
+          "Cache-Control": "no-cache,no-store",
+          "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+          "Pragma": "no-cache",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZuiHQY-Vympe5I-BxIAEyuv8Xw-2FfsB6AxR2jbyURjRVe6K3CbxVSn4IY5drWhpRMhMV5RjcLN3yubQjJueP8Zq4iGwwY_nbB_3jtuq6gBucNWVhibzxAk6ioiApRN7QKiJEW3LLF521rx_jGXrN4hR1VuzDVPeesi_b6vmVix8J8E7gKKdQckA769w_3oQ2VetvmN-uKzTuP11totf234F-yOObmtGaMeSKNGP7uRC-vUvdvqlYPzz0KhUk1D-o14Pxip-IZrCEAx9zNNwuk84Nfr6QSbhIBjh7HCJHICUa54aErcFupCVYPDM5rwRvlyaoRiBZ6H1Sxhl0Ij9GBrOZ7tRYwaWNGAKx4THZtXWXRpBlm9JfG6Cq58XyThbG56Zpn-LZ700VFrL8tCgPkCk_dccvTxS4VHwrGUftGKI4MFxo2WN4h5l83psY-5lz_oirVtZ1s9AO4y6HP3fcAb8O6PWo0gGhScrka6EzsO4fxwCjkCwh-FfdZnj2gR2gn4EaHQWCG-PqLbkCHLaPS2a4Dotn30T5uAEmzvQK26iYGJwA-LU97z36fVgI2WujPSoEG3HJ6N5m01mCvfpfl4urpfvxAMjP33lko0Hg4cSQsNA0CKb3vpXeDlM-ZBoxdsYntSZYbTKzi4gG3PAtkq2TrSI8wdAPKY4XkGOvQjNa12w2Y6nbk6-MIuuYgDWGMFJhCFbkc4ezGibAlJLQLaEy9Rh-SeFZQrHiabKMxJpPnxKT8jJLjKaIXIisBlqcZ1DeGyP82R-UIqZv1ofTYrypsSoGgmAU-Jft4EZsiDBLop-VJhhO-5sqoF5zAo2wlRgO9Bs_ziYOB3kKU8NWor5ipb4D3Iwmh2a6sDQP1CkIh78fPLiDRKnHD3Gjdgxblb_68_KBF-P-6FWQminU4v; path=/; secure; samesite=none; Partitioned",
+          "Vary": "Accept, Cookie",
+          "X-Content-Type-Options": "nosniff, nosniff",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1499",
+          "RateLimit-Reset": "HttpRequestRatePerPort:50s",
+          "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
+          "x-ms-ratelimit-limit": "1500",
+          "x-ms-ratelimit-remaining": "1494",
+          "x-ms-ratelimit-used": "6",
+          "x-ms-ratelimit-reset": "0",
+          "X-Frame-Options": "DENY",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin",
+          "X-Robots-Tag": "noindex, nofollow",
+          "VsSaaS-Request-Id": "11708802-b7c6-4f42-8225-c45cbb1702ec",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+          "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
+        },
+        "body": {
+          "error": "Invalid request payload",
+          "details": {
+            "employee_name": [
+              "This field is required."
+            ],
+            "employee_id": [
+              "This field is required."
+            ],
+            "department_id": [
+              "This field is required."
+            ],
+            "job_rank": [
+              "This field is required."
+            ],
+            "current_location": [
+              "This field is required."
+            ],
+            "idle_type": [
+              "This field is required."
+            ],
+            "idle_from_date": [
+              "This field is required."
+            ],
+            "idle_to_date": [
+              "This field is required."
+            ]
+          }
+        }
+      },
+      "error": null,
+      "success": false
+    },
+    {
+      "test_number": 7,
+      "test_name": "Export Idle Resources",
+      "timestamp": "2025-07-27T18:45:51.102664",
+      "request": {
+        "method": "POST",
+        "endpoint": "/api/v1/idle-resources/export",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources/export",
+        "headers": {
+          "User-Agent": "Final-API-Test/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "format": "excel",
+          "filters": {
+            "departmentId": "DEPT001"
+          },
+          "columns": [
+            "employeeName",
+            "employeeId"
+          ],
+          "fileName": "test_export"
+        },
+        "params": null
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Sun, 27 Jul 2025 11:45:50 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "2",
+          "Connection": "keep-alive",
+          "Allow": "OPTIONS, POST",
+          "Cache-Control": "no-cache,no-store",
+          "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+          "Pragma": "no-cache",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZsXQ4QBZNtHn_8794rhQU1yhTIRif-eq-8kSi2AKLAuT45kexJfD8eKsOaFhbuN0NevTyEfWmc7X0jia2KokCByZ4-GGBftnDaVry5EY9OYHrAy2ZrT5NkyiztAxlZp0OoEj3I4ZN8Ku-bKKPi-IAUDe8z2cWNq4dQ5mAd92_Hs40r-Qyv4I5eXxH_KtZqpYbppGc87B4CMXOfRvsJ7z54E6yduTZb9UkHMGAxJ3pDYcsHaZcXhg-4Ln66qePo4idcjjseVeodDQKTM_IDLqurb99ibkQn32ss6diwgLr1yaWS-s8iGYT7dUJKnsqJEPUTj1jDy-9pPIL60VVSlkXmOmxbnUgihma6yKoPZn94b0-LqhbYS5AEc3rvHp8EZvMa8K12ynsHW2OkleAa2mU78He13Yu2p8ooY9byi1TB9-HJK1IjXqKpnwEejRBctYCcD5ypdGcTuHEzQssk3tTcew3YqGPxrE-AnYC27_useJrXrpg57klPtTInaU6IjSxLUdxeBAjBgPHlVUzCjEvZbXMBd0P0V_xjeTP3erd2Yz-qdx-hY31YMJ2ojRrUIThvEd6FkBH3gwwlNbu9qrUYWxtVVs0IKDQtwaoS15d3FnxOo0L5ZcHjnOTG4fiKfFg2IXnFkqZHqvQ1t5mCEznKRsLxfgB2wch_TdEkdm7-ojzTLYLQo5MGzrdJoqSapLloQGCZSjhXH8HTTasHiPYjxCF45Qo7_5akBA1F-rfprCOhO_27KOQnefcS-C1aVnQwrZ5j7Ls-zPz7ssw5B4JWG9DVczfpj0un0qOKvFiHsQlXX2jzlYkbH2jp0UdJCDoZoJcZgQ6sbmi7u11rs5eHmYNAL8ioKXq3dXoIZonZhbTF9n62eaNRt9do8qk6Fx2Qkm0tBc0nBl9H2sXIW9KRG; path=/; secure; samesite=none; Partitioned",
+          "Vary": "Accept, Cookie",
+          "X-Content-Type-Options": "nosniff, nosniff",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1499, ClientConnectionsPerPort:996",
+          "RateLimit-Reset": "HttpRequestRatePerPort:40s",
+          "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
+          "x-ms-ratelimit-limit": "1500",
+          "x-ms-ratelimit-remaining": "1495",
+          "x-ms-ratelimit-used": "5",
+          "x-ms-ratelimit-reset": "0",
+          "X-Frame-Options": "DENY",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin",
+          "X-Robots-Tag": "noindex, nofollow",
+          "VsSaaS-Request-Id": "232d4a3b-1494-4ddf-b333-3200f8a4434d",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+          "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
+        },
+        "body": {}
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 8,
+      "test_name": "Advanced Search",
+      "timestamp": "2025-07-27T18:45:51.990777",
+      "request": {
+        "method": "POST",
+        "endpoint": "/api/v1/idle-resources/search",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources/search",
+        "headers": {
+          "User-Agent": "Final-API-Test/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "query": "Java developer",
+          "page": 1,
+          "pageSize": 10
+        },
+        "params": null
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Sun, 27 Jul 2025 11:45:50 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "66",
+          "Connection": "keep-alive",
+          "Allow": "OPTIONS, POST",
+          "Cache-Control": "no-cache,no-store",
+          "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+          "Pragma": "no-cache",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZu1Uqr1QQnIMH0bSCj0Jd6LhsYrHFnoQrNaCMAW2xc2zwofuQNUSUtbvjPLjmIbAp0mJYrMcMHMlo-VvlJJlLpOWdnGcs1RjQTcR4vWWB1k3m8HV25-26jKHtnYQSrCmPTiBRkDOnNQdQNIInCSGf1kEGV4wPjcmmIMSfb7KevNOO5YAihjbPseA0iYSIx6nKktx7DHe8IsFG0ewmu0Us_f60IQ18XwJtRnytyxUOnbF70j-FLwem42GVFBLsU0ZN-Kkc0qowSJBG4UAnDt_8kHMtOz-H84Cg4KwkJoywhjwOu6XVja_BVd0mt2NSuHF9gOj9GpbKXdlNQq85JjTp_-PFrJgj6B-YRrXDQ7tLDuOAGWLQ2Ikx49a_XlpGBA4fGiLJznhMP7R3mqwIcKjOwuEmZmq78XoixqvCOf9RPKD-H9PvWtB0B0QieH5fdJDzMlkYQHhT5c2l_Z-PIfxAo3MEBokJmGflZM6CQ2msczgVmE4cbOe27mpdCSyrzCMYUPgNwL6wOALt9VEKeu4QXrCq5qys5u2IuYU6nexyGp655zuwkwBTIeobKsNRudOge9Z05o53Uavny8mtYJHjjA1xLmvWVRMelrGtYlULXGU7_2ujNwUFwyDjvXuIikDMDxX8WsJsBPV8YPFLpKOK3CLp4ozdx6LzkcTRxeXdaQPweLMtzp-zxpCnpGeloG3w3ia13cNeIQXSQdGyBHhN3R-jGWyf30sMbSG2EqjdkLGuo5o7f0KtcKDZWJhqxqzQtbX1Gu2V-ZLNHXTVL8tyRVkvnKBSys1NJr3pDpW_qD1hzOm92emoKRUcSyKniRt7_ZWVMMOQAL0CkmFvRTL_q1XJPulgiPDQxurIEoWwlV4KTUnbr92bwjYKoDQOSONrYNoiTPM9H_Jgf58PSXpyju; path=/; secure; samesite=none; Partitioned",
+          "Vary": "Accept, Cookie",
+          "X-Content-Type-Options": "nosniff, nosniff",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1497, ClientConnectionsPerPort:998",
+          "RateLimit-Reset": "HttpRequestRatePerPort:51s",
+          "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
+          "x-ms-ratelimit-limit": "1500",
+          "x-ms-ratelimit-remaining": "1495",
+          "x-ms-ratelimit-used": "5",
+          "x-ms-ratelimit-reset": "0",
+          "X-Frame-Options": "DENY",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin",
+          "X-Robots-Tag": "noindex, nofollow",
+          "VsSaaS-Request-Id": "675b13ef-db22-4ce3-8e0c-71631bd0b82f",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+          "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
+        },
+        "body": {
+          "results": [],
+          "facets": {},
+          "aggregations": {},
+          "suggestedFilters": []
+        }
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 9,
+      "test_name": "Data Validation (Valid)",
+      "timestamp": "2025-07-27T18:45:52.622420",
+      "request": {
+        "method": "POST",
+        "endpoint": "/api/v1/idle-resources/validate",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources/validate",
+        "headers": {
+          "User-Agent": "Final-API-Test/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "data": {
+            "employeeName": "Valid Employee",
+            "idleFromDate": "2025-01-01",
+            "idleToDate": "2025-12-31"
+          },
+          "validationType": "full"
+        },
+        "params": null
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Sun, 27 Jul 2025 11:45:51 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "66",
+          "Connection": "keep-alive",
+          "Allow": "OPTIONS, POST",
+          "Cache-Control": "no-cache,no-store",
+          "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+          "Pragma": "no-cache",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZv4R69IjAB8GoAEtb8mTGrlDJg_jCgyQO_BCTdT2_SwnThor8XwUAmpBE8tc7H4XrUUp_6eRjROLOBMJdXFAP0rw9Ba9V2oWBH4b4qV8Icb45F_19vyLheyhg3CFeYkhoWjxiRJ3z0ig_rIxypjTiTmDK-tuR4U0C2aPumjZQonzPwU0_SULgfMxi-yEaU6qrnW_VpORAs-RK3BDbSNi_Jfh6HQaDmoqAbwP0sH5_ECGAQwAYhOqmcndyx6u_Afx3Zdnv-vKoAsqvjf8qtPDCUjEqApx7vP6LgCVAmRTWTDVYhcnFhzy2ayxXO8M8wwkB_n9GfT8iDr954jDxHwOC0yHRn53k5ADGL20nN3QA6_5HjutRM8rE-FtriJcgAPSpLWBLGlNwq3vLKrnuw7QmqMgPfMwDAZT6gYKiESlGe6dxdu8c2QvFCeXasikeP2EqqZa77QmnVh6qOPr4rAgRQhENz8y5uW1TvrcOD0Rf94ba3dioGuWw2GbkAPB64zQBfQuSRbeqeafBODWtv5DCwo54-cLtNo0jcLBOB77S5fXJ_98H82xbBAyE8YFrNG2xpFmLuv7eCkj206O9GiWmNwpmFukVm95tmLw_mZ8P0jL6hyjLNIQqYzAFukeKrkRMUaIX7IeBU8HJYtuWwS2L8y9pBpKKa5c5LITCzOfVYuJopwYteaFW0GXRUDkoEhpKnp9NhlfqwJ40xv2rZy3yfApVVnJbs82BNW0_EYcrjzLpSvwJMeyBh7G67554H7dMWJHjwRDim7U0iDgkaU8xMdB4u5uRKUmtp4mSH-jme86OxKW-JoQKm8B11QI9GVbkHBwtWMKyyKro1igwyXXBY1w7IF3-Zdo7HOFDuideeYq6vHkB2Ob0LaksliDTKXPbn-FPZr2ihy3x0N9yogMYPO; path=/; secure; samesite=none; Partitioned",
+          "Vary": "Accept, Cookie",
+          "X-Content-Type-Options": "nosniff, nosniff",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1499, ClientConnectionsPerPort:996",
+          "RateLimit-Reset": "HttpRequestRatePerPort:7s",
+          "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
+          "x-ms-ratelimit-limit": "1500",
+          "x-ms-ratelimit-remaining": "1495",
+          "x-ms-ratelimit-used": "5",
+          "x-ms-ratelimit-reset": "0",
+          "X-Frame-Options": "DENY",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin",
+          "X-Robots-Tag": "noindex, nofollow",
+          "VsSaaS-Request-Id": "6c0a4a62-d731-444a-9a8b-b62ce379c481",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+          "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
+        },
+        "body": {
+          "validationResults": [],
+          "businessRuleResults": {},
+          "suggestions": []
+        }
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 10,
+      "test_name": "Data Validation (Invalid)",
+      "timestamp": "2025-07-27T18:45:53.142413",
+      "request": {
+        "method": "POST",
+        "endpoint": "/api/v1/idle-resources/validate",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources/validate",
+        "headers": {
+          "User-Agent": "Final-API-Test/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "data": {
+            "employeeName": "Invalid Employee",
+            "idleFromDate": "2025-01-01",
+            "idleToDate": "2024-12-31"
+          },
+          "validationType": "full"
+        },
+        "params": null
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Sun, 27 Jul 2025 11:45:52 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "66",
+          "Connection": "keep-alive",
+          "Allow": "OPTIONS, POST",
+          "Cache-Control": "no-cache,no-store",
+          "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+          "Pragma": "no-cache",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZsqNGPhXaNXfWPpkrsWLGKML1DaO0qXFUO9EaSNUccJ1reHW9Fh9iEhw6Tvh1j6tmK8ORnMxJWrCxaM36291BLB-xD2Oxd8NgkiRX9OVmtvltkyH-dXITYMgw--xBTA8nyqFsDmHbqFXp_RXRQeAtYZJH39bHhLfT4jsAK5ZvbFCYE3SLSXn6vjbRmNK4njeKRvlA9lyQm4YRVDr8ztgiJXBKrVgUOJmO7BtUxhhXrUZbRpt1sTRrIjXFKfAq-IRIOm41KegURyfnf3XViCW9UpSFj2ESx0ed5QOEuv-mmoWS_Dl65w8RHf720woOZ9VP0T7B6DWcUd8xGNp2bdn0PD11xGTcvW0xAjmCjIoncYWNAiI-iTeqHQLi6ZutdC7wC3FZ9YtWtEFHXwmM90cZw277BQ6X-bGUJLYsxCpQ2VI6mzh5JoX-F1zWSakZcm9LBGaOXfHbstHRfOABmxMveC3GSWn03MgsOn_SOYd3T_KicjacU1fAzdtjIlt7rwixpeT5dUuexWzJSfC6kI88jHUtAvz9hJPzNruIUhZEnn4ACGvTxYedEthvmMDfRn0U0in1tf34rvLH0fmKjzRt5_o2LgN9z56g4r4G6OH17Pffkwq-HnYxqKAhwLgwf8_hHyDVLgJwbcpoTR4JSvr2rlqCxPiZ435gkAvFVNEKjxlijRlCa0NUemO8ZUnPtcvxIxml6XGG3vNaH5kVDxXawrCJaYsoZsH0R0TUk2cjH2_pqCmjcnop6M-oIh5R06T1W4UoTb1m8E5GZwD7VuyJonXD-edZ5i8JlykT7m4k_idVPiC4d95TroFY4Gtr2-SE4U_cN2zNcKd2u64HnGM-p9bCoNTQ4DwOu2R9CeFsCMOJ6J83PjdBzDnukwENrfL505qiJk01m59xe8vSErGH_1; path=/; secure; samesite=none; Partitioned",
+          "Vary": "Accept, Cookie",
+          "X-Content-Type-Options": "nosniff, nosniff",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1498, ClientConnectionsPerPort:998",
+          "RateLimit-Reset": "HttpRequestRatePerPort:20s",
+          "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
+          "x-ms-ratelimit-limit": "1500",
+          "x-ms-ratelimit-remaining": "1494",
+          "x-ms-ratelimit-used": "6",
+          "x-ms-ratelimit-reset": "0",
+          "X-Frame-Options": "DENY",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin",
+          "X-Robots-Tag": "noindex, nofollow",
+          "VsSaaS-Request-Id": "f2380641-ae21-445b-a85c-afdfa1b32c6a",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+          "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
+        },
+        "body": {
+          "validationResults": [],
+          "businessRuleResults": {},
+          "suggestions": []
+        }
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 11,
+      "test_name": "Bulk Update",
+      "timestamp": "2025-07-27T18:45:54.103695",
+      "request": {
+        "method": "PATCH",
+        "endpoint": "/api/v1/idle-resources/bulk",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources/bulk",
+        "headers": {
+          "User-Agent": "Final-API-Test/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "updates": [
+            {
+              "id": "550e8400-e29b-41d4-a716-446655440000",
+              "data": {
+                "specialAction": "Training"
+              },
+              "version": 1
+            }
+          ],
+          "operationId": "test-bulk-001"
+        },
+        "params": null
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Sun, 27 Jul 2025 11:45:53 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "2",
+          "Connection": "keep-alive",
+          "Allow": "PATCH, OPTIONS",
+          "Cache-Control": "no-cache,no-store",
+          "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+          "Pragma": "no-cache",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZseGNwUlJf7Tip1my6ltID5PSnREkAR-A9aXseKCCDDO3viNBCs1cewWDzabt5QQAxyMjzs6mJ7p6FPO5ingdzNLpCTAOiWONiD5F42MLWQ6ojvm1jtNggXx8aa_Xv5_S-vaNFgUC8ezKqXj2ReiDnHKmpfox2PWjygGkhfXCp-pzIhSbn2ylDRwZ2zGOIPlwSu7JAI-DqcZIg1VG8Bp0W8zYkgmFy8fpdEUCDBH6ZRRxBVZC9EizyRN3r5CECfcxpBI1f1WAqJYGiDlzTZw-aUU0t5tNVlzi-eZV0bD7Gcn1SDfltAkM-ShSCMXNAXqAAiz9jPZwg-SXTXoRcNXXN6MN0AlgOf5uPptdgwKHcOuwVj6XtKQQnUdolsPcJJdsSiJjyAEKi0gbjfWFhGgVWoxJF_wBBWANATzeCrwfiD2Hq6WMFq-w4ETCoUzSR-Bd6ZAiBacqf8cs1ATeLhBzt-a-VJv5zhIrMzotov4EasRod2LnDKug1nVSo4aE-xWZX_0BRttAM-4pcYbW4fz9uHUSA0SaDMHMwrpNys1M8tAd4zDXJyNWo0XLrD1JPEViONzax-sOIw1Nx9DTqeSZS_B4zgB8GOGZ6XUVtgRytCDfCr1arWWnJRF7JucsK2df5IyF0iToYwYH_LRJrg1R8xZBd7OKRFAueEL68XbH1jk52gPZnle9DixwGaimYVsfF8PAFWt0pV8PaB7GtU-P04CzFKRC2fIsTfaSXrC6iyH5amvqOjesH4SEmkkVnt6LXIyS0BEGrYDcrJsPl7Vt10-h3UpVPMVr9M4Yg1U9GWqorueHVtkxMkjPmz1BmJJFK4SGqJkYIw5H0LkVPc90vp3_wkEiYo-89r984CnDxj5gNfwBM5Aah1Xwamlu1VbVsNIOKdMfRko_BxMIqLl3E0; path=/; secure; samesite=none; Partitioned",
+          "Vary": "Accept, Cookie",
+          "X-Content-Type-Options": "nosniff, nosniff",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1499",
+          "RateLimit-Reset": "HttpRequestRatePerPort:1s",
+          "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
+          "x-ms-ratelimit-limit": "1500",
+          "x-ms-ratelimit-remaining": "1494",
+          "x-ms-ratelimit-used": "6",
+          "x-ms-ratelimit-reset": "0",
+          "X-Frame-Options": "DENY",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin",
+          "X-Robots-Tag": "noindex, nofollow",
+          "VsSaaS-Request-Id": "b327969c-37f9-4520-a5b5-7d3cea2603d4",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+          "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
+        },
+        "body": {}
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 12,
+      "test_name": "Master Data",
+      "timestamp": "2025-07-27T18:45:54.634586",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/master-data",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/master-data",
+        "headers": {
+          "User-Agent": "Final-API-Test/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null,
+        "params": null
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Sun, 27 Jul 2025 11:45:53 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "114",
+          "Connection": "keep-alive",
+          "Allow": "OPTIONS, GET",
+          "Cache-Control": "no-cache,no-store",
+          "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+          "Pragma": "no-cache",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZspguB5-VqRV6gMdcOpjHljBw6CO6s0Gb82yBGsXOenl913JtFSdknZtbuljyA-Eunnz0JBvg6f7hw6m5JMzpqTgScuNuO7gH0UJNjMsjFAuQKlw0aeTOQYVOQnpcmjI4S87ElXA_Q8mxLc432dIaxr_XkYHjXwxZq5ZCUtpV5e8pbZVyRTxxIxVZMoBheqgQk-KIE-eslLvla3HzKccL4zTEusD4pH9jUeqq5gTJAD7ey6sPR36t_HcI_qNGxSL57AEXmNSaLu7X21lhnb5y1HE8bQGtxRPVeqZfzklAr2RwCoMInDzFppNM6XOTyxKdiRhbw2soc8AcriCLCg377BAk36HxGV36czFvEiy1W-rdjsGb3abT68WwMFPrM5WCZq3ao6z3ih3OJVL5akolsafYBC8KGVdYhmHL8LSYv_ufJIfmCqqlIbPHAWxIZAEKcI8K2V10bcsJMDMQnbXKVR-xGcMig8g6XbEnT_RSKKlpvSr9GyCMjyVixpWYRtDDRrFIOMptdS8jb2FzWhTALtHjBKTA0GnOFNxxPSZkefsmVHFY76ilZCqE5d9A00RMpTCjUnoRhletOV6kU9er-d1Kvkuhqyt5xFZwOWPyiKQiyJfxuCTGlxRGSmWteyqg4W4qPiv_4mIqe4NzXz3pdSsX0pntF-cmPGk301alyQbSE8oPLSZezspzwimb1VMMfE2p3rPzAx97QesZOPL6puO8pUahS4qpyskl2CXi6nlegrnbT2jGccEpneStt54HEQMcDu7A4WEerBoFk6jdqEmSlUC0gDL2zYuxlTnrzd6ExLL3hgAl3PNisSAaDoQMXCfTZj82H7MVE_CjALnKRj0dq6ECeyZ9bQ_uJ3zmC0VANH6YwW6i3ywIcikiF4kFjESD6P9deBJEFVKPdMj_w4; path=/; secure; samesite=none; Partitioned",
+          "Vary": "Accept, Cookie",
+          "X-Content-Type-Options": "nosniff, nosniff",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1498",
+          "RateLimit-Reset": "HttpRequestRatePerPort:46s",
+          "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
+          "x-ms-ratelimit-limit": "1500",
+          "x-ms-ratelimit-remaining": "1494",
+          "x-ms-ratelimit-used": "6",
+          "x-ms-ratelimit-reset": "0",
+          "X-Frame-Options": "DENY",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin",
+          "X-Robots-Tag": "noindex, nofollow",
+          "VsSaaS-Request-Id": "e5149ce6-d27a-4f27-bdbf-501333cbea5e",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+          "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
+        },
+        "body": {
+          "departments": [],
+          "jobRanks": [],
+          "locations": [],
+          "idleTypes": [],
+          "languages": [],
+          "sourceTypes": [],
+          "specialActions": []
+        }
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 13,
+      "test_name": "Master Data (Filtered)",
+      "timestamp": "2025-07-27T18:45:55.551191",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/master-data",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/master-data",
+        "headers": {
+          "User-Agent": "Final-API-Test/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null,
+        "params": {
+          "dataTypes": "departments,jobRanks"
+        }
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Sun, 27 Jul 2025 11:45:54 GMT",
+          "Content-Type": "application/json",
+          "Content-Length": "114",
+          "Connection": "keep-alive",
+          "Allow": "OPTIONS, GET",
+          "Cache-Control": "no-cache,no-store",
+          "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+          "Pragma": "no-cache",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZuBCLj7Th-bjla-8S-MCnQn5Hv59BSYvPirI2APNq49q40kYVlBKi6oF0QNM4h31y_uvSW5emFUrOS3vAdzM7ObWO6RJ1sr0zWG02T2AtvGI2BPyRCLAxWTsepmcauLFk_3zoNzGxEHQZjH_G3gpY9J_uK6stlf3Wq8PldxeR7hmitRPWndL6BC3LFN8yO8JmKFHjHoy8lmY-MMvSMRfg8WH7bqqzCbyYLmrYXJhRDw5yQ5ZfYipPRfE9FRygFiHr3w_PLzVRxFg5kWXGHn9qSt0Hr24w6KdlC1mWZpOhiUmfcosNFPd6tl_4TUQXGaNomAqWvJ6A05sS2hsL1rfUqzhM1cc-peqLwoh-4YvaDLYeA2YbEia6CeK9j3ABp1vsxd-SJG8217RQ9CivYhgHvm60OEY5zAwo8Yeu4lAf26TT5kYG_KZq7vdoKG0y0vHOzu9fKnfqx-zI8dF8kYlEuCTEMg4tsxO8S9RrxtR62tNexzE0yhN5_eJrxnVWeAL0PsjYe-Q7uPeV9icgrVpvBTVXNhmaYcSMu05ZWtnyRNd8Q6iqrPyCLl8nO8rXMD-NXresoM-jjz4bmYO5ZREqP2d8SzUmw31BuYXz3FaExn5KNE3J0HGgRKTXkpANgtTaKS0bNJYOLCXvq-KpLegjsZVfO7KaWZdIte3KhjLlJiffE9CZsv2lx_oCfrlOwKY_aDgx2jT0hgZQM-b461YGmL8HDwd-fPJP3rOhIOajUWnvheheRDk_X3t-ibSNN-8RY0BTIpJSV_TH75mD6th8cP3ri1WCuLzhGw3CkAoB91cBntYV36tRZkmzWySSCPw41m83_1goceFyBrFMALBLp5EN5eAsLahEcnIVMZRMHTpcvLXFotS2olOo0ybsE2UYAhJJeX5sw2RlSMeqnG7tOX; path=/; secure; samesite=none; Partitioned",
+          "Vary": "Accept, Cookie",
+          "X-Content-Type-Options": "nosniff, nosniff",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1499",
+          "RateLimit-Reset": "HttpRequestRatePerPort:43s",
+          "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
+          "x-ms-ratelimit-limit": "1500",
+          "x-ms-ratelimit-remaining": "1494",
+          "x-ms-ratelimit-used": "6",
+          "x-ms-ratelimit-reset": "0",
+          "X-Frame-Options": "DENY",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin",
+          "X-Robots-Tag": "noindex, nofollow",
+          "VsSaaS-Request-Id": "8a87e02a-035a-4fd9-a8a3-3556d247295e",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+          "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
+        },
+        "body": {
+          "departments": [],
+          "jobRanks": [],
+          "locations": [],
+          "idleTypes": [],
+          "languages": [],
+          "sourceTypes": [],
+          "specialActions": []
+        }
+      },
+      "error": null,
+      "success": true
+    }
+  ],
+  "summary": {
+    "endpoint_coverage": [
+      "GET /api/health/ - Health Check",
+      "GET /api/v1/auth/health - Auth Health Check",
+      "GET /api/v1/idle-resources - List Resources (both formats)",
+      "POST /api/v1/idle-resources - Create Resource (both formats)",
+      "POST /api/v1/idle-resources/export - Export Resources",
+      "POST /api/v1/idle-resources/search - Advanced Search",
+      "POST /api/v1/idle-resources/validate - Data Validation",
+      "PATCH /api/v1/idle-resources/bulk - Bulk Operations",
+      "GET /api/v1/master-data - Master Data"
+    ],
+    "format_compatibility": {
+      "camelCase_support": "Implemented",
+      "snake_case_legacy": "Maintained",
+      "specification_compliance": "11/13 endpoints working"
+    }
+  }
+}
