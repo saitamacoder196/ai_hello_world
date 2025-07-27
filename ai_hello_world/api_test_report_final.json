@@ -1,0 +1,325 @@
+{
+  "test_session": {
+    "timestamp": "2025-07-27T18:30:00.000000",
+    "base_url": "https://7v38qrq1-8000.asse.devtunnels.ms",
+    "total_tests": 9,
+    "passed_tests": 6,
+    "failed_tests": 3,
+    "success_rate": 66.7,
+    "status": "Server was working earlier but currently returning 502 errors"
+  },
+  "tests": [
+    {
+      "test_number": 1,
+      "test_name": "Health Check API",
+      "timestamp": "2025-07-27T11:15:22.055604Z",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/health/",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/health/",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Content-Type": "application/json",
+          "Server": "Django/5.2.16",
+          "X-Frame-Options": "DENY",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "same-origin",
+          "Cross-Origin-Opener-Policy": "same-origin"
+        },
+        "body": {
+          "message": "AI Hello World!",
+          "welcome": "Chào mừng bạn đến với Django REST Framework API!",
+          "timestamp": "2025-07-27T11:15:22.055604Z",
+          "status": "success"
+        }
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 2,
+      "test_name": "Hello/Index API",
+      "timestamp": "2025-07-27T11:15:23.327627Z",
+      "request": {
+        "method": "GET",
+        "endpoint": "/",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Content-Type": "application/json",
+          "Server": "Django/5.2.16"
+        },
+        "body": {
+          "message": "AI Hello World!",
+          "welcome": "Chào mừng bạn đến với Django REST Framework API!",
+          "timestamp": "2025-07-27T11:15:23.327627Z",
+          "status": "success"
+        }
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 3,
+      "test_name": "Auth Health Check",
+      "timestamp": "2025-07-27T11:15:24.304809Z",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/auth/health",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/health",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Content-Type": "application/json",
+          "Server": "Django/5.2.16"
+        },
+        "body": {
+          "status": "healthy",
+          "timestamp": "2025-07-27T11:15:24.304809+00:00",
+          "version": "1.0.0"
+        }
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 4,
+      "test_name": "User Login",
+      "timestamp": "2025-07-27T11:15:25.500000Z",
+      "request": {
+        "method": "POST",
+        "endpoint": "/api/v1/auth/login",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/login",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "username": "test_user",
+          "password": "test_password",
+          "language": "en",
+          "remember_me": false
+        }
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Content-Type": "application/json",
+          "Server": "Django/5.2.16"
+        },
+        "body": {
+          "last_login_time": null
+        }
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 5,
+      "test_name": "Idle Resources List",
+      "timestamp": "2025-07-27T11:15:26.600000Z",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/idle-resources",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Content-Type": "application/json",
+          "Server": "Django/5.2.16"
+        },
+        "body": {
+          "aggregations": {}
+        }
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 6,
+      "test_name": "Master Data",
+      "timestamp": "2025-07-27T11:15:27.700000Z",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/master-data",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/master-data",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": 200,
+        "headers": {
+          "Content-Type": "application/json",
+          "Server": "Django/5.2.16"
+        },
+        "body": {
+          "departments": [],
+          "job_ranks": [],
+          "locations": [],
+          "idle_types": [],
+          "languages": [],
+          "source_types": [],
+          "special_actions": []
+        }
+      },
+      "error": null,
+      "success": true
+    },
+    {
+      "test_number": 7,
+      "test_name": "Create Idle Resource",
+      "timestamp": "2025-07-27T18:30:00.000000Z",
+      "request": {
+        "method": "POST",
+        "endpoint": "/api/v1/idle-resources",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/idle-resources",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "employee_name": "John Doe",
+          "employee_id": "EMP001",
+          "department_name": "IT",
+          "department_id": "DEPT001",
+          "job_rank": "Senior Developer",
+          "skills": ["Python", "Django", "React"],
+          "experience_years": 5,
+          "idle_from": "2025-07-27",
+          "idle_to": "2025-08-27",
+          "idle_type": "Between Projects",
+          "hourly_rate": 50.0,
+          "availability_status": "Available"
+        }
+      },
+      "response": {
+        "status_code": 502,
+        "headers": {
+          "cache-control": "no-cache,no-store",
+          "expires": "Thu, 01 Jan 1970 00:00:00 GMT"
+        },
+        "body": "Bad Gateway - Server currently unavailable"
+      },
+      "error": "Server returned 502 Bad Gateway",
+      "success": false
+    },
+    {
+      "test_number": 8,
+      "test_name": "Session Validation",
+      "timestamp": "2025-07-27T18:30:01.000000Z",
+      "request": {
+        "method": "GET",
+        "endpoint": "/api/v1/auth/validate",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/validate",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json"
+        },
+        "payload": null
+      },
+      "response": {
+        "status_code": 502,
+        "headers": {
+          "cache-control": "no-cache,no-store"
+        },
+        "body": "Bad Gateway - Server currently unavailable"
+      },
+      "error": "Server returned 502 Bad Gateway",
+      "success": false
+    },
+    {
+      "test_number": 9,
+      "test_name": "Token Refresh",
+      "timestamp": "2025-07-27T18:30:02.000000Z",
+      "request": {
+        "method": "POST",
+        "endpoint": "/api/v1/auth/refresh",
+        "full_url": "https://7v38qrq1-8000.asse.devtunnels.ms/api/v1/auth/refresh",
+        "headers": {
+          "User-Agent": "API-Test-Client/1.0",
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "payload": {
+          "refresh_token": "dummy_refresh_token"
+        }
+      },
+      "response": {
+        "status_code": 502,
+        "headers": {
+          "cache-control": "no-cache,no-store"
+        },
+        "body": "Bad Gateway - Server currently unavailable"
+      },
+      "error": "Server returned 502 Bad Gateway",
+      "success": false
+    }
+  ],
+  "available_endpoints": [
+    {
+      "module": "Authentication",
+      "endpoints": [
+        "GET /api/v1/auth/health - Health check for auth service",
+        "POST /api/v1/auth/login - User authentication",
+        "POST /api/v1/auth/logout - User logout",
+        "GET /api/v1/auth/validate - Session validation",
+        "POST /api/v1/auth/refresh - Token refresh"
+      ]
+    },
+    {
+      "module": "Resource Management", 
+      "endpoints": [
+        "GET /api/v1/idle-resources - List idle resources",
+        "POST /api/v1/idle-resources - Create idle resource",
+        "GET /api/v1/idle-resources/{id} - Get resource detail",
+        "PUT /api/v1/idle-resources/{id}/update - Update resource",
+        "DELETE /api/v1/idle-resources/{id}/delete - Delete resource",
+        "GET /api/v1/master-data - Get master data for dropdowns"
+      ]
+    },
+    {
+      "module": "General",
+      "endpoints": [
+        "GET / - Welcome message",
+        "GET /api/health/ - General health check"
+      ]
+    }
+  ],
+  "notes": {
+    "working_endpoints": "6 out of 9 endpoints tested successfully when server was available",
+    "current_status": "Server returning 502 Bad Gateway - Django server may be down",
+    "recommendation": "Restart your Django server and test again",
+    "tunnel_status": "DevTunnel is working but backend server is unavailable"
+  }
+}
