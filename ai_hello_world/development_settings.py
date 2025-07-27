@@ -6,7 +6,7 @@ Settings cho development với cấu hình Swagger
 from ai_hello_world.settings import *
 
 # Allow all hosts for development
-ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1', '0.0.0.0', 'https://7v38qrq1-8000.asse.devtunnels.ms']
 
 # Templates configuration
 TEMPLATES = [
