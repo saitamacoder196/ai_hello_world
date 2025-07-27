@@ -18,6 +18,136 @@ from django.contrib import admin
 from django.urls import path, include
 from django.http import JsonResponse
 from django.shortcuts import render
+def api_schema_view(request):
+    """Generate OpenAPI 3.0 schema for our APIs"""
+    schema = {
+        "openapi": "3.0.0",
+        "info": {
+            "title": "AI Hello World API",
+            "description": "Resource Management System APIs with 92.3% specification compliance",
+            "version": "1.0.0"
+        },
+        "servers": [
+            {"url": "http://localhost:8000", "description": "Development server"},
+            {"url": "https://7v38qrq1-8000.asse.devtunnels.ms", "description": "Remote tunnel"}
+        ],
+        "paths": {
+            "/api/health/": {
+                "get": {
+                    "summary": "System Health Check",
+                    "tags": ["Health"],
+                    "responses": {
+                        "200": {
+                            "description": "System is healthy",
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "message": {"type": "string"},
+                                            "status": {"type": "string"},
+                                            "timestamp": {"type": "string"}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "/api/v1/idle-resources": {
+                "get": {
+                    "summary": "Get Idle Resource List",
+                    "tags": ["Resource Management"],
+                    "parameters": [
+                        {"name": "page", "in": "query", "schema": {"type": "integer"}},
+                        {"name": "pageSize", "in": "query", "schema": {"type": "integer"}}
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "List of idle resources",
+                            "content": {
+                                "application/json": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "records": {"type": "array"},
+                                            "totalCount": {"type": "integer"},
+                                            "pageInfo": {"type": "object"}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "post": {
+                    "summary": "Create Idle Resource",
+                    "tags": ["Resource Management"],
+                    "requestBody": {
+                        "required": True,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "required": ["employeeName", "employeeId"],
+                                    "properties": {
+                                        "employeeName": {"type": "string"},
+                                        "employeeId": {"type": "string"},
+                                        "departmentId": {"type": "string"},
+                                        "jobRank": {"type": "string"}
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "responses": {
+                        "201": {"description": "Resource created"},
+                        "400": {"description": "Invalid request"}
+                    }
+                }
+            }
+        },
+        "tags": [
+            {"name": "Health", "description": "System health checks"},
+            {"name": "Resource Management", "description": "Idle resource operations"}
+        ]
+    }
+    return JsonResponse(schema)
+
+def swagger_ui_view(request):
+    """Render Swagger UI interface"""
+    html = '''<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Hello World API Documentation</title>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@4.15.5/swagger-ui.css" />
+    <style>
+        html { box-sizing: border-box; overflow: -moz-scrollbars-vertical; overflow-y: scroll; }
+        *, *:before, *:after { box-sizing: inherit; }
+        body { margin:0; background: #fafafa; }
+    </style>
+</head>
+<body>
+    <div id="swagger-ui"></div>
+    <script src="https://unpkg.com/swagger-ui-dist@4.15.5/swagger-ui-bundle.js"></script>
+    <script src="https://unpkg.com/swagger-ui-dist@4.15.5/swagger-ui-standalone-preset.js"></script>
+    <script>
+        window.onload = function() {
+            const ui = SwaggerUIBundle({
+                url: '/api/schema.json',
+                dom_id: '#swagger-ui',
+                deepLinking: true,
+                presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
+                plugins: [SwaggerUIBundle.plugins.DownloadUrl],
+                layout: "StandaloneLayout"
+            });
+        };
+    </script>
+</body>
+</html>'''
+    from django.http import HttpResponse
+    return HttpResponse(html)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,8 +162,12 @@ urlpatterns = [
     # Simple APIs (no authentication required) - temporarily disabled
     # path('', include('simple_urls')),
     
-    # API Documentation (Simple version)
-    path('api/docs/', lambda request: JsonResponse({
+    # API Documentation - Swagger UI
+    path('api/docs/', swagger_ui_view, name='swagger-ui'),
+    path('api/schema.json', api_schema_view, name='api-schema'),
+    
+    # API Documentation (JSON version)
+    path('api/docs/json/', lambda request: JsonResponse({
         'message': 'API Documentation',
         'available_endpoints': [
             'GET /api/health/ - System Health Check',
@@ -48,7 +182,7 @@ urlpatterns = [
         ],
         'compliance_report': '/api/compliance-report/',
         'test_results': '92.3% success rate (12/13 tests passing)'
-    }), name='api-docs'),
+    }), name='api-docs-json'),
     
     # Compliance Report endpoint
     path('api/compliance-report/', lambda request: JsonResponse({
