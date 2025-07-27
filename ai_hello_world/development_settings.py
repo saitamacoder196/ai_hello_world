@@ -5,8 +5,8 @@ Settings cho development với cấu hình Swagger
 
 from ai_hello_world.settings import *
 
-# Allow all hosts for development
-ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1', '0.0.0.0', 'https://7v38qrq1-8000.asse.devtunnels.ms']
+# Allow all hosts for development including tunnel
+ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1', '0.0.0.0', '7v38qrq1-8000.asse.devtunnels.ms']
 
 # Templates configuration
 TEMPLATES = [
@@ -35,6 +35,14 @@ INSTALLED_APPS += [
 # CORS settings for API documentation
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
+
+# Explicitly allow tunnel URLs
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",
+    "http://127.0.0.1:8000", 
+    "https://7v38qrq1-8000.asse.devtunnels.ms",
+    "http://7v38qrq1-8000.asse.devtunnels.ms"
+]
 CORS_ALLOW_HEADERS = [
     'accept',
     'accept-encoding',

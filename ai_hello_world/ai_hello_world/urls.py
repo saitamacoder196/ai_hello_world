@@ -31,8 +31,9 @@ def api_schema_view(request):
             "version": "1.0.0"
         },
         "servers": [
-            {"url": "http://localhost:8000", "description": "Development server"},
-            {"url": "https://7v38qrq1-8000.asse.devtunnels.ms", "description": "Remote tunnel"}
+            {"url": "http://localhost:8000", "description": "Local development server"},
+            {"url": "https://7v38qrq1-8000.asse.devtunnels.ms", "description": "Remote tunnel (HTTPS)"},
+            {"url": "http://7v38qrq1-8000.asse.devtunnels.ms", "description": "Remote tunnel (HTTP)"}
         ],
         "paths": {
             "/api/health/": {
@@ -118,9 +119,19 @@ def api_schema_view(request):
     }
     
     response = JsonResponse(schema)
-    response["Access-Control-Allow-Origin"] = "*"
-    response["Access-Control-Allow-Methods"] = "GET, OPTIONS"
-    response["Access-Control-Allow-Headers"] = "Content-Type"
+    
+    # Set CORS headers explicitly for tunnel URLs
+    origin = request.META.get('HTTP_ORIGIN', '')
+    if 'devtunnels.ms' in origin or 'localhost' in origin or '127.0.0.1' in origin:
+        response["Access-Control-Allow-Origin"] = origin
+    else:
+        response["Access-Control-Allow-Origin"] = "*"
+    
+    response["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
+    response["Access-Control-Allow-Headers"] = "Content-Type, Authorization, X-Requested-With"
+    response["Access-Control-Allow-Credentials"] = "true"
+    response["Access-Control-Max-Age"] = "86400"
+    
     return response
 
 def swagger_ui_view(request):
@@ -135,8 +146,9 @@ def swagger_ui_view(request):
             "version": "1.0.0"
         },
         "servers": [
-            {"url": "http://localhost:8000", "description": "Development server"},
-            {"url": "https://7v38qrq1-8000.asse.devtunnels.ms", "description": "Remote tunnel"}
+            {"url": "http://localhost:8000", "description": "Local development server"},
+            {"url": "https://7v38qrq1-8000.asse.devtunnels.ms", "description": "Remote tunnel (HTTPS)"},
+            {"url": "http://7v38qrq1-8000.asse.devtunnels.ms", "description": "Remote tunnel (HTTP)"}
         ],
         "paths": {
             "/api/health/": {
@@ -405,6 +417,28 @@ def swagger_ui_view(request):
             try {{
                 console.log("Initializing Swagger UI with embedded schema...");
                 const spec = {schema_json};
+                
+                // Dynamically set the current server as the default
+                const currentOrigin = window.location.origin;
+                console.log("Current origin:", currentOrigin);
+                
+                // Find the matching server or add current origin
+                let serverFound = false;
+                for (let server of spec.servers) {{
+                    if (server.url === currentOrigin) {{
+                        serverFound = true;
+                        break;
+                    }}
+                }}
+                
+                if (!serverFound) {{
+                    spec.servers.unshift({{
+                        "url": currentOrigin,
+                        "description": "Current server (auto-detected)"
+                    }});
+                }}
+                
+                console.log("Updated servers:", spec.servers);
                 console.log("Spec loaded:", spec);
                 
                 const ui = SwaggerUIBundle({{
@@ -456,7 +490,20 @@ def swagger_ui_view(request):
 </html>'''
     
     from django.http import HttpResponse
-    return HttpResponse(html)
+    response = HttpResponse(html)
+    
+    # Set CORS headers for tunnel URLs
+    origin = request.META.get('HTTP_ORIGIN', '')
+    if 'devtunnels.ms' in origin or 'localhost' in origin or '127.0.0.1' in origin:
+        response["Access-Control-Allow-Origin"] = origin
+    else:
+        response["Access-Control-Allow-Origin"] = "*"
+    
+    response["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
+    response["Access-Control-Allow-Headers"] = "Content-Type, Authorization, X-Requested-With"
+    response["Access-Control-Allow-Credentials"] = "true"
+    
+    return response
 
 urlpatterns = [
     path('admin/', admin.site.urls),
