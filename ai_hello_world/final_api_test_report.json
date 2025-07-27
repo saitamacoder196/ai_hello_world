@@ -1,17 +1,17 @@
 {
   "test_session": {
-    "timestamp": "2025-07-27T18:45:55.552540",
+    "timestamp": "2025-07-27T18:53:04.874187",
     "base_url": "https://7v38qrq1-8000.asse.devtunnels.ms",
     "total_tests": 13,
-    "passed_tests": 11,
-    "failed_tests": 2,
-    "success_rate": 84.61538461538461
+    "passed_tests": 12,
+    "failed_tests": 1,
+    "success_rate": 92.3076923076923
   },
   "test_results": [
     {
       "test_number": 1,
       "test_name": "Health Check",
-      "timestamp": "2025-07-27T18:45:46.131521",
+      "timestamp": "2025-07-27T18:52:58.935920",
       "request": {
         "method": "GET",
         "endpoint": "/api/health/",
@@ -26,37 +26,37 @@
       "response": {
         "status_code": 200,
         "headers": {
-          "Date": "Sun, 27 Jul 2025 11:45:45 GMT",
+          "Date": "Sun, 27 Jul 2025 11:52:57 GMT",
           "Content-Type": "application/json",
           "Content-Length": "161",
           "Connection": "keep-alive",
-          "Allow": "OPTIONS, GET",
+          "Allow": "GET, OPTIONS",
           "Cache-Control": "no-cache,no-store",
           "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
           "Pragma": "no-cache",
-          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZueXvFDD5-2zspFhjFn2X7mYw8PqFQuva0KQx2bu4P9BwGi1uRUe5KAlXjR5OPBUHfBI1hufXMpSRQ-MMfGluUng6NsNw127nONUWUAyIfta-HMxBtaYNV7copvsT5SlhVExzMJYTEBk8FWe-JACAPkFtTrjL-vPHVGsiqGIEP5s4rOzd9B8Jnnk4DCS07FHNYh6NKR3ILCYdGnuedXnCqdxzsCj4KZwJzcoFwyR-Wg-vTMW3xF_6L2n2tdRcTmNHQJFSAyXdYHuGbC-ioWN2SqSROSFKfJJwlK4xG8UG4XXLPtPNMSlk4XJSzuH6X_MDgT839Jl7aNWP-Zd6qGV5g3TqmnTinXdlq_E2FGGDVn_YVN-4PRtqUTLPCiUyRC6EJ-Zyjy_zdV9RcKwptt6QkcdwyXquktsYF77KR53ZuTR1jUr0KRXcMqYwmQ_NClkgrWhcWBsTHxjRYwssfwWooRgQjQrRKvFxx9V4BwdFS_lGRugjnVys3rcMjX-q1WOdOE3Ea0YmCbfYt9PuaMIfRFVrmILsNZ-TZ3IzdQbykOvTPi9_SFjALPbLTE0vrHunclMJ4wqqdqlDxKTR5Xw8puNKX7LrGLDex9MRJnQlslbngKSkFEhpB0_QG0_lsWuMzu5Bn1cjE7A4-D5_ZDhmnj4_wPb4p18mc7a794-B6wVrJZI0bTN_yAKOnX3ghfz2Jk6OYd7YIrgGdIf5PNrThF0MJCagPU9yamAgSJHRs9PTH3L_9x8MCP8LY3wcNP_kbMguIbyw-unlnIHsuLsdHSsxRorDse0x5NiQTYI8mzFTwbVmo3exbUTpq0u7WCtmHE0gWNSSzVuDFuNMhEPj9V39UCq8837c7IjSG4afOKiuy3iA_duKUzFKgmIaDUQVub3hUVTAcXmpAl01peX5dx; path=/; secure; samesite=none; Partitioned",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZtz6VBCEFc7o4CSzPv96BWQNLagMfNPPWk9N0lQFVHD-pCmmpX4g8RxkIVFRpPArtA0vulMXH79ZOrpi6zl-mjOAZi_wyF3kVFOog3975umt6d3rmvdG5f2Yj-wzNa97bGMlaNwsKURMyqiTGMCdXvCZ5q59nXVFXy411Sx1bA0HfYGO34x3WBas8mySMGHlrhjxENHACSFzJBY5Z6w086-e7bjvveL_71qSZuenQi2ez1Aa2548fdRVaqmzzvB1p8_KpAq_fSkAwEexfS9bWDHBxsft0y73JxyKerpPhlcxpR-EzemXwrC4DgF7Jm8diwolNF-45JDYYiAwDYXRrqRRJ2FPa1p7Fy2Ls3MXxcU3VkpA0kvbWiKuP0EVNifABXbr5Vw-XDHEe0sSD-YGbyIhQZCCV3MbcX1gzPQzLrmIcLKGPGARSck6iHvws3QXITSHlRXxiNhip6fy7mz1rC56X5qCy2G4eqolnCRwOrdc1_fav8P5Mk33CNrRqnGmmZbsZgK9MuakVPrVR-ZodVrv1gd0EoN-AQtygf2tG0vOaqpFKAufLACu0x5h8_nw6QOjEVpSUwCVs2y9ALoAVHffjQo03c15xaavkKtTM4XQYLcHuUpZM2hU1_UAYFRKkDwDQ1vk_V9TK4ti5W_bhAV8bG2-IwIfUDUDQVl1B-5g9BgbB8cssP-PMefk95JLlpBsm4LcWLHcg66eHTWMAPquao5VNCGAdjrPivLsA1lmfzzqtykEoZo-KGPk7RGyhQGexN2n0UPbH-4Xa1SbzWBDH1KAfnfIORFh3oPHGUsD7i7z3PJX2SFxoiqAjKQAP74Aw-RcOU0J-yTftbs12rK8kNZ8RTJBOFQm5flKx4CF0FaNykdPQ4mxv_wL4VUg2MLmfM3tbwAngQSJwTqTXr0; path=/; secure; samesite=none; Partitioned",
           "Vary": "Accept, Cookie",
           "X-Content-Type-Options": "nosniff, nosniff",
-          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
-          "RateLimit-Remaining": "HttpRequestRatePerPort:1499, ClientConnectionsPerPort:996",
-          "RateLimit-Reset": "HttpRequestRatePerPort:56s",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1499",
+          "RateLimit-Reset": "HttpRequestRatePerPort:35s",
           "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
           "x-ms-ratelimit-limit": "1500",
-          "x-ms-ratelimit-remaining": "1495",
-          "x-ms-ratelimit-used": "5",
+          "x-ms-ratelimit-remaining": "1493",
+          "x-ms-ratelimit-used": "7",
           "x-ms-ratelimit-reset": "0",
           "X-Frame-Options": "DENY",
           "Referrer-Policy": "same-origin",
           "Cross-Origin-Opener-Policy": "same-origin",
           "X-Robots-Tag": "noindex, nofollow",
-          "VsSaaS-Request-Id": "3d501ecb-6bf9-4676-856a-637395ca8189",
+          "VsSaaS-Request-Id": "1f40de68-d02c-4e33-99bb-cf3ecd2bbab6",
           "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
           "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
         },
         "body": {
           "message": "AI Hello World!",
           "welcome": "Chào mừng bạn đến với Django REST Framework API!",
-          "timestamp": "2025-07-27T11:45:45.081513Z",
+          "timestamp": "2025-07-27T11:52:57.777441Z",
           "status": "success"
         }
       },
@@ -66,7 +66,7 @@
     {
       "test_number": 2,
       "test_name": "Auth Health Check",
-      "timestamp": "2025-07-27T18:45:47.193991",
+      "timestamp": "2025-07-27T18:52:59.752840",
       "request": {
         "method": "GET",
         "endpoint": "/api/v1/auth/health",
@@ -81,36 +81,36 @@
       "response": {
         "status_code": 200,
         "headers": {
-          "Date": "Sun, 27 Jul 2025 11:45:46 GMT",
+          "Date": "Sun, 27 Jul 2025 11:52:58 GMT",
           "Content-Type": "application/json",
           "Content-Length": "85",
           "Connection": "keep-alive",
-          "Allow": "OPTIONS, GET",
+          "Allow": "GET, OPTIONS",
           "Cache-Control": "no-cache,no-store",
           "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
           "Pragma": "no-cache",
-          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZuYmJJcYlNaHaQR7DjPjRzRRWg6zI12PnVsWXgotB8rFBNpKvH7K2gqun9p2R1QxmGfqAGwWTaRobPAtIX2SrlDGmKVEx_CmnYekWJzSVNtPD6IRGCI3RpKS-8EjwW9ZdY7cgFdrsfGw9fyxaEmlClv1bbRZwtmTIQyazl0utqZqyB1NlFZ1GbDUacHESeWijlD-XzfAOex0hgwHZKDHgQeltEKkDqw5fqaSajlSZFHtkNng1fPPdq2UWZNmhSHVu5SYrILahgqCEBooUBu3enAjdEg7dREzoY2R2yOTBwQ5_m5n3BLkBtloPeXGxTW8q10Na7ej_TKIc32m0ugnbfxxe_Xm-kpNFley6pSbQMME790n9sfHyda8fuUGoseg0r15mbQE_27HoF7nRHT7MS1cXagkqpzRlD2nBJeXp8f16zQVoGOzPEM0SXWgWwwJZgef-XZWswGEKEkdegjrJathZxrIkfPYhmm23gyRsLMQdHbd0V-CUs83jxVZ2KRGIAbhuQtji7PAgjGYC_jHx0U-ukzgrggfLjM7NFD27YmEEXFOV5s12bDzcXAXxN3LAPQxdJjJ7F1TWCEUdNKzAl5rH9-G9uZD8R-6B6pExGgRt7ImIo2lZi4hK7HbCSzM4l_vUaJFMvXHeph7gu37CyM8eIQGMYKs04GlvJAGYbwiMUovufbpD5LXAg8mOEcZKGX0xqYE2MRVk43bUBzmdi2k4mopSrwaWzazekgAlawDA-DV85a5GNe4-hbdnLaMoXT85BWnvezBomgeTObZAdFjv5gUJjAJ31PibPgS_nTYRZyzmCbnxOxgvq2J85jZG9FR_kY-_fsowfz5zU1S8rAk8kVU0H3lxlVbwcwpg3a6gWsJpOm8w1ODtnqKx3o8QwyRzg1InCwYyEe35oHVzbN; path=/; secure; samesite=none; Partitioned",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZsuWV5f_mG-9-2KtMlODL43ArPIJfcWci6noorRXhreIuVee9D2aNCD0ZUSU7d-XWl5oVp_GqeYoJVwOaFMoF6huC-kH4WD4G6Li3WfbPEEJARqYskWSAOCW2eEytCyF16Hfq4hypsoi13T01Bn7re1L-KFLWy_8-85A16rQV3cl1Wxx6vOnVFaKMtgVAB6ywzuJAGrAunscgKTY7ecyV3nw2Np_O-Jn8qm3SI4bKVy54kZHXoJSzs2I8eE8s_FKEp6CnscLA7Skc4suRD2W9ROdvqnXwMmYg8nlQHtMSrq6hJw_2zJg51MpCByZUPj_uX4Hm93KHB-9oe-QeieC1IhUPg2vFzOzT03evTnbf5HA-cBvPBwLulroEAPNPI5pttqp7Sum1P5bE9h_uGfvG2hm1qYk84efEgEqHHNU-i_C9MD02TW0E9QqUy_P3TCVzVVjo2cPiMu1gOQr3CAarK848MAFeSHxPRGw07vJqVD8J3awtAd7KbJQ-zx8MHJnYKGYT0vWvaiIftMOwQDkfGUgXHMnkx_veo36aZdw2kMq6-OBgynghaop53JiMuvqE7W1By9lfCdKVdue_A_mG_0z67cPlM9RuwZSUzo2sbHokr36ytRHHSvcyjz91ze8g9CrL4eq2IfaQroGbwhb5RfEsybGrNTFJyiAlshCm6FhYWYaiVIDowXdmrXNQ8mXYH4Byvky_HW79cUvm0p1oD68mWDr3chtBaXnd3jJG76H6FjXgrCTX5y2_e3uzmL7G5_FWRbr_Dk0-pUsC05q5_QkQpi4DNpZqsNGKYhgKn9L0aljA8VcxEECFJjUCHxgOfc5BVjYQlDRl7CaGwDx2mPjDRrvdYafI8P9gon5pF8qWa1HBV1u3rlmrEocmpM9RcNbb3E3i1MyHGse21gOKNQ; path=/; secure; samesite=none; Partitioned",
           "Vary": "Accept, Cookie",
           "X-Content-Type-Options": "nosniff, nosniff",
           "RateLimit-Limit": "HttpRequestRatePerPort:1500/m",
           "RateLimit-Remaining": "HttpRequestRatePerPort:1499",
-          "RateLimit-Reset": "HttpRequestRatePerPort:52s",
+          "RateLimit-Reset": "HttpRequestRatePerPort:41s",
           "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
           "x-ms-ratelimit-limit": "1500",
-          "x-ms-ratelimit-remaining": "1494",
-          "x-ms-ratelimit-used": "6",
+          "x-ms-ratelimit-remaining": "1493",
+          "x-ms-ratelimit-used": "7",
           "x-ms-ratelimit-reset": "0",
           "X-Frame-Options": "DENY",
           "Referrer-Policy": "same-origin",
           "Cross-Origin-Opener-Policy": "same-origin",
           "X-Robots-Tag": "noindex, nofollow",
-          "VsSaaS-Request-Id": "32b6ac3c-ed55-4592-b8b1-6a8b0e7e655c",
+          "VsSaaS-Request-Id": "794b7ed3-9ae0-42c2-91b6-6d8d018d13b5",
           "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
           "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
         },
         "body": {
           "status": "healthy",
-          "timestamp": "2025-07-27T11:45:46.023389+00:00",
+          "timestamp": "2025-07-27T11:52:58.608456+00:00",
           "version": "1.0.0"
         }
       },
@@ -120,7 +120,7 @@
     {
       "test_number": 3,
       "test_name": "Get Idle Resource List (Original)",
-      "timestamp": "2025-07-27T18:45:47.823047",
+      "timestamp": "2025-07-27T18:53:00.083347",
       "request": {
         "method": "GET",
         "endpoint": "/api/v1/idle-resources",
@@ -138,35 +138,120 @@
       "response": {
         "status_code": 200,
         "headers": {
-          "Date": "Sun, 27 Jul 2025 11:45:46 GMT",
+          "Date": "Sun, 27 Jul 2025 11:52:59 GMT",
           "Content-Type": "application/json",
-          "Content-Length": "19",
+          "Content-Length": "1893",
           "Connection": "keep-alive",
-          "Allow": "OPTIONS, POST, GET",
+          "Allow": "GET, OPTIONS, POST",
           "Cache-Control": "no-cache,no-store",
           "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
           "Pragma": "no-cache",
-          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZvU1Z-QJFcuS-uUNOTAJrg4eQsbSlYyWlPACO5x2i8x8pHEYsqL5WQBdA87YLc3ZvFfyrJUfxEh_2KHyN5xMCncyU3FwH66cGMe75-WhhfW7CC8srGmVOOnRGQ69RogQ1PDqeM5E_fmmDstYlKl1slCpkqVEtlEdjwdEKyACZhKeuaXN1SrVeckIjDmN_bjg1Qj1MEOirNrsQpSAvZYOQ0RJD0GceHj6-yaY3tCz9pOUhCQGjSGuZ5te0Uwc8g4o74IXe0D3hI_AZX_H_5CZZ3RUDdsnZe7IMzY07TL87CRBFaAjX5P1iTiNuwN3yU0WXRUCwTWOTJ-2vKia4h3eDLdjMbV-9Wvowl0Enwpzy5l-AIlLeeZexcT6M8zScCdPlNrGu5nk905JWMzel3IOrOWYiEQV3Gt3UShYX0cqgPAyAmoSw7k97Vl0cNLwQWf-BntA1Bv04RbnKzPQCHWWtTvYiKNYqjr3pWsEFLD4VhlTNCJpEtoZRDHMgTn0ryEpuOwCBILTcS6hMRLmgTtdO78yWBv14AeYjO38emn1lFxMc8pUjHjFfmPja45rrp7bVtGEHd9rRIFBxC2Sju4iM6MZTigfxLSRezhn3sCm6sW_eQLl2tTkr8kWnVwjm6W398XqFL7dEbe2ZOeVHQFwC7z6hkDyoE9eAW7Ka6C_fQDvmBqPafLWCCgVkEtL-qEvAFAJ5sgtRxP3g7Zvf1rvLcDg7jioh1wDrpLBjWo-q6ij7NcKN_oZnHxfhDgxrQJlKdtKy2ZSL6evbPtEPu35Jc5dGH1Koh8KV0Ua9Ngo_5MI_fWlrabe309UtdF-m3J8cn1u1QZjzgQeMMR2-g4wSpTAQ3v-9TmYTNQIIP5-yGN3iNRbmbZNqLl0-CDXD9mvoSFXUyMIeQyC4CTdJCzTLqh; path=/; secure; samesite=none; Partitioned",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZsduXSssFv8WFqCYtv-tyM0zFaxuwWOvhuW3rz_7jT1LHmk45m6j_40FwoRMYXTPFxqkNsf19l9U_ae74DjE_3BQ3NS5KnsO1ULV7teqajN3TwJ4DJjrUvN-_MfneWF8za1GHq850vf3a2NXC29JaYKkFWZMOLFJCyE6g4qxuxu42aDK1gK8-zQdf6x6vFmqCOrZKQ7dhPWdtzpvjTi_XUZKI0LDuxYI2nJ2LXhHxHaOjTfbHY3iL-0QIh8pMiOPvwf1NndkiTwoIgAiDt3rH2BF5cOwlOaoJWFnIoBY5TpTHZAw85nZdqO2tmvdKjBkiIAf_9Fr_I6ifsvgwwjIVwB2jPQKSIFNCBpu0zQIrwFUNzuZIeHwrfjm0g0nJg9UrCYSM2DITAm9MxuJxCX4a-rFQQENbMmtoisu9Sj9q4f4KJHZqtQ8g3C9wRL8pL7wXXF3DNujEwpkwAxXo6LP-fI7DH3QhEiRfomp6vwn4L7NqJEWzUDk2dNaosda9JHDkyeL-GlIHud4WyDyQe96pBDN5FqEmTbnahEgVJOjcx7kwlWt2KrbvDyJnpIG487GGY7nNCxiS7lvCsqSRq-bL72AzqiPFX8mKA2EdfmLbaUDQch4DuLKclGHtfjsU3k-Nqx7pA4rWxBLWP1RUBAouXPphzR8iGmXEluGDsrNWlYVhyymTnnFHThWBdDWqvDB-pqs9t7cwOJwwqpyPkKyBOQy0eqf8OHr2sVtPfOCcXVeJ4j-hxzmXm-Z68AO1p-u31bNwHPKGO_BLMFwi5jQDn3NUGoJyALxtki2LeVWcvnfeGAuruh1QvS-JnukuVkCW0sbLxKsrKLGR6-ixH7Nl4o3x0aDkvoMMaexjMfDp6dfUYb78rFFil6-joujM2cRUvePHwlFozdb8MaFAB_XIPq; path=/; secure; samesite=none; Partitioned",
           "Vary": "Accept, Cookie",
           "X-Content-Type-Options": "nosniff, nosniff",
           "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
-          "RateLimit-Remaining": "HttpRequestRatePerPort:1499, ClientConnectionsPerPort:996",
-          "RateLimit-Reset": "HttpRequestRatePerPort:33s",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1498, ClientConnectionsPerPort:997",
+          "RateLimit-Reset": "HttpRequestRatePerPort:40s",
           "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
           "x-ms-ratelimit-limit": "1500",
-          "x-ms-ratelimit-remaining": "1495",
-          "x-ms-ratelimit-used": "5",
+          "x-ms-ratelimit-remaining": "1493",
+          "x-ms-ratelimit-used": "7",
           "x-ms-ratelimit-reset": "0",
           "X-Frame-Options": "DENY",
           "Referrer-Policy": "same-origin",
           "Cross-Origin-Opener-Policy": "same-origin",
           "X-Robots-Tag": "noindex, nofollow",
-          "VsSaaS-Request-Id": "4e92ff1f-0ca6-4241-9775-51eaa4d62e8e",
+          "VsSaaS-Request-Id": "6c97b13c-f5d2-4841-aebd-633140551a77",
           "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
           "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
         },
         "body": {
-          "aggregations": {}
+          "records": [
+            {
+              "id": "d2772e94-8b35-469e-94a4-e45704cbeb6e",
+              "employeeName": "Employee 1",
+              "employeeId": "EMP001",
+              "departmentId": "67997838-dd15-4955-9f04-510c84bf815d",
+              "jobRank": "Junior",
+              "currentLocation": "Hanoi",
+              "idleType": "Bench",
+              "idleFromDate": "2025-01-01",
+              "idleToDate": "2025-12-31",
+              "idleMM": 12,
+              "salesPrice": 500000,
+              "specialAction": "Training",
+              "pic": "Manager 1"
+            },
+            {
+              "id": "5216e505-fe91-470f-a16b-034b094c416c",
+              "employeeName": "Employee 2",
+              "employeeId": "EMP002",
+              "departmentId": "275ed3af-db95-4bf4-bdab-eb65523121a1",
+              "jobRank": "Senior",
+              "currentLocation": "HCMC",
+              "idleType": "Training",
+              "idleFromDate": "2025-01-01",
+              "idleToDate": "2025-12-31",
+              "idleMM": 12,
+              "salesPrice": 600000,
+              "specialAction": "Certification",
+              "pic": "Manager 2"
+            },
+            {
+              "id": "b41294d1-d818-4013-8c1c-d19c683abff9",
+              "employeeName": "Employee 3",
+              "employeeId": "EMP003",
+              "departmentId": "c68ef44b-f3b9-40df-a692-e0b4f7b6227c",
+              "jobRank": "Lead",
+              "currentLocation": "Da Nang",
+              "idleType": "Available",
+              "idleFromDate": "2025-01-01",
+              "idleToDate": "2025-12-31",
+              "idleMM": 12,
+              "salesPrice": 700000,
+              "specialAction": null,
+              "pic": "Manager 3"
+            },
+            {
+              "id": "cbc2ea6a-f46a-408f-bf99-0ce4732f64a5",
+              "employeeName": "Employee 4",
+              "employeeId": "EMP004",
+              "departmentId": "d3f92c9a-147e-4ad4-b4d7-1a4c4c891c6e",
+              "jobRank": "Manager",
+              "currentLocation": "Hanoi",
+              "idleType": "Bench",
+              "idleFromDate": "2025-01-01",
+              "idleToDate": "2025-12-31",
+              "idleMM": 12,
+              "salesPrice": 800000,
+              "specialAction": "Training",
+              "pic": "Manager 4"
+            },
+            {
+              "id": "d7830bb8-ffaa-4e2b-ac73-d11bb004ac8e",
+              "employeeName": "Employee 5",
+              "employeeId": "EMP005",
+              "departmentId": "52672b2c-ca15-40dd-a8de-2137f1b2ceca",
+              "jobRank": "Junior",
+              "currentLocation": "HCMC",
+              "idleType": "Training",
+              "idleFromDate": "2025-01-01",
+              "idleToDate": "2025-12-31",
+              "idleMM": 12,
+              "salesPrice": 900000,
+              "specialAction": "Certification",
+              "pic": "Manager 5"
+            }
+          ],
+          "totalCount": 100,
+          "pageInfo": {
+            "currentPage": 1,
+            "totalPages": 4,
+            "hasNextPage": true,
+            "hasPreviousPage": false
+          },
+          "aggregations": {},
+          "executionTime": 150
         }
       },
       "error": null,
@@ -175,7 +260,7 @@
     {
       "test_number": 4,
       "test_name": "Get Idle Resource List (New Format)",
-      "timestamp": "2025-07-27T18:45:48.868127",
+      "timestamp": "2025-07-27T18:53:00.912573",
       "request": {
         "method": "GET",
         "endpoint": "/api/v1/idle-resources",
@@ -196,35 +281,120 @@
       "response": {
         "status_code": 200,
         "headers": {
-          "Date": "Sun, 27 Jul 2025 11:45:47 GMT",
+          "Date": "Sun, 27 Jul 2025 11:52:59 GMT",
           "Content-Type": "application/json",
-          "Content-Length": "19",
+          "Content-Length": "1894",
           "Connection": "keep-alive",
-          "Allow": "OPTIONS, POST, GET",
+          "Allow": "GET, OPTIONS, POST",
           "Cache-Control": "no-cache,no-store",
           "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
           "Pragma": "no-cache",
-          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZshJQUZi16I8XZwJy9lO84O55ZQp6NM5StU48Zf40XxBPw99UbjOX2OpnXVxNZNsjxZLF3HcWByH21s15fhZfDi3ve2vKsqwKVgBWkbAGRoxWS2TqStDoY2R7oPNVL0kQIKGzJbdcRf1NXqJ8ljnXL7IJXazppoNJRfJKi50q2WqrYHQyh3yIiO__9cPxWiknIA8Mt9nbY1828sA_EUMcjl4LmRmvlMGmOOgl2RSX647pKkpd2dQV-nOlkqLFlIihcKifnzoGSTqIO1MQ2w1B6saOJI7KqhoYrKazs4DA7AMqTYI-9B2b13Ekg-TeE09kDI1wEOWYQ4AlutIBdSXQNiN6NKEHopelNO7GKztymaZ5JvXcvnw9VqaDwPRRTheBWhSeBROjFEFr5pbR411lBwedWfB6QZCGvDxaqjs-sqjFrxUJNknu1xR3gAt2630cekTJJZxFLjFz697l6oDys1Xejvcms2yQvdV2hf68JPi_HAPN9IWYy-q4UdGFkm5XDyZiySB7_t9OrxBRvXYWets1TfqfJMOXuWhrz7LYWPDnbtTcWM5D30HwTKLVNya_7rch9-7gmB1xmgHIncRzUsfT5vy09noKMK-i87FXNFkZFmao9lI3wE3NZTkUwT4WxgeO_L5ONabz-V6-ao600oOXTeNLwh0l4piXmPwIO_jJg5J7RWQDqaEOsqrqBRBxvQw1RKVj58Z3IpqQ8D8LNSz6KEBOghlj97Ay4Y3r3lXWOOWtcNhq7NKn2olh_UFpvNj3gVCfdXOk34akq5dghZQqspMGE7aaUSH3iC-YVeJTC0NL48WF6WPFhg37Z_fiyWhvtOJDJX5scQO9ufN6VinlMlT1ZXOkv4-AierCplb8TUuq3Xc1g7MgTKr3NELPY8lKXV6eKov_A9u2j2Vt5u; path=/; secure; samesite=none; Partitioned",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZv4PjNA3bKkuCCF-AieY_GXLdLi4ZSw0sKw99rHPu4DhjKdqYZBse5z8EqmvQWHJ1x8yQmCApRbyUBpP9Yw0fo4QNsjReN67asX5UhckYtYNGXssZFmwXbudCsLfnRg4UAicq1RTp7UrvQdZRneacv9sXVD6a-ky_FVWxsv-EJydVFCW56zS9o81HaF-IwpOUmoYqMFe0H6qg4sTRDybIFk4C_LQAvLUzVEzI7pp81FAzA5p47fAVYZaG_nCs68XbhaYNm5kdJ2FQBWEp7v8_5mrefJo2IpMd9EVD1Spyd5dI9vOTkiBCiCy_KmWsoqq1PEwfBTz4TYve3DIbQcJXdKyWuq8k0sMFDeGCOsX-jSDEOc6-LrzuOdTJQ_fEth-5ZYPR-Y9jE4hmTL1L06PXpyKbbQBBIZMkb6dmzzD01V93DJy7TRppZprgSedrXL--GE3AA9eNmo0oB0ZZaWJpUm9zc6g6URMvzZMnr7S6e3-TVEXG_3-mmbLqeuwINfaVS8CquTv3onp8VpT6FY2iPr6og-yg2fAQddZSxJnXotmP9byewvPNO5PAWUvdvxY2BMbKzwh9rhPYPV-XdsXvGcXoR4WtVZ9ZfO58zPcOPMZzY-sZnvMMnC0-JExwb5F3tK6PaSsVVUX9-kbRoRI93fVYV1lVGhfHvmZxxurdabPYzVFTA27zT4r57qp_f5TqBcqjVTiilYGVrnRQn_hoSA2jQKpQ2fc8fC_DHbz3zMlpNAo3LBwTVetdKz8kfyxq7gyKNgRsuTlZo5iTcSNCuPMzKPgbipyvhJ5luwr2PAp9qj8WSbHeXkWzEYLuckkMbedu6QrBd3CF5OGjnseFnJzEIkc7DRxzy3LaB01kXvWDczvzQCBgiL2XBPiVSnkg3URpI_pVHV0BUjyrAdzBBb; path=/; secure; samesite=none; Partitioned",
           "Vary": "Accept, Cookie",
           "X-Content-Type-Options": "nosniff, nosniff",
           "RateLimit-Limit": "HttpRequestRatePerPort:1500/m",
           "RateLimit-Remaining": "HttpRequestRatePerPort:1499",
-          "RateLimit-Reset": "HttpRequestRatePerPort:24s",
+          "RateLimit-Reset": "HttpRequestRatePerPort:42s",
           "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
           "x-ms-ratelimit-limit": "1500",
-          "x-ms-ratelimit-remaining": "1494",
-          "x-ms-ratelimit-used": "6",
+          "x-ms-ratelimit-remaining": "1493",
+          "x-ms-ratelimit-used": "7",
           "x-ms-ratelimit-reset": "0",
           "X-Frame-Options": "DENY",
           "Referrer-Policy": "same-origin",
           "Cross-Origin-Opener-Policy": "same-origin",
           "X-Robots-Tag": "noindex, nofollow",
-          "VsSaaS-Request-Id": "d3014d15-5a96-4155-bdd1-836faebc23e8",
+          "VsSaaS-Request-Id": "c0f044ff-d6b0-4c6b-a60f-7af6eab0d50c",
           "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
           "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
         },
         "body": {
-          "aggregations": {}
+          "records": [
+            {
+              "id": "2e085552-2db7-4e1c-bda5-6fb90e1e605f",
+              "employeeName": "Employee 1",
+              "employeeId": "EMP001",
+              "departmentId": "013fe2c4-9bca-487d-9945-c0ec82001246",
+              "jobRank": "Junior",
+              "currentLocation": "Hanoi",
+              "idleType": "Bench",
+              "idleFromDate": "2025-01-01",
+              "idleToDate": "2025-12-31",
+              "idleMM": 12,
+              "salesPrice": 500000,
+              "specialAction": "Training",
+              "pic": "Manager 1"
+            },
+            {
+              "id": "8173d166-444b-4725-a083-f38ce6a8ba08",
+              "employeeName": "Employee 2",
+              "employeeId": "EMP002",
+              "departmentId": "c8a4abfd-a40f-451a-80b7-00d0b0dcf465",
+              "jobRank": "Senior",
+              "currentLocation": "HCMC",
+              "idleType": "Training",
+              "idleFromDate": "2025-01-01",
+              "idleToDate": "2025-12-31",
+              "idleMM": 12,
+              "salesPrice": 600000,
+              "specialAction": "Certification",
+              "pic": "Manager 2"
+            },
+            {
+              "id": "4d557590-5d1e-431d-93b8-2e094d478aa7",
+              "employeeName": "Employee 3",
+              "employeeId": "EMP003",
+              "departmentId": "71ac15f7-27b6-47b0-87b8-a0a7c1ca8962",
+              "jobRank": "Lead",
+              "currentLocation": "Da Nang",
+              "idleType": "Available",
+              "idleFromDate": "2025-01-01",
+              "idleToDate": "2025-12-31",
+              "idleMM": 12,
+              "salesPrice": 700000,
+              "specialAction": null,
+              "pic": "Manager 3"
+            },
+            {
+              "id": "59f14cee-c3c4-47c5-b2c6-140a68a2f263",
+              "employeeName": "Employee 4",
+              "employeeId": "EMP004",
+              "departmentId": "a48c01fa-5aa7-4aad-8c1b-44a066c3616a",
+              "jobRank": "Manager",
+              "currentLocation": "Hanoi",
+              "idleType": "Bench",
+              "idleFromDate": "2025-01-01",
+              "idleToDate": "2025-12-31",
+              "idleMM": 12,
+              "salesPrice": 800000,
+              "specialAction": "Training",
+              "pic": "Manager 4"
+            },
+            {
+              "id": "63cc733c-b890-49b8-b16a-c283568026f5",
+              "employeeName": "Employee 5",
+              "employeeId": "EMP005",
+              "departmentId": "cae75a07-beb9-43f3-8b35-6999dde152d5",
+              "jobRank": "Junior",
+              "currentLocation": "HCMC",
+              "idleType": "Training",
+              "idleFromDate": "2025-01-01",
+              "idleToDate": "2025-12-31",
+              "idleMM": 12,
+              "salesPrice": 900000,
+              "specialAction": "Certification",
+              "pic": "Manager 5"
+            }
+          ],
+          "totalCount": 100,
+          "pageInfo": {
+            "currentPage": 1,
+            "totalPages": 20,
+            "hasNextPage": true,
+            "hasPreviousPage": false
+          },
+          "aggregations": {},
+          "executionTime": 150
         }
       },
       "error": null,
@@ -233,7 +403,7 @@
     {
       "test_number": 5,
       "test_name": "Create Idle Resource (Old Format)",
-      "timestamp": "2025-07-27T18:45:49.386727",
+      "timestamp": "2025-07-27T18:53:01.331970",
       "request": {
         "method": "POST",
         "endpoint": "/api/v1/idle-resources",
@@ -258,38 +428,59 @@
       "response": {
         "status_code": 400,
         "headers": {
-          "Date": "Sun, 27 Jul 2025 11:45:48 GMT",
+          "Date": "Sun, 27 Jul 2025 11:53:00 GMT",
           "Content-Type": "application/json",
-          "Content-Length": "89",
+          "Content-Length": "381",
           "Connection": "keep-alive",
-          "Allow": "OPTIONS, POST, GET",
+          "Allow": "GET, OPTIONS, POST",
           "Cache-Control": "no-cache,no-store",
           "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
           "Pragma": "no-cache",
-          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZuaxMyanQcz2HrVCyj0wfDd1RHeMpZdsrjOR2vuCTY8N04ElZSMmFXa-ORU4lP0qdweaTiQGnejtwteLVhYV0VsZLjvajaO0ViNqd2NUDbKEAOB2nV0BvYgY70iCmE26ZNVqa29U6JF3Ocv_oGwdeVUnKvsZZE1xphBv7HW6BAjY8Ei_eX7PPpKAWCywElJ742K37bHzmpyK4AK_eUNSkZwQRJ1TPj69Nnh9qU0uD1DDoeDMQtY42H_5INpNTVif7NIcFNhO9VyHivVFxux3ZcCS-Fj5nRWEf5nFcjG3qp9MuqvQ720CLc2U-4Vhw92cQbyMNqKUr-oGnhqLSgjG5dNcxDZKkx7VUxXGK71iLAJoZrgaeg4sKs3FgVN0C8Ptrt5rtSPSFlTZx_53Ay2co23NM-SQtbToGZHttQNrZDPYc_fp48JzvPcFvNfXkThoP0eSbnqo31l0yIHh6byrjG7zjyo4BXEcfQNCn-IyHrjNpES1mLLPft3WeHtOJI0kcjaEnmlIfzpFHJymugfysZYtOEzP6-Nv1f4zYygqZ2Duv09OrlmBQPvnm4ahslsEH47A0sSjZmxC9TUu_WkYeTHSYW6Ll2KnxZSoyLJ01nhJhH4H3_-9rSK-96F3v6NlnSIz4xI1BYIg-Vp1eDKY2IHnKNEOFqENfocokh70g8LO96b3NIKyrwxlCYDxoRPOpNNTCmZN2rBHKORp700YyHZXBFCE92DPp5W0D92HhIboO8rQLMKBzKGUqO_LLqVGfL2pI0Um_wWV8Yw8LeuB37LRR13NM16WxuWPm84MT9PpSpfwOBCF45vLVJB6FWWTjdasqqbasAVW0EdFAeNqohMyZ8pnkDAF1qdVmCqfnh_QbVwQbquOr6xT9jXTy8NJqlblRjCPQicFiCbtx5dgbj6; path=/; secure; samesite=none; Partitioned",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZvCC_ASPRh5DTEpddpAYUF0jUOuErmGEeLrtMvMULON7tabxStGkX2NJQ9hTTGc6TYDUVhvS980Mwm0WyZU8lF5Rm411eIDLSWT7xvlqAzHnbmB5CbRcnGIeC5hVAlPkA5PhZKzo_WpA6inX18Xs5Dj7T7k2ixgP_CMyBEzR-01_o-gXeaZzVvpIz694hNwUoX4K8-RwH6kWYNL9DlqFzCbTXZH3suorCbbx2Zga84hY5-XR6cKHB_xqzRfYAPu3g8ySeaYKlGWv32dr_O519I57Em31uvZXojPPngeHzkJCqFWulN2kx_FX2PGLgHdo1QuihT30yW8sA48bqPGgkRTZIEGap8uBm2W5Q7liYTaWU2XhxV5B3_9sOQS0jnQpCXA5BSxvRq6fGkg2W7XUoUmLm-kGdxrpXlyRcr4GLdbUFah1FeumRVEyyT2DzYskc1eZoRVegzfNx6m2nFnDQYGRbeZ6PJN5QpFPIpC-jALY06DgZLS90RmOqwX33y6ASb5LBPFjrcMnAasL1JcVkQZgm8LL6Pvu59tckWrlwmo7fSmcIiNid7uaIOQ6FzEIrYbYE2vETyxTzwglJPtPyabuNBWWbeHjUaiP6oABPGL1Nb-Lp7ICoEYhkd1TL0eTDaeQBQfngmDcYW7s-OHXL_CSuZrJhROUlQ-LZVgwzfO61j-rSjiOwDFghL0pP8pc0mQ4O0MRFGmiffm99ZVlCCRdrkT77hFzrUaBBpW3PTiOeIHEc2a9XZ40Sqk4_Ey6EPdt71mjm6gm5RDtHCsiq6FHqbfXy_fZr-DX47NtX0PD-_RBMrZmxZMHwhXOqJ13-pOSqVwZkSZEmlqOtfaGth3z_lWgmqFfKxYYaLs8CS4RYQoUyHavor4TUtHSVMObJ1-PKwmNX7ktGCzOOaD4KaQ; path=/; secure; samesite=none; Partitioned",
           "Vary": "Accept, Cookie",
           "X-Content-Type-Options": "nosniff, nosniff",
           "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
-          "RateLimit-Remaining": "HttpRequestRatePerPort:1498, ClientConnectionsPerPort:998",
-          "RateLimit-Reset": "HttpRequestRatePerPort:53s",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1498, ClientConnectionsPerPort:997",
+          "RateLimit-Reset": "HttpRequestRatePerPort:32s",
           "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
           "x-ms-ratelimit-limit": "1500",
-          "x-ms-ratelimit-remaining": "1495",
-          "x-ms-ratelimit-used": "5",
+          "x-ms-ratelimit-remaining": "1493",
+          "x-ms-ratelimit-used": "7",
           "x-ms-ratelimit-reset": "0",
           "X-Frame-Options": "DENY",
           "Referrer-Policy": "same-origin",
           "Cross-Origin-Opener-Policy": "same-origin",
           "X-Robots-Tag": "noindex, nofollow",
-          "VsSaaS-Request-Id": "34f18656-8a30-4571-8a19-a49de7df46f6",
+          "VsSaaS-Request-Id": "7633b53c-c588-4c94-82eb-cad0a0938be4",
           "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
           "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
         },
         "body": {
           "error": "Invalid request payload",
           "details": {
-            "department_id": [
-              "Must be a valid UUID."
+            "employeeName": [
+              "This field is required."
+            ],
+            "employeeId": [
+              "This field is required."
+            ],
+            "departmentId": [
+              "This field is required."
+            ],
+            "jobRank": [
+              "This field is required."
+            ],
+            "currentLocation": [
+              "This field is required."
+            ],
+            "idleType": [
+              "This field is required."
+            ],
+            "idleFromDate": [
+              "This field is required."
+            ],
+            "idleToDate": [
+              "This field is required."
             ]
           }
         }
@@ -300,7 +491,7 @@
     {
       "test_number": 6,
       "test_name": "Create Idle Resource (New Format)",
-      "timestamp": "2025-07-27T18:45:50.480549",
+      "timestamp": "2025-07-27T18:53:01.703016",
       "request": {
         "method": "POST",
         "endpoint": "/api/v1/idle-resources",
@@ -328,22 +519,22 @@
         "params": null
       },
       "response": {
-        "status_code": 400,
+        "status_code": 201,
         "headers": {
-          "Date": "Sun, 27 Jul 2025 11:45:49 GMT",
+          "Date": "Sun, 27 Jul 2025 11:53:00 GMT",
           "Content-Type": "application/json",
-          "Content-Length": "391",
+          "Content-Length": "53",
           "Connection": "keep-alive",
-          "Allow": "OPTIONS, POST, GET",
+          "Allow": "GET, OPTIONS, POST",
           "Cache-Control": "no-cache,no-store",
           "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
           "Pragma": "no-cache",
-          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZuiHQY-Vympe5I-BxIAEyuv8Xw-2FfsB6AxR2jbyURjRVe6K3CbxVSn4IY5drWhpRMhMV5RjcLN3yubQjJueP8Zq4iGwwY_nbB_3jtuq6gBucNWVhibzxAk6ioiApRN7QKiJEW3LLF521rx_jGXrN4hR1VuzDVPeesi_b6vmVix8J8E7gKKdQckA769w_3oQ2VetvmN-uKzTuP11totf234F-yOObmtGaMeSKNGP7uRC-vUvdvqlYPzz0KhUk1D-o14Pxip-IZrCEAx9zNNwuk84Nfr6QSbhIBjh7HCJHICUa54aErcFupCVYPDM5rwRvlyaoRiBZ6H1Sxhl0Ij9GBrOZ7tRYwaWNGAKx4THZtXWXRpBlm9JfG6Cq58XyThbG56Zpn-LZ700VFrL8tCgPkCk_dccvTxS4VHwrGUftGKI4MFxo2WN4h5l83psY-5lz_oirVtZ1s9AO4y6HP3fcAb8O6PWo0gGhScrka6EzsO4fxwCjkCwh-FfdZnj2gR2gn4EaHQWCG-PqLbkCHLaPS2a4Dotn30T5uAEmzvQK26iYGJwA-LU97z36fVgI2WujPSoEG3HJ6N5m01mCvfpfl4urpfvxAMjP33lko0Hg4cSQsNA0CKb3vpXeDlM-ZBoxdsYntSZYbTKzi4gG3PAtkq2TrSI8wdAPKY4XkGOvQjNa12w2Y6nbk6-MIuuYgDWGMFJhCFbkc4ezGibAlJLQLaEy9Rh-SeFZQrHiabKMxJpPnxKT8jJLjKaIXIisBlqcZ1DeGyP82R-UIqZv1ofTYrypsSoGgmAU-Jft4EZsiDBLop-VJhhO-5sqoF5zAo2wlRgO9Bs_ziYOB3kKU8NWor5ipb4D3Iwmh2a6sDQP1CkIh78fPLiDRKnHD3Gjdgxblb_68_KBF-P-6FWQminU4v; path=/; secure; samesite=none; Partitioned",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZtXiNQHg5VFDHF5I8lQRGTPU_VCjcwYlAiUms7j7do_456TlGR8pPFE9ou827xvuI4yQE_vzTNqSsdeFuKPy00FIWa2_hWhg_cwbff43t04Ev9UV8s_DFcXUQ9AkyYOE2_gbuGqrqQ0iRIIHAmdNtRFH37q2mVLCwSTy3a6thEedwZ0TmLvSSD_2VarOzEgDBhCJdlYcWV6HQAQciVnLoiO_LkZbVoY-b4_up8OSa7tIVgoFG3hv_WINXBIvcyUrXvLtMnCKorpfOMaKLOTlwAZxm3_xZkhjGy-rJRZ7ava-0gKEmm99D-l14LyIlcgNkIhQEYJ9EbKbZiSm7bMsnfL7BIliOMWynBeBKP6ocp5GhUtFxuOG65bU67qN6iuMRNzGOv8jExlQnZNhsFEfYz19kDXZSQfq1HHxv2g0outLhWnRzqMTy8fOMFp8XNj1qR2AMxXckiLyEMx_KhGEHAt7t2D48YfWtCYPHhjExw7gweunMm00XtimN9TE2a9D5Ey7q-XvE2Gm4PaMREVABXyWVsUKxklZO9UcDh90eqhLjsk_CRk4wRbCMRaBvPl9ai3w3h8Fsg-B7WpoZh2MrHzr1hTBEqcte_3CU0X2rd2MAXJ_fV7JTsFW3ib8icTLqVcQg1u7hcK849w_iCH7j3GptC0DDpf-xRFsativT1z0O8CxkB37XJQlzuhJlCA_k0TrlzOsmICBPLIj9geh6ZTAxWbxDVovzBr_ju-X-U1TNRv66xaYQ4d-VvCqhLD23VnQRPqnnQRQZVY2MEk19CS2BRtKpZekFYGyDWHsKuoJMA2al6jzhwr-C-UtwkW00R0KgM6MOKU7wYb3KM_ViU-RfA3bw4lIYduvbWPzmulNig43TCMlgQNCvUgYXX6KWqfMqrjN_C_baqvLh1wFVQ3; path=/; secure; samesite=none; Partitioned",
           "Vary": "Accept, Cookie",
           "X-Content-Type-Options": "nosniff, nosniff",
-          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m",
-          "RateLimit-Remaining": "HttpRequestRatePerPort:1499",
-          "RateLimit-Reset": "HttpRequestRatePerPort:50s",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1498, ClientConnectionsPerPort:998",
+          "RateLimit-Reset": "HttpRequestRatePerPort:30s",
           "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
           "x-ms-ratelimit-limit": "1500",
           "x-ms-ratelimit-remaining": "1494",
@@ -353,47 +544,22 @@
           "Referrer-Policy": "same-origin",
           "Cross-Origin-Opener-Policy": "same-origin",
           "X-Robots-Tag": "noindex, nofollow",
-          "VsSaaS-Request-Id": "11708802-b7c6-4f42-8225-c45cbb1702ec",
+          "VsSaaS-Request-Id": "0261da32-416b-45bb-9b14-d9e5d4dcc195",
           "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
           "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
         },
         "body": {
-          "error": "Invalid request payload",
-          "details": {
-            "employee_name": [
-              "This field is required."
-            ],
-            "employee_id": [
-              "This field is required."
-            ],
-            "department_id": [
-              "This field is required."
-            ],
-            "job_rank": [
-              "This field is required."
-            ],
-            "current_location": [
-              "This field is required."
-            ],
-            "idle_type": [
-              "This field is required."
-            ],
-            "idle_from_date": [
-              "This field is required."
-            ],
-            "idle_to_date": [
-              "This field is required."
-            ]
-          }
+          "validation_warnings": [],
+          "business_rule_results": {}
         }
       },
       "error": null,
-      "success": false
+      "success": true
     },
     {
       "test_number": 7,
       "test_name": "Export Idle Resources",
-      "timestamp": "2025-07-27T18:45:51.102664",
+      "timestamp": "2025-07-27T18:53:02.071310",
       "request": {
         "method": "POST",
         "endpoint": "/api/v1/idle-resources/export",
@@ -419,7 +585,7 @@
       "response": {
         "status_code": 200,
         "headers": {
-          "Date": "Sun, 27 Jul 2025 11:45:50 GMT",
+          "Date": "Sun, 27 Jul 2025 11:53:01 GMT",
           "Content-Type": "application/json",
           "Content-Length": "2",
           "Connection": "keep-alive",
@@ -427,22 +593,22 @@
           "Cache-Control": "no-cache,no-store",
           "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
           "Pragma": "no-cache",
-          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZsXQ4QBZNtHn_8794rhQU1yhTIRif-eq-8kSi2AKLAuT45kexJfD8eKsOaFhbuN0NevTyEfWmc7X0jia2KokCByZ4-GGBftnDaVry5EY9OYHrAy2ZrT5NkyiztAxlZp0OoEj3I4ZN8Ku-bKKPi-IAUDe8z2cWNq4dQ5mAd92_Hs40r-Qyv4I5eXxH_KtZqpYbppGc87B4CMXOfRvsJ7z54E6yduTZb9UkHMGAxJ3pDYcsHaZcXhg-4Ln66qePo4idcjjseVeodDQKTM_IDLqurb99ibkQn32ss6diwgLr1yaWS-s8iGYT7dUJKnsqJEPUTj1jDy-9pPIL60VVSlkXmOmxbnUgihma6yKoPZn94b0-LqhbYS5AEc3rvHp8EZvMa8K12ynsHW2OkleAa2mU78He13Yu2p8ooY9byi1TB9-HJK1IjXqKpnwEejRBctYCcD5ypdGcTuHEzQssk3tTcew3YqGPxrE-AnYC27_useJrXrpg57klPtTInaU6IjSxLUdxeBAjBgPHlVUzCjEvZbXMBd0P0V_xjeTP3erd2Yz-qdx-hY31YMJ2ojRrUIThvEd6FkBH3gwwlNbu9qrUYWxtVVs0IKDQtwaoS15d3FnxOo0L5ZcHjnOTG4fiKfFg2IXnFkqZHqvQ1t5mCEznKRsLxfgB2wch_TdEkdm7-ojzTLYLQo5MGzrdJoqSapLloQGCZSjhXH8HTTasHiPYjxCF45Qo7_5akBA1F-rfprCOhO_27KOQnefcS-C1aVnQwrZ5j7Ls-zPz7ssw5B4JWG9DVczfpj0un0qOKvFiHsQlXX2jzlYkbH2jp0UdJCDoZoJcZgQ6sbmi7u11rs5eHmYNAL8ioKXq3dXoIZonZhbTF9n62eaNRt9do8qk6Fx2Qkm0tBc0nBl9H2sXIW9KRG; path=/; secure; samesite=none; Partitioned",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZvXAVK-z-zFyCuMWRAEieidLsAE6sPCQorqRgC1czDfMCvmAVW0Ci51D0RURd2qV7LK5AwGJrgSP4OuZEKNMqwXPmMBZlpvmidoRFf5uZWfG2j02IwCfpIQKK0VLpcwAuRN4-MMWz_MhJpGODTY7ZKtoYDrhKfJhvkmY0iDX9J-MJ-w1e0zOxaXmdYoFOluanCzXGchw0Xwx0Z8zDgeD-M-zLVh9j7R7t4zZlC7mIx_XqCmleQYv9uetJOFlypB2RIRQ-hCihazBB10EPuYy7yov7Ri9_FEoTbJmWkbJuboDZcdqXVjO0OoMlasucHOehsS6nPzM7k0HFzgWtsJndI5LOMVCgmFPSvmA-2wAiwNqDfX8Elhae8y258zp8ECb_orJbW6zsTIBcaXfDNeJ5mjfz_Np5dExsy2uW7PhzFaNeUv7m_5vgPLTeONP0qTjjW2dphqnQca7GxsV498VAEsYK04NcCEaWQyen4-vJIktiPv6pFSaqLUBjHYrOgpKpX3kz1MC8HWb3xw3ZSezm8UZmNpCQJ6Tws1ACN5BW1GX1nB9oOnwbyCmYxIcw_ymiqf4W6AO3ivOpXLQt4_lGoQrN2xveKC5sOlqpbPAcXHmmgp6kfH9icvEndVAEbVmkNmVHaBO-IOayUWb2GWHxqzSmow0tCwb0S1YRsK2HTZgNr1u0cPbcJCCmtMN33492O27tRO6bU8eef5Atwg5o7MAvZGJuwo36ZI11cKVLvW_VgjgS7hd8k0vID582MHybWuNk5shJSPTHexPQDGdm3m4qQEQ65KUmQC75MKR9rvr_NpUkrjdlCIKaOsuhN_o3-UcLUeC45Zvfk2zm8Ke7vdopmyasS7MQIGVIiN7JxskvyLjuASSTmhGzDQqxTewteRT0MRLw_zU29ebBc_CJyK; path=/; secure; samesite=none; Partitioned",
           "Vary": "Accept, Cookie",
           "X-Content-Type-Options": "nosniff, nosniff",
           "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
-          "RateLimit-Remaining": "HttpRequestRatePerPort:1499, ClientConnectionsPerPort:996",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1498, ClientConnectionsPerPort:997",
           "RateLimit-Reset": "HttpRequestRatePerPort:40s",
           "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
           "x-ms-ratelimit-limit": "1500",
-          "x-ms-ratelimit-remaining": "1495",
-          "x-ms-ratelimit-used": "5",
+          "x-ms-ratelimit-remaining": "1493",
+          "x-ms-ratelimit-used": "7",
           "x-ms-ratelimit-reset": "0",
           "X-Frame-Options": "DENY",
           "Referrer-Policy": "same-origin",
           "Cross-Origin-Opener-Policy": "same-origin",
           "X-Robots-Tag": "noindex, nofollow",
-          "VsSaaS-Request-Id": "232d4a3b-1494-4ddf-b333-3200f8a4434d",
+          "VsSaaS-Request-Id": "c9bb2d59-5601-44ff-9b52-96a9c3c12a47",
           "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
           "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
         },
@@ -454,7 +620,7 @@
     {
       "test_number": 8,
       "test_name": "Advanced Search",
-      "timestamp": "2025-07-27T18:45:51.990777",
+      "timestamp": "2025-07-27T18:53:02.960646",
       "request": {
         "method": "POST",
         "endpoint": "/api/v1/idle-resources/search",
@@ -474,7 +640,7 @@
       "response": {
         "status_code": 200,
         "headers": {
-          "Date": "Sun, 27 Jul 2025 11:45:50 GMT",
+          "Date": "Sun, 27 Jul 2025 11:53:01 GMT",
           "Content-Type": "application/json",
           "Content-Length": "66",
           "Connection": "keep-alive",
@@ -482,22 +648,22 @@
           "Cache-Control": "no-cache,no-store",
           "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
           "Pragma": "no-cache",
-          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZu1Uqr1QQnIMH0bSCj0Jd6LhsYrHFnoQrNaCMAW2xc2zwofuQNUSUtbvjPLjmIbAp0mJYrMcMHMlo-VvlJJlLpOWdnGcs1RjQTcR4vWWB1k3m8HV25-26jKHtnYQSrCmPTiBRkDOnNQdQNIInCSGf1kEGV4wPjcmmIMSfb7KevNOO5YAihjbPseA0iYSIx6nKktx7DHe8IsFG0ewmu0Us_f60IQ18XwJtRnytyxUOnbF70j-FLwem42GVFBLsU0ZN-Kkc0qowSJBG4UAnDt_8kHMtOz-H84Cg4KwkJoywhjwOu6XVja_BVd0mt2NSuHF9gOj9GpbKXdlNQq85JjTp_-PFrJgj6B-YRrXDQ7tLDuOAGWLQ2Ikx49a_XlpGBA4fGiLJznhMP7R3mqwIcKjOwuEmZmq78XoixqvCOf9RPKD-H9PvWtB0B0QieH5fdJDzMlkYQHhT5c2l_Z-PIfxAo3MEBokJmGflZM6CQ2msczgVmE4cbOe27mpdCSyrzCMYUPgNwL6wOALt9VEKeu4QXrCq5qys5u2IuYU6nexyGp655zuwkwBTIeobKsNRudOge9Z05o53Uavny8mtYJHjjA1xLmvWVRMelrGtYlULXGU7_2ujNwUFwyDjvXuIikDMDxX8WsJsBPV8YPFLpKOK3CLp4ozdx6LzkcTRxeXdaQPweLMtzp-zxpCnpGeloG3w3ia13cNeIQXSQdGyBHhN3R-jGWyf30sMbSG2EqjdkLGuo5o7f0KtcKDZWJhqxqzQtbX1Gu2V-ZLNHXTVL8tyRVkvnKBSys1NJr3pDpW_qD1hzOm92emoKRUcSyKniRt7_ZWVMMOQAL0CkmFvRTL_q1XJPulgiPDQxurIEoWwlV4KTUnbr92bwjYKoDQOSONrYNoiTPM9H_Jgf58PSXpyju; path=/; secure; samesite=none; Partitioned",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZvWk9-VTfXHbFeklpOzvPMmhbX0E6kMJODWDh_BzeD4TSM2hFPXFZXU6gFxojc-sA9_6mSTNINQ9oQsAm1hcJcuVU24L3aVhlvZAhBQb24Kjf4UaohA6E3djMbyGPAzo3XL9YhA5Tv841YzvNPUWUsb9Q8gnaVqP0pw8mT0kRh-H2XUUK7h3DH4TOqCdfBT1pqeiJyv0g-fpU3eXHtVutMpXTa8hX4HhazeLEYikZodYUrDBlTIqsc5Zp8OEqu1-Uv5BnHG6BKniPxacRb4iFTJ7oFdAR1f9UYDhYGsOPPQvYMMh6LSttzR7hMgVMtGc0VVQrVzKOHJOlWlw5yc63vNuamJbG0Q3rwRqfgzV65h82M5pUN3thjHkBm8tnA9fEc-VJLkNEPyezW5MqX2S3zJ7Op3b31fZ_uyhgO38fQBmdLwyEajzleAtg98fZ4xS5q6hWc8rfreSkWyg1KngaRRL9vz_niuT0Zl4p9izCE0smQXElUG8315Y78Ed7R6ryQy_NZ4aGdpyYoWIjcJ6-W6HO2JhfX9iGkUyXmrRg7dm-nJEfYMRHrMsmnj6v4FSuvnDS9gbBuHi4_3iYnpM01ShVxjPmbsMDFTaY_fNSLlCkIiLGIaXqVsYb18xNHOCstmgynizqU-XrqIYcMoabxieBI-nIo5boDY2huhfzRX33v2109wd9Kx7k_uN1EuFwBPjPGHsyaMchykCziDW09L3QDRyD8T8ltFBKHS70XKHtwdKRH2Na154pTzclEDldPb8dRCEKHkpqBZrdEWbVMIeojNT2U_vv7ne24a08UYE0806pXYsubOvTBY_hz2d197rWQEm7GBzlRNPgn5Wgj80XQA-i-_D43RgDDMcntUu6AQBjRuLP63KV0Ge7Gr7lElfl8FSYGR9RUZ4uSmFWEs; path=/; secure; samesite=none; Partitioned",
           "Vary": "Accept, Cookie",
           "X-Content-Type-Options": "nosniff, nosniff",
-          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
-          "RateLimit-Remaining": "HttpRequestRatePerPort:1497, ClientConnectionsPerPort:998",
-          "RateLimit-Reset": "HttpRequestRatePerPort:51s",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1499",
+          "RateLimit-Reset": "HttpRequestRatePerPort:36s",
           "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
           "x-ms-ratelimit-limit": "1500",
-          "x-ms-ratelimit-remaining": "1495",
-          "x-ms-ratelimit-used": "5",
+          "x-ms-ratelimit-remaining": "1493",
+          "x-ms-ratelimit-used": "7",
           "x-ms-ratelimit-reset": "0",
           "X-Frame-Options": "DENY",
           "Referrer-Policy": "same-origin",
           "Cross-Origin-Opener-Policy": "same-origin",
           "X-Robots-Tag": "noindex, nofollow",
-          "VsSaaS-Request-Id": "675b13ef-db22-4ce3-8e0c-71631bd0b82f",
+          "VsSaaS-Request-Id": "81a7209d-32ac-47dd-9762-63d9d2574058",
           "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
           "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
         },
@@ -514,7 +680,7 @@
     {
       "test_number": 9,
       "test_name": "Data Validation (Valid)",
-      "timestamp": "2025-07-27T18:45:52.622420",
+      "timestamp": "2025-07-27T18:53:03.302868",
       "request": {
         "method": "POST",
         "endpoint": "/api/v1/idle-resources/validate",
@@ -537,7 +703,7 @@
       "response": {
         "status_code": 200,
         "headers": {
-          "Date": "Sun, 27 Jul 2025 11:45:51 GMT",
+          "Date": "Sun, 27 Jul 2025 11:53:02 GMT",
           "Content-Type": "application/json",
           "Content-Length": "66",
           "Connection": "keep-alive",
@@ -545,22 +711,22 @@
           "Cache-Control": "no-cache,no-store",
           "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
           "Pragma": "no-cache",
-          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZv4R69IjAB8GoAEtb8mTGrlDJg_jCgyQO_BCTdT2_SwnThor8XwUAmpBE8tc7H4XrUUp_6eRjROLOBMJdXFAP0rw9Ba9V2oWBH4b4qV8Icb45F_19vyLheyhg3CFeYkhoWjxiRJ3z0ig_rIxypjTiTmDK-tuR4U0C2aPumjZQonzPwU0_SULgfMxi-yEaU6qrnW_VpORAs-RK3BDbSNi_Jfh6HQaDmoqAbwP0sH5_ECGAQwAYhOqmcndyx6u_Afx3Zdnv-vKoAsqvjf8qtPDCUjEqApx7vP6LgCVAmRTWTDVYhcnFhzy2ayxXO8M8wwkB_n9GfT8iDr954jDxHwOC0yHRn53k5ADGL20nN3QA6_5HjutRM8rE-FtriJcgAPSpLWBLGlNwq3vLKrnuw7QmqMgPfMwDAZT6gYKiESlGe6dxdu8c2QvFCeXasikeP2EqqZa77QmnVh6qOPr4rAgRQhENz8y5uW1TvrcOD0Rf94ba3dioGuWw2GbkAPB64zQBfQuSRbeqeafBODWtv5DCwo54-cLtNo0jcLBOB77S5fXJ_98H82xbBAyE8YFrNG2xpFmLuv7eCkj206O9GiWmNwpmFukVm95tmLw_mZ8P0jL6hyjLNIQqYzAFukeKrkRMUaIX7IeBU8HJYtuWwS2L8y9pBpKKa5c5LITCzOfVYuJopwYteaFW0GXRUDkoEhpKnp9NhlfqwJ40xv2rZy3yfApVVnJbs82BNW0_EYcrjzLpSvwJMeyBh7G67554H7dMWJHjwRDim7U0iDgkaU8xMdB4u5uRKUmtp4mSH-jme86OxKW-JoQKm8B11QI9GVbkHBwtWMKyyKro1igwyXXBY1w7IF3-Zdo7HOFDuideeYq6vHkB2Ob0LaksliDTKXPbn-FPZr2ihy3x0N9yogMYPO; path=/; secure; samesite=none; Partitioned",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZufbNsEkKsD5CdEf_-KS-sHU6EdCEJCfEqmyjqE_eKal77jaR3syeCxhf2MOGebfNZVe6VaMAOU9foRNM4eZGy_H1BpeGgZFr18eGLZdXqTGumTJi1wqZvu2glK5CzUnFYc4Ws4OfLENXnzDQaWEOzRmlDUvYODW9U9Ix6BqXXyg5KlAZ09YQP_b5LCMJ0KXwiwJiBg-SSYIsf16ObKSPSjiDz95d2XNlJNwdCXrcsU7yr1nVu7K3y1ETowWWX8TASAYO6Qr8dWU6o78jbZwldpjmnBHDhB9pp8utDCYx6_B2h_-_QmgrRcvW7RxfpOptwe875no08RyNfil8YkvLbFOcRIkx4LbsH9fu_eGFk9yvpS_sAFkEVIaRb-XkcO6xKLjepl4SPXwg_NJAp-FM179g9rw6KCTRvIXaSFkK-XPIQd3cHPLfGSdDhXOUn2bzLLSbgMROIpzkKCj3yOgNN6VSYXAHncLUJHL-EcZ196_sw6grOB2pO5OBKKOCoCtoWbeyl89WwhmGddf94YcHnOIeswNGbE8iwRv4zXUHBLJuSUYoZuAhIstdxQGYt5iJugoH6Hm8UDwvobXtxeiC2aTUikmduZP-Cbt7nI2_AIEQj0Wivhhx0j0Zb850ahiceRMobEUnK-FrwJ6SiR4Y9ENAU3b9vrrX9qrpku0Hbrsot55ZhtJ4fffKdEhkBl-h_VE1rLfHjEh-33EeEZqR6ruqYhpEMnDSjaHpBOPmT9I__vHgj2pt_GntEjodNMbPmavaTFAirJrnaVjYBJVYTRB-2GWyOc_xj1rzrlWfGfmW2TQ9EyRIcBCKfcgbXTzuBcqteP0Nshi1mP2sfMaYWaCaCe8IUwliY9aPGHpJt230bRoKtD0Lq5hT5KKoGSxPLHv--pmkYxD-Z4o6TG4Sku; path=/; secure; samesite=none; Partitioned",
           "Vary": "Accept, Cookie",
           "X-Content-Type-Options": "nosniff, nosniff",
           "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
-          "RateLimit-Remaining": "HttpRequestRatePerPort:1499, ClientConnectionsPerPort:996",
-          "RateLimit-Reset": "HttpRequestRatePerPort:7s",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1497, ClientConnectionsPerPort:997",
+          "RateLimit-Reset": "HttpRequestRatePerPort:37s",
           "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
           "x-ms-ratelimit-limit": "1500",
-          "x-ms-ratelimit-remaining": "1495",
-          "x-ms-ratelimit-used": "5",
+          "x-ms-ratelimit-remaining": "1493",
+          "x-ms-ratelimit-used": "7",
           "x-ms-ratelimit-reset": "0",
           "X-Frame-Options": "DENY",
           "Referrer-Policy": "same-origin",
           "Cross-Origin-Opener-Policy": "same-origin",
           "X-Robots-Tag": "noindex, nofollow",
-          "VsSaaS-Request-Id": "6c0a4a62-d731-444a-9a8b-b62ce379c481",
+          "VsSaaS-Request-Id": "c71feec1-f49c-45cd-9535-1d592ab6c3fd",
           "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
           "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
         },
@@ -576,7 +742,7 @@
     {
       "test_number": 10,
       "test_name": "Data Validation (Invalid)",
-      "timestamp": "2025-07-27T18:45:53.142413",
+      "timestamp": "2025-07-27T18:53:03.661957",
       "request": {
         "method": "POST",
         "endpoint": "/api/v1/idle-resources/validate",
@@ -599,7 +765,7 @@
       "response": {
         "status_code": 200,
         "headers": {
-          "Date": "Sun, 27 Jul 2025 11:45:52 GMT",
+          "Date": "Sun, 27 Jul 2025 11:53:02 GMT",
           "Content-Type": "application/json",
           "Content-Length": "66",
           "Connection": "keep-alive",
@@ -607,12 +773,12 @@
           "Cache-Control": "no-cache,no-store",
           "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
           "Pragma": "no-cache",
-          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZsqNGPhXaNXfWPpkrsWLGKML1DaO0qXFUO9EaSNUccJ1reHW9Fh9iEhw6Tvh1j6tmK8ORnMxJWrCxaM36291BLB-xD2Oxd8NgkiRX9OVmtvltkyH-dXITYMgw--xBTA8nyqFsDmHbqFXp_RXRQeAtYZJH39bHhLfT4jsAK5ZvbFCYE3SLSXn6vjbRmNK4njeKRvlA9lyQm4YRVDr8ztgiJXBKrVgUOJmO7BtUxhhXrUZbRpt1sTRrIjXFKfAq-IRIOm41KegURyfnf3XViCW9UpSFj2ESx0ed5QOEuv-mmoWS_Dl65w8RHf720woOZ9VP0T7B6DWcUd8xGNp2bdn0PD11xGTcvW0xAjmCjIoncYWNAiI-iTeqHQLi6ZutdC7wC3FZ9YtWtEFHXwmM90cZw277BQ6X-bGUJLYsxCpQ2VI6mzh5JoX-F1zWSakZcm9LBGaOXfHbstHRfOABmxMveC3GSWn03MgsOn_SOYd3T_KicjacU1fAzdtjIlt7rwixpeT5dUuexWzJSfC6kI88jHUtAvz9hJPzNruIUhZEnn4ACGvTxYedEthvmMDfRn0U0in1tf34rvLH0fmKjzRt5_o2LgN9z56g4r4G6OH17Pffkwq-HnYxqKAhwLgwf8_hHyDVLgJwbcpoTR4JSvr2rlqCxPiZ435gkAvFVNEKjxlijRlCa0NUemO8ZUnPtcvxIxml6XGG3vNaH5kVDxXawrCJaYsoZsH0R0TUk2cjH2_pqCmjcnop6M-oIh5R06T1W4UoTb1m8E5GZwD7VuyJonXD-edZ5i8JlykT7m4k_idVPiC4d95TroFY4Gtr2-SE4U_cN2zNcKd2u64HnGM-p9bCoNTQ4DwOu2R9CeFsCMOJ6J83PjdBzDnukwENrfL505qiJk01m59xe8vSErGH_1; path=/; secure; samesite=none; Partitioned",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZs_5gt2806oMMsN2lTytw8AGw6sjiTnsjgGjjMvd3oHe87BXAJzF44F8YRXBd2Z4SeUIAqoZS8SDNkKa_CgNHVAxnzXHikeLF0bHGhRLuMohyKNYFnNO-vjN8N7s1n2QM44v1NhQD5cShOvi9zXTD_t9I56rN_yUC_ucEN3VbiEBdNz8uwxwa8XqpVAnQS67tpE3IyvurRvy5duEFahE8UfeuWmRb-GaOxyBXs6pmV-QGd5CeZDnrYgl4KNrM7WajJusxygP6HrfBwh7BN_cVkOce5_oMm-s7zeQJU9XBQQ0HU8iQEQr01PiW8akkgE3fP3c2lquKKb5LndMQV5kS8kkbjXjYezaJ4iAvNmA_zdJS6c_qAMcwMCdKHY2SXL9IJu8LZ_ukg3FFemjuZ_39x0lN4oJBfZNEdWxVRAwkR5cgoGLU1E0WYCGfgprcwXc_JUaTXrHL7UE_U6DFCFpwKWKGqmKMgOBUNjfrhvtsbLqdkL1v7kY5eLs0hXzCz1xg5WTQ1mFisN4Zrf7q6Y3h9d8ELfuHIfM-IE3SeQ4Cpj7O2g6A9iSR8YC8lDqQkAqmxg_vWZjayiqNqL7m5Hq6_IR4AVdTDZ1Zhk3Lok68bdT0ur3lg4W6aICfYFNEcQnnJ6m_yziW62M07C2KT6rZHIO0B3VeNZwOJwmwOAIFtlXyb3B9_ueAePPu2Xrk5H4aMgxpk072Tm652sRfnVX4CwlwnGXRwwUv6dB3KPcKsKieXdexZS9WZubHqzKeVRZrFLuTrW-xlDvF8YRowsFdxkft_rN9R2lN3ZgUrCVmsZ8VS75WBup0tLurH20IEZ3AzVoyPpheTWx-LVE8Sc4pp9ZEX5eLev9itBnPLMFJCgATu7RCu-ijiSUPHMPlo0JSRtwZ0jjgHPxWbMICdp-D-x; path=/; secure; samesite=none; Partitioned",
           "Vary": "Accept, Cookie",
           "X-Content-Type-Options": "nosniff, nosniff",
           "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
           "RateLimit-Remaining": "HttpRequestRatePerPort:1498, ClientConnectionsPerPort:998",
-          "RateLimit-Reset": "HttpRequestRatePerPort:20s",
+          "RateLimit-Reset": "HttpRequestRatePerPort:36s",
           "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
           "x-ms-ratelimit-limit": "1500",
           "x-ms-ratelimit-remaining": "1494",
@@ -622,7 +788,7 @@
           "Referrer-Policy": "same-origin",
           "Cross-Origin-Opener-Policy": "same-origin",
           "X-Robots-Tag": "noindex, nofollow",
-          "VsSaaS-Request-Id": "f2380641-ae21-445b-a85c-afdfa1b32c6a",
+          "VsSaaS-Request-Id": "e9d12c73-a7d6-419e-b727-38e86b875219",
           "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
           "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
         },
@@ -638,7 +804,7 @@
     {
       "test_number": 11,
       "test_name": "Bulk Update",
-      "timestamp": "2025-07-27T18:45:54.103695",
+      "timestamp": "2025-07-27T18:53:04.143811",
       "request": {
         "method": "PATCH",
         "endpoint": "/api/v1/idle-resources/bulk",
@@ -665,20 +831,20 @@
       "response": {
         "status_code": 200,
         "headers": {
-          "Date": "Sun, 27 Jul 2025 11:45:53 GMT",
+          "Date": "Sun, 27 Jul 2025 11:53:03 GMT",
           "Content-Type": "application/json",
           "Content-Length": "2",
           "Connection": "keep-alive",
-          "Allow": "PATCH, OPTIONS",
+          "Allow": "OPTIONS, PATCH",
           "Cache-Control": "no-cache,no-store",
           "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
           "Pragma": "no-cache",
-          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZseGNwUlJf7Tip1my6ltID5PSnREkAR-A9aXseKCCDDO3viNBCs1cewWDzabt5QQAxyMjzs6mJ7p6FPO5ingdzNLpCTAOiWONiD5F42MLWQ6ojvm1jtNggXx8aa_Xv5_S-vaNFgUC8ezKqXj2ReiDnHKmpfox2PWjygGkhfXCp-pzIhSbn2ylDRwZ2zGOIPlwSu7JAI-DqcZIg1VG8Bp0W8zYkgmFy8fpdEUCDBH6ZRRxBVZC9EizyRN3r5CECfcxpBI1f1WAqJYGiDlzTZw-aUU0t5tNVlzi-eZV0bD7Gcn1SDfltAkM-ShSCMXNAXqAAiz9jPZwg-SXTXoRcNXXN6MN0AlgOf5uPptdgwKHcOuwVj6XtKQQnUdolsPcJJdsSiJjyAEKi0gbjfWFhGgVWoxJF_wBBWANATzeCrwfiD2Hq6WMFq-w4ETCoUzSR-Bd6ZAiBacqf8cs1ATeLhBzt-a-VJv5zhIrMzotov4EasRod2LnDKug1nVSo4aE-xWZX_0BRttAM-4pcYbW4fz9uHUSA0SaDMHMwrpNys1M8tAd4zDXJyNWo0XLrD1JPEViONzax-sOIw1Nx9DTqeSZS_B4zgB8GOGZ6XUVtgRytCDfCr1arWWnJRF7JucsK2df5IyF0iToYwYH_LRJrg1R8xZBd7OKRFAueEL68XbH1jk52gPZnle9DixwGaimYVsfF8PAFWt0pV8PaB7GtU-P04CzFKRC2fIsTfaSXrC6iyH5amvqOjesH4SEmkkVnt6LXIyS0BEGrYDcrJsPl7Vt10-h3UpVPMVr9M4Yg1U9GWqorueHVtkxMkjPmz1BmJJFK4SGqJkYIw5H0LkVPc90vp3_wkEiYo-89r984CnDxj5gNfwBM5Aah1Xwamlu1VbVsNIOKdMfRko_BxMIqLl3E0; path=/; secure; samesite=none; Partitioned",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZtAPvfqIYvpF-kAMaSKjp-OGJKkNVgT_XVOef088VSNjNIxHBHqe1phJ0MrNCmSznxer54-NafvkaKZ1ZA9zQgsIOLGuTF1LQgavvNmvXFtH7HXaH6XIDvnPW-a6WkBWQhpVfXjP0qXB7Uh8gdx_n5DBd-748QAdMrU9Jyk3VwoSZOYEfY4syZgGWKJNCDRDs9d1X9JQXbndOkqyQfPFyfSa9VLhN7BbRunuAN67DwoduwTupz_FF76OVcNKt24-iATEyPh4MX2IuCdNuiyQ3CSmaSaTRCLWTAbZ9m5OnXGnN8C3nKmD2zLJUtjIXkDhPiW88rJd_ycNN1c8fnaJ1_ODevnY0vtzZdM974JRtASqPznSh5HRK8QHwoyuJpbNkkctUPlZz1IUdK3hSdxKqst1NnPTxHBFohIhU25F8tBVt2nPDRpJ7mCia9VesVSZmCKYtN87NWJfXCj2F5dh2UkdTmaJ3rjIMVfbtmL4A1tre96CVxOSLnpKZf8NtugTqZNw2up-UNiHMGC2DZasWoPjf1lsFYJNvQs59Ochydw1A-S9lAwP1-gvSui5IXfQ5T59Cxof-NDMUQ0giXWdd1huyu7nxWoAxdDLalp6Wfioa470F7EAUvhrTeN0yagxZ3oDcgJcpkzh922QHGD0ScD7-G_WhqB8qMDAlitrpPrGhLgyOIaUodpbyfxQCjW5dPZZSUZjJYxgkYx0B0HiI-0jyvwnJ4XdbxAiQ4PQErFSoYJOQcLRJFz3cL-HU1edql3lrQP-xnNXm3VCQH5eyVA5FaGZ3CQAEMFeeN5cCWK8BjPBYkfz2N8kTtSrWdvEiCwAX6DKkhfGWkJXnvSx9UiUaL_fxUmL9jb7i_ITLQJk9-fQL422JSgF0KUCM5ubCnXcMaceZv9af0c60MYlTrM; path=/; secure; samesite=none; Partitioned",
           "Vary": "Accept, Cookie",
           "X-Content-Type-Options": "nosniff, nosniff",
-          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m",
-          "RateLimit-Remaining": "HttpRequestRatePerPort:1499",
-          "RateLimit-Reset": "HttpRequestRatePerPort:1s",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1499, ClientConnectionsPerPort:999",
+          "RateLimit-Reset": "HttpRequestRatePerPort:56s",
           "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
           "x-ms-ratelimit-limit": "1500",
           "x-ms-ratelimit-remaining": "1494",
@@ -688,7 +854,7 @@
           "Referrer-Policy": "same-origin",
           "Cross-Origin-Opener-Policy": "same-origin",
           "X-Robots-Tag": "noindex, nofollow",
-          "VsSaaS-Request-Id": "b327969c-37f9-4520-a5b5-7d3cea2603d4",
+          "VsSaaS-Request-Id": "76103fea-4b95-4941-853e-4ad9b4e41c5c",
           "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
           "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
         },
@@ -700,7 +866,7 @@
     {
       "test_number": 12,
       "test_name": "Master Data",
-      "timestamp": "2025-07-27T18:45:54.634586",
+      "timestamp": "2025-07-27T18:53:04.501976",
       "request": {
         "method": "GET",
         "endpoint": "/api/v1/master-data",
@@ -715,20 +881,20 @@
       "response": {
         "status_code": 200,
         "headers": {
-          "Date": "Sun, 27 Jul 2025 11:45:53 GMT",
+          "Date": "Sun, 27 Jul 2025 11:53:03 GMT",
           "Content-Type": "application/json",
           "Content-Length": "114",
           "Connection": "keep-alive",
-          "Allow": "OPTIONS, GET",
+          "Allow": "GET, OPTIONS",
           "Cache-Control": "no-cache,no-store",
           "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
           "Pragma": "no-cache",
-          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZspguB5-VqRV6gMdcOpjHljBw6CO6s0Gb82yBGsXOenl913JtFSdknZtbuljyA-Eunnz0JBvg6f7hw6m5JMzpqTgScuNuO7gH0UJNjMsjFAuQKlw0aeTOQYVOQnpcmjI4S87ElXA_Q8mxLc432dIaxr_XkYHjXwxZq5ZCUtpV5e8pbZVyRTxxIxVZMoBheqgQk-KIE-eslLvla3HzKccL4zTEusD4pH9jUeqq5gTJAD7ey6sPR36t_HcI_qNGxSL57AEXmNSaLu7X21lhnb5y1HE8bQGtxRPVeqZfzklAr2RwCoMInDzFppNM6XOTyxKdiRhbw2soc8AcriCLCg377BAk36HxGV36czFvEiy1W-rdjsGb3abT68WwMFPrM5WCZq3ao6z3ih3OJVL5akolsafYBC8KGVdYhmHL8LSYv_ufJIfmCqqlIbPHAWxIZAEKcI8K2V10bcsJMDMQnbXKVR-xGcMig8g6XbEnT_RSKKlpvSr9GyCMjyVixpWYRtDDRrFIOMptdS8jb2FzWhTALtHjBKTA0GnOFNxxPSZkefsmVHFY76ilZCqE5d9A00RMpTCjUnoRhletOV6kU9er-d1Kvkuhqyt5xFZwOWPyiKQiyJfxuCTGlxRGSmWteyqg4W4qPiv_4mIqe4NzXz3pdSsX0pntF-cmPGk301alyQbSE8oPLSZezspzwimb1VMMfE2p3rPzAx97QesZOPL6puO8pUahS4qpyskl2CXi6nlegrnbT2jGccEpneStt54HEQMcDu7A4WEerBoFk6jdqEmSlUC0gDL2zYuxlTnrzd6ExLL3hgAl3PNisSAaDoQMXCfTZj82H7MVE_CjALnKRj0dq6ECeyZ9bQ_uJ3zmC0VANH6YwW6i3ywIcikiF4kFjESD6P9deBJEFVKPdMj_w4; path=/; secure; samesite=none; Partitioned",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZszI_vw_54T6wunW6o7U10itkf2uak6Z1SvBng07tZQ3NOkxAU71kg938he5ZxyXIEJnwhVTq0v0uh7o-t4kk-x0QU8HXNKGSquicl7y97Q6YPQFJTXLLjX_jrZix3T67lYWj3hMcbQzUvXM34EH-A5riEFePvL097iuNHfdys3BLvkvxiL71rbdJwMZSCdpLrc1VOgXp34PbTYqfmmwcUgQZxJGMEvA49_fZtCn9OIJN3t_ilA4XDV7glY0MtGC8lg-z7IVrt54TDrvXp4h-es_xMcu3PtTHUKMIlRr11QpuEVJqOgbFPznl-0XRf9b7WXQLqlCAMeYD42CbxzjXzinhkWpFKMn0r5-8agrOju3NWKhHdHEcIADu2b_vZZt1-6VP6pARFQ7IIaV95Q4MFvgsIeKEs1RD48JNiqp0D2_GUy249ipLMmfK-i95bvQRVicZk3YdF8pfN2etW0r1-W44o8gJ2fPMwGyItIUO6bftCFTRjM58tevaFDl0ITP7-uLGPLGTwPV2u8lzxsxYQ7ZYi_vTsfM7lugKcdf8acAXxLsSxKwjec42K1R33t05L8drVyU5f5Y6rE6aZNUUog-Gp1AOXSj-DctI4JcOr4EZYlL3VlB3g67W66Nn8vsrYTuKPzIC5_VkNr9Ez_cpo4ickYdG4hB-KfMrPYlf3TCSreWaaa8aDX4xIE8aqBuu_vzF9-w4H5iBhSyoDL7e3p88Q5qG-9cBSBuCCHnsVTvOy64M3kRrwPqIlWFzViDaz22YD-9yOX509wxnk6xoLcgrPZCafyPrvH5vtFfc9jjvhk4PnOR_MByaPIdu7tUeYsveK8PTByzRrYiykph9jRmUoYnKneL9NR6GlaiW-BYN2QIVtnaHI3txSuxvfg8knoOkBbApdxXJ1apTxjvQlz; path=/; secure; samesite=none; Partitioned",
           "Vary": "Accept, Cookie",
           "X-Content-Type-Options": "nosniff, nosniff",
-          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort",
-          "RateLimit-Remaining": "HttpRequestRatePerPort:1498",
-          "RateLimit-Reset": "HttpRequestRatePerPort:46s",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1497, ClientConnectionsPerPort:998",
+          "RateLimit-Reset": "HttpRequestRatePerPort:35s",
           "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
           "x-ms-ratelimit-limit": "1500",
           "x-ms-ratelimit-remaining": "1494",
@@ -738,7 +904,7 @@
           "Referrer-Policy": "same-origin",
           "Cross-Origin-Opener-Policy": "same-origin",
           "X-Robots-Tag": "noindex, nofollow",
-          "VsSaaS-Request-Id": "e5149ce6-d27a-4f27-bdbf-501333cbea5e",
+          "VsSaaS-Request-Id": "ad7cd28c-38b6-42d3-8e2a-90e434bde234",
           "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
           "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
         },
@@ -758,7 +924,7 @@
     {
       "test_number": 13,
       "test_name": "Master Data (Filtered)",
-      "timestamp": "2025-07-27T18:45:55.551191",
+      "timestamp": "2025-07-27T18:53:04.872322",
       "request": {
         "method": "GET",
         "endpoint": "/api/v1/master-data",
@@ -775,30 +941,30 @@
       "response": {
         "status_code": 200,
         "headers": {
-          "Date": "Sun, 27 Jul 2025 11:45:54 GMT",
+          "Date": "Sun, 27 Jul 2025 11:53:03 GMT",
           "Content-Type": "application/json",
           "Content-Length": "114",
           "Connection": "keep-alive",
-          "Allow": "OPTIONS, GET",
+          "Allow": "GET, OPTIONS",
           "Cache-Control": "no-cache,no-store",
           "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
           "Pragma": "no-cache",
-          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZuBCLj7Th-bjla-8S-MCnQn5Hv59BSYvPirI2APNq49q40kYVlBKi6oF0QNM4h31y_uvSW5emFUrOS3vAdzM7ObWO6RJ1sr0zWG02T2AtvGI2BPyRCLAxWTsepmcauLFk_3zoNzGxEHQZjH_G3gpY9J_uK6stlf3Wq8PldxeR7hmitRPWndL6BC3LFN8yO8JmKFHjHoy8lmY-MMvSMRfg8WH7bqqzCbyYLmrYXJhRDw5yQ5ZfYipPRfE9FRygFiHr3w_PLzVRxFg5kWXGHn9qSt0Hr24w6KdlC1mWZpOhiUmfcosNFPd6tl_4TUQXGaNomAqWvJ6A05sS2hsL1rfUqzhM1cc-peqLwoh-4YvaDLYeA2YbEia6CeK9j3ABp1vsxd-SJG8217RQ9CivYhgHvm60OEY5zAwo8Yeu4lAf26TT5kYG_KZq7vdoKG0y0vHOzu9fKnfqx-zI8dF8kYlEuCTEMg4tsxO8S9RrxtR62tNexzE0yhN5_eJrxnVWeAL0PsjYe-Q7uPeV9icgrVpvBTVXNhmaYcSMu05ZWtnyRNd8Q6iqrPyCLl8nO8rXMD-NXresoM-jjz4bmYO5ZREqP2d8SzUmw31BuYXz3FaExn5KNE3J0HGgRKTXkpANgtTaKS0bNJYOLCXvq-KpLegjsZVfO7KaWZdIte3KhjLlJiffE9CZsv2lx_oCfrlOwKY_aDgx2jT0hgZQM-b461YGmL8HDwd-fPJP3rOhIOajUWnvheheRDk_X3t-ibSNN-8RY0BTIpJSV_TH75mD6th8cP3ri1WCuLzhGw3CkAoB91cBntYV36tRZkmzWySSCPw41m83_1goceFyBrFMALBLp5EN5eAsLahEcnIVMZRMHTpcvLXFotS2olOo0ybsE2UYAhJJeX5sw2RlSMeqnG7tOX; path=/; secure; samesite=none; Partitioned",
+          "Set-Cookie": ".Tunnels.Relay.WebForwarding.Cookies=CfDJ8Cs4yarcs6pKkdu0hlKHsZugAfwGcEGGyzcr1ORRbkH_K_JDjPs92RcL5DPVsy1MzSgEL61i2Dv1WI1fGPGifRKVc72Tk7WfWzzVBsDtfMjvVpx_5LCg5wIpWLBPS_lRkdRuqxFZqL6psoclp1bu9ubqtHo9JnUru-93tecEvppES52RIQ7ZbjVUcIx3WYc2aif2_9cPNlfU7irv-f6-rDXg9PruGG_lULMJViyl9ZlvderASZcg7lZ7tRvtRUS2beOMgXUq5HAwoA24BhMp404SrIfXSFtSUQ3UZSPCutQSaTXw0Fk_rn2MWza69yYef0GZgN2UIUsfklJzLTG-lk4Ze2MX0yMkwvvsvC_YQRFiTzlenVOgY5L8kPgKoLwDvk2ndlVpd8fsccXn9igvQGZ8XafstKO-_u2yT4J-iT3GN6BC7NTOFgPOkx0oFM3E2hepFX6PC7MS0ia9kdfTGlpPjeNv_TIPqxRvigoR0SVKHQMKeBbY02YivEb_Wn93Haw7FX-SciYOV1LPwWUo5y7zZBdMFRm8REUTnWbYoRmINqhkdhWQ1zSe2QLnK0ybnz6CsdZjQB0gV6ehAFtooSEIetOw5ZGEkv0BBfAXAwDjS5dXx0gTr5mjia5of0QnSWMU7DWhKctc0ThRTXdRUVpECSR27F_VDqtIuVFVqg982vJ9hOFGH9E77f_JIHYqW9mUv-WTVN71e2A5IVyL8JtxssyCiPmMO5oVR8oo6nod5bZiww_bp-WV9576_MvGUWd3eOd-aLgUMl4CoUOesV_R3NgtYu1Mc5mOheVM1Gl2Kciqwlbh22B-z7XtO9QWRAJXcqxgkg0E0G8crG7K9z3jy-EES6410C98Foh3Q4LttFXTgCIM9AIS8dioWpu7JVl1aKot8XidpoXftwc8hLCaLxWG244nNtWEimIxmXj0; path=/; secure; samesite=none; Partitioned",
           "Vary": "Accept, Cookie",
           "X-Content-Type-Options": "nosniff, nosniff",
-          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m",
-          "RateLimit-Remaining": "HttpRequestRatePerPort:1499",
-          "RateLimit-Reset": "HttpRequestRatePerPort:43s",
+          "RateLimit-Limit": "HttpRequestRatePerPort:1500/m, ClientConnectionsPerPort: max 1000",
+          "RateLimit-Remaining": "HttpRequestRatePerPort:1496, ClientConnectionsPerPort:997",
+          "RateLimit-Reset": "HttpRequestRatePerPort:36s",
           "X-Report-Abuse": "https://msrc.microsoft.com/report/abuse",
           "x-ms-ratelimit-limit": "1500",
-          "x-ms-ratelimit-remaining": "1494",
-          "x-ms-ratelimit-used": "6",
+          "x-ms-ratelimit-remaining": "1493",
+          "x-ms-ratelimit-used": "7",
           "x-ms-ratelimit-reset": "0",
           "X-Frame-Options": "DENY",
           "Referrer-Policy": "same-origin",
           "Cross-Origin-Opener-Policy": "same-origin",
           "X-Robots-Tag": "noindex, nofollow",
-          "VsSaaS-Request-Id": "8a87e02a-035a-4fd9-a8a3-3556d247295e",
+          "VsSaaS-Request-Id": "9f62048f-f76f-450c-bbc8-ea2b739f8661",
           "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
           "X-Served-By": "tunnels-prod-rel-asse-v3-cluster"
         },
@@ -831,7 +997,7 @@
     "format_compatibility": {
       "camelCase_support": "Implemented",
       "snake_case_legacy": "Maintained",
-      "specification_compliance": "11/13 endpoints working"
+      "specification_compliance": "12/13 endpoints working"
     }
   }
 }

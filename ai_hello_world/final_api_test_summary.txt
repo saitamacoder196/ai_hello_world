@@ -3,12 +3,12 @@ FINAL API TEST REPORT SUMMARY
 ================================================================================
 
 Test Session:
-  Timestamp: 2025-07-27T18:45:55.552540
+  Timestamp: 2025-07-27T18:53:04.874187
   Base URL: https://7v38qrq1-8000.asse.devtunnels.ms
   Total Tests: 13
-  Passed: 11
-  Failed: 2
-  Success Rate: 84.6%
+  Passed: 12
+  Failed: 1
+  Success Rate: 92.3%
 
 Individual Test Results:
 ----------------------------------------
@@ -22,8 +22,8 @@ Individual Test Results:
     Status: 200
  5. Create Idle Resource (Old Format): ❌ FAIL
     Status: 400
- 6. Create Idle Resource (New Format): ❌ FAIL
-    Status: 400
+ 6. Create Idle Resource (New Format): ✅ PASS
+    Status: 201
  7. Export Idle Resources: ✅ PASS
     Status: 200
  8. Advanced Search: ✅ PASS
