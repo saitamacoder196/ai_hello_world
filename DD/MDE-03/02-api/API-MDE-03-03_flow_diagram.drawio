@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="API-MDE-03-03 Flow" id="api-flow-diagram">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="API-MDE-03-03: Create Idle Resource Flow Diagram" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="20" width="470" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- START -->
+        <mxCell id="start" value="START&#xa;POST /api/v1/idle-resources&#xa;Create New Idle Resource" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="70" width="210" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Step 1: Authentication -->
+        <mxCell id="auth" value="Step 1: Authentication &amp; Authorization&#xa;&#xa;• Validate JWT Token&#xa;• Check create permissions&#xa;• Verify department access" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="430" y="190" width="310" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- Step 2: Input Validation -->
+        <mxCell id="validation" value="Step 2: Input Data Validation&#xa;&#xa;Service: SVE-MDE-03-03 (Validation Service)&#xa;• Required fields validation&#xa;• Data format &amp; length check&#xa;• Type validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="430" y="300" width="310" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Step 3: Business Rules -->
+        <mxCell id="businessrules" value="Step 3: Business Rule Validation&#xa;&#xa;Service: SVE-MDE-03-11 (Business Rule Engine)&#xa;• Cross-field validation&#xa;• Business logic constraints&#xa;• Calculate derived fields" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="430" y="420" width="310" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Step 4: Create Record -->
+        <mxCell id="createrecord" value="Step 4: Create Database Record&#xa;&#xa;Service: SVE-MDE-03-01 (CRUD Service)&#xa;DAO: DAO-MDE-03-01-01&#xa;• Generate unique ID&#xa;• Insert into idle_resources table" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="430" y="540" width="310" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Step 5: Audit Trail -->
+        <mxCell id="audit" value="Step 5: Create Audit Trail&#xa;&#xa;Service: SVE-MDE-03-10 (Audit Trail Service)&#xa;DAO: DAO-MDE-03-04-01&#xa;• Log create operation&#xa;• Record user activity" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="430" y="660" width="310" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Step 6: Response -->
+        <mxCell id="response" value="Step 6: Format Response&#xa;&#xa;• Format created record&#xa;• Include audit trail ID&#xa;• Add validation warnings&#xa;• Set HTTP 201 status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="430" y="780" width="310" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- END -->
+        <mxCell id="end" value="END&#xa;HTTP 201 Created&#xa;Return Created Resource" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="890" width="210" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- DAO Details Left Side -->
+        <mxCell id="dao1" value="DAO-MDE-03-01-01&#xa;Create Idle Resource&#xa;&#xa;SQL: INSERT INTO idle_resources&#xa;(resource_id, employee_id, ...)&#xa;VALUES (?, ?, ...)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="80" y="520" width="200" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dao2" value="DAO-MDE-03-04-01&#xa;Create Audit Entry&#xa;&#xa;SQL: INSERT INTO audit_trail&#xa;(audit_id, resource_id, ...)&#xa;VALUES (?, ?, ...)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="80" y="660" width="200" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="dao3" value="DAO-MDE-03-09-01&#xa;Get Reference Data&#xa;&#xa;SQL: SELECT * FROM&#xa;system_configurations&#xa;WHERE config_key = ?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="80" y="280" width="200" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Database Tables Right Side -->
+        <mxCell id="db1" value="Database Tables&#xa;&#xa;• idle_resources&#xa;• audit_trail&#xa;• employees&#xa;• departments&#xa;• user_departments&#xa;• system_configurations&#xa;• reference_data" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="890" y="400" width="200" height="200" as="geometry" />
+        </mxCell>
+        
+        <!-- Response Format -->
+        <mxCell id="responseformat" value="Response Format&#xa;&#xa;{&#xa;  &quot;id&quot;: &quot;generated-id&quot;,&#xa;  &quot;createdRecord&quot;: {...},&#xa;  &quot;auditTrailId&quot;: &quot;audit-id&quot;,&#xa;  &quot;validationWarnings&quot;: [],&#xa;  &quot;businessRuleResults&quot;: {...},&#xa;  &quot;createdAt&quot;: &quot;timestamp&quot;&#xa;}" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontFamily=Courier New;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="890" y="760" width="250" height="160" as="geometry" />
+        </mxCell>
+        
+        <!-- Error Handling -->
+        <mxCell id="error1" value="400 Bad Request&#xa;Validation Errors" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff0000;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="800" y="300" width="120" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="error2" value="403 Forbidden&#xa;Unauthorized" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#ff0000;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="800" y="190" width="120" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Legend -->
+        <mxCell id="legend" value="Legend&#xa;&#xa;🟡 API Layer (Authentication, Response)&#xa;🔵 Service Layer (Business Logic)&#xa;🔴 DAO Layer (Database Operations)&#xa;🟣 Database (Tables)&#xa;⚠️ Error Handling (Dashed)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#666666;align=left;spacingLeft=10;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="80" y="80" width="250" height="150" as="geometry" />
+        </mxCell>
+        
+        <!-- Main Flow Arrows -->
+        <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="start" target="auth" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="auth" target="validation" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="validation" target="businessrules" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="businessrules" target="createrecord" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="createrecord" target="audit" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="audit" target="response" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="response" target="end" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- DAO Connection Arrows -->
+        <mxCell id="arrow8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="validation" target="dao3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="createrecord" target="dao1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="audit" target="dao2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Database Connection Arrows -->
+        <mxCell id="arrow11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="dao1" target="db1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.7;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="dao2" target="db1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" parent="1" source="dao3" target="db1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Error Connection Arrows -->
+        <mxCell id="arrow14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=#ff0000;" parent="1" source="auth" target="error2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=#ff0000;" parent="1" source="validation" target="error1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Side Process: Cache -->
+        <mxCell id="cache" value="Cache Operations&#xa;&#xa;• Cache validation rules&#xa;• Store reference data&#xa;• Performance optimization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#4d94ff;dashed=1;align=left;spacingLeft=10;" parent="1" vertex="1">
+          <mxGeometry x="80" y="440" width="200" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=#4d94ff;" parent="1" source="businessrules" target="cache" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Response Connection -->
+        <mxCell id="arrow17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="response" target="responseformat" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
